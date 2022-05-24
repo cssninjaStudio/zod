@@ -1,0 +1,47 @@
+<div
+  x-data="initDropdown()"
+  @click.away="close()"
+  class="dropdown-wrap is-right"
+  :class="{
+    'is-active': open,
+    '': !open
+  }"
+>
+  <span class="indicator"></span>
+  <button @click="toggle()" class="dropdown-button is-reset mask mask-blob">
+    <i class="iconify" data-icon="ph:chat-circle-duotone"></i>
+  </button>
+  <div class="drop-menu">
+    <div class="menu-inner">
+      <div class="menu-header">
+        <h3>Messages</h3>
+        <a>All</a>
+      </div>
+      <div class="message-items">
+        <div class="message-item">
+          <img class="avatar is-reset mask mask-blob" src="/img/avatars/5.jpg" alt="" />
+          <div class="message-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <small>30 minutes ago</small>
+          </div>
+        </div>
+        <div class="message-item">
+          <div class="avatar is-fake is-primary is-reset mask mask-blob">
+            <span>M</span>
+          </div>
+          <div class="message-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <small>1 hour ago</small>
+          </div>
+        </div>
+        <div class="message-item is-read">
+          <img class="avatar is-reset mask mask-blob" src="/img/avatars/1.jpg" alt="" />
+          <div class="message-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <small>Yesterday</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<!-- Message details -->
+<div
+  x-show="activeMessage === 'message-8'"
+  id="message-8"
+  class="inbox-message-details"
+  :class="{
+        'mobile-active tablet-active': isMobileMessageActive,
+        '': !isMobileMessageActive
+    }"
+>
+  <div class="header-area">
+    <img class="sender-pic" src="/img/avatars/51.jpg" alt="sender photo" />
+    <div class="message-meta">
+      <span class="message-title">Customer dashboard february bug report</span>
+    </div>
+    <div class="attachments inbox-hidden-mobile">
+      <i class="iconify" data-icon="feather:paperclip"></i>
+      <span>1</span>
+    </div>
+    {{> inbox-message-dropdown}}
+    <a
+      @click="closeMobileMessage()"
+      class="inbox-action inbox-close-details-mobile"
+    >
+      <i class="iconify" data-icon="feather:x"></i>
+    </a>
+  </div>
+  <!--Message-->
+  <div class="message-wrapper has-slimscroll">
+    <div class="message-inner">
+      <div class="message-head">
+        <div class="info">
+          <span>Sent by</span>
+          <span>mikewilson@gmail.com</span>
+        </div>
+        <div class="message-actions">
+          <a class="inbox-action">
+            <i class="iconify" data-icon="feather:tag"></i>
+          </a>
+          <a class="inbox-action">
+            <i class="iconify" data-icon="feather:message-circle"></i>
+          </a>
+          <a class="inbox-action">
+            <i class="iconify" data-icon="feather:trash-2"></i>
+          </a>
+        </div>
+      </div>
+      <!--Mail Content-->
+      <div class="mail-content content">
+        <p>Hi,</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <a href="#" target="_blank"
+            >Nunc haec primum fortasse audientis servire debemus.</a
+          >
+          At iste non dolendi status non vocatur voluptas. Quae duo sunt, unum
+          facit. Etiam beatissimum? Haec quo modo conveniant, non sane
+          intellego. Duo Reges: constructio interrete.
+        </p>
+        <ul>
+          <li>Nam Pyrrho, Aristo, Erillus iam diu abiecti.</li>
+          <li>
+            Maximas vero virtutes iacere omnis necesse est voluptate dominante.
+          </li>
+        </ul>
+
+        <p>Mike Wilson</p>
+      </div>
+
+      <!-- Attachments -->
+      <div class="attachments-list">
+        <div class="attachment">
+          <span>report.pdf</span>
+          <div class="download-icon">
+            <i class="iconify" data-icon="feather:arrow-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Reply-->
+    <div class="reply-box-wrap">
+      <div class="reply-bubble">
+        <div class="reply-as">
+          <img src="/img/avatars/25.jpg" alt="user photo" />
+          <div class="reply-details">
+            <span>Reply as</span>
+            <span>anthonym@gmail.com</span>
+          </div>
+          {{> inbox-reply-dropdown}}
+        </div>
+        <!--textarea-->
+        <div class="control">
+          <textarea
+            class="textarea"
+            rows="6"
+            placeholder="Type your message..."
+          ></textarea>
+          <button type="button" class="button">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

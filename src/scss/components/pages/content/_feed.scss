@@ -1,0 +1,222 @@
+/* ==========================================================================
+1. Feed Channels Widget
+========================================================================== */
+
+/* ==========================================================================
+2. Placeholder Card
+========================================================================== */
+
+/* ==========================================================================
+3. Compose Card
+========================================================================== */
+
+.compose-card {
+  @include zodCard();
+
+  align-items: center;
+  padding: 0.75rem;
+
+  .compose-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .compose-avatar {
+      margin-#{$end-direction}: 0.5rem;
+
+      img {
+        height: 48px;
+        width: 48px;
+        min-width: 48px;
+        border-radius: 50%;
+      }
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.25rem;
+
+      .action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        width: 32px;
+        font-size: 1.25rem;
+        border-radius: 50%;
+
+        &:hover {
+          background: var(--wrap-muted-color);
+        }
+      }
+    }
+  }
+
+  .status-wrapper {
+    display: flex;
+    align-items: center;
+
+    .textarea {
+      display: block;
+      flex-grow: 2;
+    }
+  }
+}
+
+/* ==========================================================================
+4. Feed Post
+========================================================================== */
+
+.post-item {
+  @include zodCard();
+
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+  background: var(--card-bg-color);
+  overflow: visible;
+  box-shadow: var(--light-box-shadow);
+  z-index: 1;
+
+  .post-header {
+    .is-flex {
+      margin-bottom: 0.5rem;
+
+      .feed-avatar {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+      }
+
+      .item-title {
+        font-weight: 500;
+        font-family: var(--font);
+        color: var(--medium-text);
+        margin-#{$start-direction}: 15px;
+        line-height: 1.3;
+
+        a {
+          color: var(--secondary);
+        }
+
+        .feed-time-small {
+          font-size: 0.8rem;
+          font-family: var(--font);
+          color: var(--light-text);
+          font-weight: 400;
+        }
+      }
+
+      .dropdown-wrap {
+        margin-#{$start-direction}: auto;
+        z-index: 1000;
+      }
+    }
+
+    .post-title {
+      font-size: 0.95rem;
+      font-family: var(--font-alt);
+      font-weight: 600;
+
+      a {
+        color: var(--title-color);
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .post-text {
+      font-family: var(--font);
+      font-size: 0.9rem;
+      color: var(--light-text);
+    }
+  }
+
+  .feed-image-container {
+    position: relative;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+      max-width: 100%;
+      width: 100%;
+      max-height: 280px;
+    }
+
+    .soft-overlay {
+      position: absolute;
+      top: 0;
+      #{$start-direction}: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--dark);
+      opacity: 20%;
+    }
+  }
+
+  .feed-item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .counter-blocks {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .counter-block {
+        display: flex;
+        align-items: center;
+        gap: 0.1rem;
+
+        span {
+          color: var(--light-text);
+        }
+      }
+    }
+
+    .arrow-link {
+      display: flex;
+      align-items: center;
+      gap: .1rem;
+      font-family: var(--font);
+      font-size: .9rem;
+      color: var(--primary);
+
+      .iconify {
+        transition: transform .3s;
+      }
+
+      &:hover {
+        .iconify {
+          transform: translate(.25rem);
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+Load more
+========================================================================== */
+
+.load-more-wrapper {
+  padding: 20px 0;
+
+  .button {
+    height: 40px;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1299px) and (orientation: landscape) {
+  .hidden-column {
+    display: none;
+  }
+}

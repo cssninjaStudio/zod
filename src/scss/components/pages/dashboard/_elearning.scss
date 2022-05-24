@@ -1,0 +1,313 @@
+/* ==========================================================================
+E-Learning Dashboard
+========================================================================== */
+
+.elearning-dashboard {
+  margin-top: 3rem;
+
+  .dashboard-header {
+    position: relative;
+    background: var(--primary-dark-6);
+    border-radius: 1.25rem;
+    margin-bottom: 1.5rem;
+
+    .dashboard-header-inner {
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+      height: 100%;
+      border-radius: 1.25rem;
+    }
+
+    .header-content {
+      width: 60%;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      padding-#{$start-direction}: 2.5rem;
+      padding-#{$end-direction}: 0;
+
+      .button-wrap {
+        margin-top: 0.75rem;
+      }
+    }
+
+    .header-image {
+      position: relative;
+      width: 40%;
+      height: 100%;
+
+      .circle-shape {
+        position: absolute;
+        bottom: -300px;
+        #{$end-direction}: -26px;
+        height: 260px;
+        width: 260px;
+        border-radius: 50%;
+        background: var(--white-smoke);
+        opacity: 0.3;
+      }
+    }
+
+    > img {
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      #{$end-direction}: 50px;
+      max-width: 170px;
+    }
+  }
+
+  .popular-courses {
+    margin-bottom: 2.5rem;
+
+    .popular-course {
+      @include zodCard();
+
+      position: relative;
+      padding: 2rem;
+      overflow: hidden;
+
+      .course-circle {
+        position: absolute;
+        top: -24px;
+        #{$start-direction}: -26px;
+        height: 100px;
+        width: 100px;
+        background: var(--icon-bg-color);
+        border-radius: 50%;
+      }
+
+      .course-header {
+        position: relative;
+        top: -7px;
+        #{$start-direction}: -10px;
+        display: flex;
+        z-index: 1;
+
+        .iconify {
+          font-size: 1.5rem;
+          color: var(--title-color);
+        }
+
+        .title {
+          margin-#{$start-direction}: 3rem;
+        }
+      }
+
+      .course-body {
+        margin-top: 2.5rem;
+
+        .course-link {
+          font-family: var(--font);
+          font-size: 0.95rem;
+          color: var(--primary);
+          margin-top: 1.5rem;
+          display: inline-flex;
+          align-items: center;
+
+          .iconify {
+            transition: transform 0.3s;
+          }
+
+          &:hover {
+            .iconify {
+              transform: translateX($transform-direction * 0.25rem);
+            }
+          }
+        }
+      }
+
+      &.is-primary {
+        .course-circle {
+          background: var(--icon-primary-bg-color);
+        }
+
+        .course-header {
+          .iconify {
+            color: var(--icon-primary-color);
+          }
+        }
+      }
+
+      &.is-green {
+        .course-circle {
+          background: var(--icon-green-bg-color);
+        }
+
+        .course-header {
+          .iconify {
+            color: var(--icon-green-color);
+          }
+        }
+      }
+
+      &.is-purple {
+        .course-circle {
+          background: var(--icon-purple-bg-color);
+        }
+
+        .course-header {
+          .iconify {
+            color: var(--icon-purple-color);
+          }
+        }
+      }
+
+      &.is-yellow {
+        .course-circle {
+          background: var(--icon-yellow-bg-color);
+        }
+
+        .course-header {
+          .iconify {
+            color: var(--icon-yellow-color);
+          }
+        }
+      }
+    }
+  }
+
+  .current-courses {
+    .current-course {
+      padding: 0 0.5rem;
+
+      h4 {
+        max-width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: var(--title-color);
+        margin-bottom: 1.5rem;
+      }
+
+      .current-course-inner {
+        position: relative;
+
+        .icon-box,
+        .icon-button {
+          position: absolute;
+          top: 50%;
+          #{$start-direction}: 50%;
+          transform: translate($transform-direction * -50%, -50%);
+          z-index: 1;
+        }
+
+        .icon-button {
+          background: none;
+          border: 1px dashed var(--light-text);
+
+          .iconify,
+          svg,
+          path {
+            color: var(--light-text);
+          }
+
+          &:hover {
+            border: 1px solid var(--primary);
+            background: var(--primary);
+            box-shadow: var(--primary-box-shadow);
+
+            .iconify,
+            svg,
+            path {
+              color: var(--white-smoke) !important;
+            }
+          }
+        }
+
+        .circle-chart-background {
+          stroke: var(--circle-chart-bg-color-inverted);
+        }
+
+        .circle-chart-circle {
+          animation: circle-chart-fill 2s reverse;
+          transform: rotate(-90deg);
+          transform-origin: center;
+        }
+
+        .circle-chart-dashed {
+          position: absolute;
+          top: 0;
+          #{$start-direction}: 0;
+          width: 100%;
+          height: 100%;
+          border: 2px dashed var(--light-text);
+          border-radius: 50%;
+          transition: border-color 0.3s;
+        }
+
+        @keyframes circle-chart-fill {
+          to {
+            stroke-dasharray: 0 100;
+          }
+        }
+      }
+
+      &.is-primary {
+        .circle-chart-circle {
+          stroke: var(--primary);
+        }
+      }
+
+      &.is-blue {
+        .circle-chart-circle {
+          stroke: var(--blue);
+        }
+      }
+    }
+  }
+
+  .dashboard-calendar {
+    @include zodCard();
+
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+
+    .calendar-footer {
+      display: flex;
+      align-items: center;
+      padding: 0 0.5rem;
+      margin-top: 1rem;
+
+      span {
+        display: block;
+        font-family: var(--font);
+        font-size: 0.9rem;
+        color: var(--primary);
+        margin-#{$start-direction}: 0.5rem;
+      }
+    }
+  }
+
+  .recent-activities {
+    .recent-activity {
+      @include zodCard();
+      @include flexMediaAligned();
+
+      padding: 1.5rem 1rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .elearning-dashboard {
+    margin-top: 1rem;
+    
+    .dashboard-header {
+      .dashboard-header-inner {
+        .header-content {
+          width: 78%;
+        }
+      }
+
+      > img {
+        #{$end-direction}: -65px;
+        max-width: 170px;
+      }
+    }
+  }
+}

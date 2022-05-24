@@ -1,0 +1,349 @@
+.invoice-wrapper {
+  padding: 1.5rem 0;
+
+  .invoice-card {
+    @include zodCard();
+
+    width: 100%;
+    margin: 0 auto;
+    max-width: 880px;
+    padding: 3rem;
+    font-family: var(--font);
+
+    .logo {
+      width: 60px;
+    }
+
+    .invoice-meta {
+      span {
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--medium-text);
+
+        small {
+          font-size: 1rem;
+          font-weight: 400;
+          color: var(--light-text);
+          text-transform: none;
+
+          &.date {
+            font-size: 0.85rem;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+
+    .seller,
+    .buyer {
+      font-family: var(--font);
+      font-size: 0.8rem;
+      color: var(--light-text);
+      font-weight: 400;
+
+      span {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--title-color);
+      }
+    }
+
+    .responsive-table {
+      width: 100%;
+      background: var(--wrap-bg-color);
+      border-color: var(--wrap-border-color);
+
+      tr {
+        background: var(--wrap-bg-color) !important;
+      }
+
+      th {
+        border-color: var(--wrap-border-color);
+      }
+
+      td {
+        font-family: var(--font);
+        vertical-align: middle !important;
+        border-color: var(--wrap-border-color);
+        line-height: 1.2;
+        padding: 0.75rem;
+
+        .product {
+          color: var(--title-color);
+          font-weight: 500;
+          font-size: 0.95rem;
+        }
+
+        .sku {
+          font-size: 0.8rem;
+          color: var(--light-text);
+        }
+
+        .quantity {
+          color: var(--light-text);
+        }
+
+        .unit-price,
+        .total-price {
+          font-weight: 500;
+          color: var(--title-color);
+          font-size: 0.9rem;
+
+          &:before {
+            content: "$";
+          }
+        }
+      }
+
+      th {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: var(--light-text);
+      }
+    }
+
+    .sub-table {
+      width: 100%;
+      margin-top: 10px;
+      background: var(--wrap-bg-color);
+      border-color: var(--wrap-border-color);
+
+      td {
+        border-color: var(--wrap-border-color);
+      }
+
+      .subtotal,
+      .vat {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: var(--light-text);
+      }
+
+      .total {
+        text-transform: uppercase;
+        font-weight: 500 !important;
+        font-size: 1.2rem;
+        color: var(--title-color);
+      }
+
+      .subtotal-value,
+      .vat-value {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--title-color);
+
+        &:before {
+          content: "$";
+        }
+      }
+
+      .total-value {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--title-color);
+
+        &:before {
+          content: "$";
+        }
+      }
+    }
+
+    .bottom-page {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      font-size: 0.85em;
+
+      .company,
+      .url {
+        font-weight: 500;
+        color: var(--light-text);
+      }
+
+      .url {
+        color: var(--secondary);
+      }
+
+      .code,
+      .id {
+        color: var(--title-color);
+        font-weight: 500;
+        font-size: 90%;
+      }
+    }
+  }
+
+  .invoice-info {
+    .invoice-info-card {
+      @include zodCard();
+
+      .info-card-section {
+        padding: 1.5rem;
+
+        .section-heading {
+          font-family: var(--font);
+          font-size: .75rem;
+          font-weight: 500;
+          color: var(--medium-text);
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
+
+        .company {
+          @include flexMediaAligned();
+
+          width: 100%;
+
+          .avatar {
+            background: var(--wrap-muted-color);
+          }
+
+          .flex-meta {
+            p {
+              color: var(--light-text);
+            }
+          }
+        }
+
+        .inner-list {
+          li {
+            .widget-list-item {
+              display: flex;
+              justify-content: space-between;
+              padding: 0.75rem 0;
+            }
+
+            .list-item-data {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              width: 100%;
+
+              .item-info {
+                max-width: 230px;
+
+                span {
+                  display: block;
+
+                  &.item-title {
+                    color: var(--title-color);
+                    font-size: 0.8rem;
+                    font-family: var(--font-alt);
+                    font-weight: 600;
+                  }
+
+                  &:nth-child(2) {
+                    font-family: var(--font);
+                    font-size: 0.75rem;
+                    color: var(--light-text);
+                  }
+                }
+              }
+
+              .item-action {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-#{$start-direction}: auto;
+
+                .button {
+                  height: 36px;
+                  font-size: 0.85rem;
+                }
+              }
+            }
+          }
+        }
+
+        .buttons {
+          .button {
+            flex-grow: 2;
+          }
+        }
+
+        &.is-dashed {
+          border-bottom: 2px dashed var(--wrap-border-color);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .invoice-wrapper {
+    .invoice-card {
+      padding: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px),
+  (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .invoice-wrapper {
+    .invoice-card {
+      .responsive-table {
+        display: block;
+
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead tr {
+          position: absolute;
+          top: -9999px;
+          #{$start-direction}: -9999px;
+        }
+
+        tr {
+          border: 1px solid var(--wrap-border-color);
+        }
+
+        td {
+          border: none;
+          border-bottom: 1px solid var(--wrap-border-color);
+          position: relative;
+          padding-#{$start-direction}: 50%;
+
+          &.has-text-centered {
+            text-align: left !important;
+          }
+        }
+
+        td:before {
+          position: absolute;
+          top: 12px;
+          #{$start-direction}: 6px;
+          width: 45%;
+          padding-#{$end-direction}: 10px;
+          white-space: nowrap;
+          text-transform: uppercase;
+          font-weight: 500 !important;
+          font-size: 0.75rem;
+          color: var(--light-text) !important;
+        }
+
+        td:nth-of-type(1):before {
+          content: "Product";
+        }
+
+        td:nth-of-type(2):before {
+          content: "Quantity";
+        }
+
+        td:nth-of-type(3):before {
+          content: "Price";
+        }
+
+        td:nth-of-type(4):before {
+          content: "Total";
+        }
+      }
+    }
+  }
+}

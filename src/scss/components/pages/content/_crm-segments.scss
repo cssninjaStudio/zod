@@ -1,0 +1,183 @@
+.boards-grid {
+  margin-top: 20px;
+
+  .boards-grid-item {
+    @include zodCard();
+
+    text-align: center;
+    position: relative;
+
+    .card-inner {
+      padding: 40px;
+
+      .board-title {
+        font-family: var(--font-alt);
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: var(--title-color);
+      }
+
+      .board-icon {
+        margin: 1rem 0;
+
+        img {
+          display: block;
+          height: 70px;
+          margin: 0 auto;
+          max-width: 70px;
+          background: var(--wrap-muted-color);
+          border-radius: 50%;
+        }
+      }
+
+      .board-summary {
+        font-family: var(--font-alt);
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--light-text);
+      }
+
+      .board-meta {
+        margin: 2rem 0 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .status-toggle {
+          margin: 0 auto;
+          width: 60px;
+          display: block;
+          position: relative;
+          cursor: pointer;
+          font-size: 22px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+
+            &:checked ~ .toggler {
+              border-color: var(--primary);
+
+              .off,
+              .on {
+                transform: translateX(100%) rotate(360deg);
+              }
+
+              .off {
+                opacity: 1;
+              }
+
+              .on {
+                opacity: 0;
+              }
+            }
+          }
+
+          .toggler {
+            position: relative;
+            display: block;
+            height: 20px;
+            width: 60px;
+            border: 1.6px solid var(--wrap-muted-color);
+            background: var(--wrap-muted-color);
+            border-radius: 100px;
+            transition: all 0.3s;
+
+            .off,
+            .on {
+              position: absolute;
+              top: -8px;
+              #{$start-direction}: -2px;
+              height: 32px;
+              width: 32px;
+              border-radius: 50%;
+              background: black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transform: translateX(0) rotate(0);
+              transition: all 0.3s ease;
+
+              .iconify {
+                color: var(--white);
+                font-size: 1rem;
+              }
+            }
+
+            .on {
+              background: var(--primary);
+              border-color: var(--primary);
+              opacity: 1;
+              z-index: 1;
+            }
+
+            .off {
+              background: var(--danger);
+              border-color: var(--danger);
+              opacity: 0;
+              z-index: 0;
+            }
+          }
+        }
+
+        .board-assignees {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+        }
+      }
+    }
+
+    .card-foot {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid var(--card-border-color);
+
+      .footer-block {
+        width: 50%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:first-child {
+          border-#{$end-direction}: 1px solid var(--card-border-color);
+        }
+
+        span {
+          display: block;
+
+          &:first-child {
+            font-size: 1.1rem;
+            font-family: var(--font-alt);
+            font-weight: 600;
+            color: var(--title-color);
+
+            &:before {
+              content: "$";
+            }
+          }
+
+          &:nth-child(2) {
+            font-size: 0.9rem;
+            font-family: var(--font);
+            color: var(--light-text);
+          }
+        }
+      }
+    }
+
+    .dropdown-wrap {
+      position: absolute;
+      top: 1rem;
+      #{$end-direction}: 1rem;
+      text-align: left;
+    }
+  }
+}

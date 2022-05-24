@@ -1,0 +1,45 @@
+.form-outer {
+  @include zodCard();
+
+  padding: 2rem;
+
+  .form-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .button {
+      min-height: 48px;
+    }
+  }
+
+  &.is-vertical {
+    padding: 3.5rem;
+  }
+
+  &.is-horizontal {
+    padding: 3.5rem;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .form-outer {
+    &.is-vertical {
+      padding: 1.75rem;
+    }
+  
+    &.is-horizontal {
+      padding: 1.75rem;
+    }
+
+    .form-buttons {
+  
+      .button {
+        &.is-full-mobile {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

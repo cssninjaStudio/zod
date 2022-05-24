@@ -1,0 +1,76 @@
+.project-grid {
+  .project-grid-item {
+    @include zodCard();
+
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow .3s;
+
+    .project-image {
+      position: relative;
+
+      img {
+        display: block;
+        width: 100%;
+        background-color: var(--wrap-bg-color);
+        border-radius: 0.65rem;
+      }
+
+      .tag {
+        position: absolute;
+        top: .5rem;
+        #{$end-direction}: .5rem;
+        height: 2.75em;
+        line-height: 2.75;
+        min-width: 75px;
+        text-align: center;
+        padding-#{$start-direction}: 1.5em;
+        padding-#{$end-direction}: 1.5em;
+        transform: translateY(.25rem);
+          opacity: 0;
+          transition: transform .3s, opacity .3s;
+      }
+    }
+
+    .project-body {
+      padding: .75rem 0;
+
+      p {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.8rem;
+        color: var(--light-text);
+      }
+    }
+
+    .project-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+
+      .project-progress {
+        flex-grow: 2;
+        max-width: 170px;
+
+        p {
+          color: var(--light-text);
+          font-size: .85rem;
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: var(--spread-shadow);
+
+      .project-image {
+        .tag {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}

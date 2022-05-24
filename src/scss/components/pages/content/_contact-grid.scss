@@ -1,0 +1,87 @@
+.contact-grid {
+  .contact-grid-item {
+    @include zodCard();
+
+    position: relative;
+    padding: 1.5rem 1rem;
+
+    .item-body {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      .contact {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+  
+        .meta {
+          p {
+            font-size: 0.8rem;
+            color: var(--light-text);
+          }
+
+          a {
+            display: block;
+            font-size: .8rem;
+            color: var(--primary);
+          }
+        }
+      }
+
+      .tag {
+        position: absolute;
+        top: 1rem;
+        #{$end-direction}: 1rem;
+        height: 2.75em;
+        line-height: 2.75;
+        font-size: .6rem;
+        min-width: 75px;
+        text-align: center;
+        padding-#{$start-direction}: 1.5em;
+        padding-#{$end-direction}: 1.5em;
+        transform: scale(.8);
+      }
+    }
+
+    .item-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .actions {
+        display: flex;
+        gap: .25rem;
+
+        .action {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 34px;
+          width: 34px;
+          min-width: 34px;
+          color: var(--light-text);
+          border-radius: 50%;
+          transition: background-color .3s, color .3s;
+
+          .iconify {
+            font-size: 1rem;
+          }
+
+          &:hover {
+            color: var(--secondary);
+            background: var(--wrap-muted-color);
+          }
+        }
+      }
+
+      .details {
+        .button {
+          height: 38px;
+          min-width: 90px;
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}

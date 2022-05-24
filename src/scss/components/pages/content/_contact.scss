@@ -1,0 +1,425 @@
+.contact-profile-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .contact-profile {
+    .profile-card {
+      @include zodCard();
+
+      padding: 2.5rem;
+
+      .inner {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contact-block {
+          width: 100%;
+          text-align: center;
+
+          .avatar-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid var(--wrap-muted-color);
+            margin: 0 auto 1rem;
+
+            img {
+              display: block;
+              height: 90px;
+              width: 90px;
+              border-radius: 50%;
+            }
+          }
+
+          .contact-meta {
+            line-height: 1.2;
+
+            .contact-name {
+              font-family: var(--font-alt);
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: var(--title-color);
+            }
+
+            .contact-company {
+              font-family: var(--font);
+              font-size: 1rem;
+              color: var(--light-text);
+            }
+          }
+
+          .stats-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.75rem;
+            font-family: var(--font);
+
+            .stat {
+              text-align: center;
+
+              span {
+                display: block;
+
+                &:first-child {
+                  text-transform: uppercase;
+                  font-weight: 500;
+                  font-size: 0.75rem;
+                  color: var(--light-text);
+                }
+
+                &:nth-child(2) {
+                  font-size: 1.5rem;
+                  color: var(--title-color);
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .info-card {
+      @include zodCard();
+
+      padding: 2.5rem;
+
+      .single-contact-tabs {
+        overflow: visible;
+
+        .tabs {
+          margin-bottom: 2.5rem;
+        }
+
+        ul {
+          margin: 0 !important;
+          border-bottom: none;
+
+          li {
+            margin: 0 !important;
+
+            a {
+              color: var(--placeholder);
+              border-bottom: 2px solid transparent !important;
+              margin-bottom: 0 !important;
+            }
+
+            &.is-active a {
+              border-color: var(--secondary) !important;
+              color: var(--secondary);
+              font-weight: 500;
+            }
+          }
+        }
+
+        .navtab-content {
+          .info-block {
+            display: flex;
+            gap: 0.75rem;
+
+            .iconify {
+              font-size: 1.5rem;
+            }
+
+            .info-label {
+              text-transform: uppercase;
+              font-family: var(--font);
+              font-size: 0.7rem;
+              font-weight: 500;
+              color: var(--light-text);
+            }
+
+            .info-content {
+              font-family: var(--font);
+              font-size: 0.9rem;
+              color: var(--title-color);
+            }
+
+            .is-prospect {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 0.5rem;
+              cursor: pointer;
+              font-weight: 400;
+              font-size: 0.8rem;
+              color: var(--light-text);
+              margin-top: 1.5rem;
+
+              span {
+                font-size: 0.9rem;
+                position: relative;
+                top: -3px;
+              }
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 1rem;
+            }
+          }
+
+          hr {
+            background: var(--card-border-color);
+          }
+
+          .lifetime-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .avatar {
+              img {
+                background: var(--wrap-muted-color);
+              }
+            }
+
+            .lifetime-won {
+              width: 40%;
+
+              span {
+                display: block;
+                font-family: var(--font);
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: var(--title-color);
+
+                &:before {
+                  content: "$";
+                }
+              }
+
+              .lifetime-label {
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-family: var(--font);
+                font-weight: 500;
+                color: var(--light-text);
+              }
+            }
+          }
+
+          .event-block {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid var(--wrap-border-color);
+            padding: 1rem 0;
+
+            .iconify {
+              font-size: 1.75rem;
+            }
+
+            .date-block {
+              text-align: center;
+              position: relative;
+              width: 42px;
+              line-height: 1;
+
+              span {
+                display: block;
+
+                &:first-child {
+                  color: var(--title-color);
+                  font-family: var(--font-alt);
+                  font-weight: 700;
+                  font-size: 1.25rem;
+                }
+
+                &:nth-child(2) {
+                  position: relative;
+                  text-transform: uppercase;
+                  color: var(--light-text);
+                  font-family: var(--font);
+                  font-size: 0.85rem;
+                }
+              }
+            }
+
+            .event-meta {
+              line-height: 1.2;
+
+              .event-name {
+                color: var(--title-color);
+                font-family: var(--font-alt);
+                font-size: 0.9rem;
+                font-weight: 600;
+              }
+
+              .meta {
+                display: flex;
+                align-items: center;
+                font-size: 0.85rem;
+
+                .meta-element,
+                span {
+                  font-family: var(--font);
+                  color: var(--medium-text);
+                  font-weight: 400;
+                }
+              }
+            }
+
+            .dropdown-wrap {
+              margin-#{$start-direction}: auto;
+            }
+          }
+
+          .call-block {
+            @include zodCard;
+            padding: 2.25rem;
+            margin-bottom: 1.5rem;
+
+            &.is-inner {
+              .fa,
+              .fas {
+                color: var(--secondary);
+              }
+            }
+
+            &.is-outer {
+              .fa,
+              .fas {
+                color: var(--warning);
+              }
+            }
+
+            .block-head {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              a {
+                display: flex;
+                align-items: center;
+                color: var(--secondary);
+
+                small {
+                  font-size: 1rem;
+                  font-weight: 500;
+                  margin: 0 10px;
+                }
+              }
+
+              .iconify {
+                font-size: 1.5rem;
+              }
+
+              .people {
+                display: flex;
+                align-items: center;
+              }
+            }
+
+            .block-container {
+              padding: 10px 0 16px 0;
+
+              .meta-group {
+                display: flex;
+                padding: 1rem 0;
+
+                .meta-block {
+                  margin-#{$end-direction}: 30px;
+                }
+              }
+
+              .meta-block {
+                margin-bottom: 10px;
+                font-family: var(--font);
+
+                .call-label {
+                  text-transform: uppercase;
+                  font-size: 0.75rem;
+                  font-weight: 700;
+                  color: var(--title-color);
+                }
+
+                .call-info {
+                  font-size: 0.9rem;
+                  color: var(--medium-text);
+                }
+              }
+            }
+
+            .block-footer {
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-profile-wrap {
+    padding: 0;
+
+    .contact-profile {
+      .info-card {
+        padding: 1.5rem;
+
+        .single-contact-tabs {
+          .navtab-content {
+            padding-#{$start-direction}: 0;
+            padding-#{$end-direction}: 0;
+
+            .call-block {
+              padding: 1.5rem;
+
+              .block-head {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .people {
+                  margin-top: 1rem;
+                }
+              }
+
+              .block-container {
+                .meta-group {
+                  flex-direction: column;
+                  align-items: flex-start;
+                }
+              }
+
+              .block-footer {
+
+                .buttons {
+                  width: 100%;
+                }
+
+                .button {
+                  flex-grow: 2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .contact-profile-wrap {
+    .contact-profile {
+      .profile-card {
+        max-width: 240px;
+        padding: 0;
+        margin: 0 auto;
+        background: none;
+        border: none;
+      }
+    }
+  }
+}

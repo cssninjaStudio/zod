@@ -1,0 +1,88 @@
+/* ==========================================================================
+Main wrapper
+========================================================================== */
+
+.zod-wrapper {
+  position: relative;
+  width: calc(100% - 280px);
+  margin-#{$start-direction}: 280px;
+  min-height: 100vh;
+  background: var(--dashboard-bg-color);
+  padding: 4rem 3rem 5rem 3rem;
+  transition: all 0.3s;
+  
+  &.is-expanded {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .wrapper-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    .dashboard-content {
+      padding: 16px 0 100px 0;
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        padding: 30px 0 20px 0;
+
+        > svg {
+          height: 22px;
+          width: 22px;
+          stroke: var(--light-text);
+          color: var(--light-text);
+          stroke-width: 1.4px;
+          margin-#{$end-direction}: 8px;
+        }
+
+        > h3 {
+          text-transform: uppercase;
+          font-family: var(--font-alt);
+          font-weight: 500;
+          font-size: 0.8rem;
+          color: var(--light-text);
+        }
+
+        .dropdown-wrap {
+          margin-#{$start-direction}: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .zod-wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .zod-wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .zod-wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .zod-wrapper {
+    width: calc(100% - 620px);
+    margin-right: 340px;
+
+    &.is-expanded {
+      width: calc(100% - 340px);
+      margin-right: 340px;
+    }
+  }
+}

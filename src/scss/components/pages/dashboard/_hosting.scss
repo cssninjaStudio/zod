@@ -1,0 +1,314 @@
+/* ==========================================================================
+Hosting Dashboard
+========================================================================== */
+
+.hosting-dashboard {
+  .header-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    background: var(--secondary-light-35);
+    border: 2px solid var(--secondary);
+    border-radius: 0.85rem;
+    margin-bottom: 2rem;
+
+    > img {
+      max-width: 210px;
+    }
+
+    .meta {
+      margin-#{$start-direction}: 1rem;
+
+      p {
+        color: var(--medium-text);
+      }
+    }
+
+    .header-close {
+      position: absolute;
+      top: 1rem;
+      #{$end-direction}: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      width: 36px;
+      background: none;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      margin: 0 0.5rem;
+
+      .iconify {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  .dashboard-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    > svg {
+      height: 40px;
+      color: var(--primary);
+      color: var(--secondary);
+    }
+
+    .meta {
+      margin-#{$start-direction}: 0.5rem;
+
+      p {
+        color: var(--light-text);
+      }
+    }
+
+    .action {
+      margin-#{$start-direction}: auto;
+    }
+  }
+
+  .dashboard-tabs {
+    .tab-content {
+      .tab-group {
+        .group-label {
+          font-family: var(--font);
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          color: var(--light-text);
+          margin-bottom: 1rem;
+        }
+
+        .resource-cards {
+          margin-bottom: 2rem;
+
+          .resource-card {
+            @include zodCard();
+
+            display: flex;
+            align-items: center;
+            padding: 1.75rem 1rem;
+
+            .dot {
+              height: 0.75rem;
+              width: 0.75rem;
+              min-width: 0.75rem;
+              border-radius: 50%;
+              background-color: var(--success);
+            }
+
+            .card-icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.5rem;
+              color: var(--primary);
+              margin: 0 1.5rem;
+            }
+
+            .meta {
+              p {
+                color: var(--light-text);
+              }
+            }
+
+            .address {
+              margin-#{$start-direction}: 3rem;
+              font-family: var(--font);
+              color: var(--medium-text);
+            }
+
+            .actions {
+              margin-#{$start-direction}: auto;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+
+              .card-icon {
+                font-size: 1.25rem;
+                margin-#{$end-direction}: 1rem;
+                margin-#{$start-direction}: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+
+        .creation-actions {
+          padding: 1rem 0;
+
+          .creation-action {
+            display: flex;
+            align-items: center;
+
+            .meta {
+              margin-#{$start-direction}: 0.5rem;
+        
+              p {
+                color: var(--light-text);
+              }
+            }
+          }
+        }
+
+        .activity-items {
+          .activity-item {
+            @include zodCard();
+
+            display: flex;
+            align-items: center;
+            padding: 1.25rem 1rem;
+
+            .card-icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 1.75rem;
+              color: var(--primary);
+              margin: 0 1.5rem;
+            }
+
+            .meta {
+              p {
+                color: var(--light-text);
+              }
+            }
+
+            .actions {
+              margin-#{$start-direction}: auto;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+
+              .card-icon {
+                font-size: 1.25rem;
+                margin-#{$end-direction}: 1rem;
+                margin-#{$start-direction}: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+              }
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .cta-card {
+    @include zodCard();
+
+    padding: 2rem;
+
+    > img {
+      max-width: 200px;
+      margin: 0 auto .5rem;
+    }
+
+    .cta-content {
+      text-align: center;
+
+      p {
+        color: var(--light-text);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .link-card {
+    @include zodCard();
+
+    padding: 2rem;
+
+    .link-group {
+      display: block;
+
+      .name {
+        font-size: .9rem;
+        color: var(--primary);
+      }
+
+      p {
+        color: var(--light-text);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.is-dark {
+  .hosting-dashboard {
+    .header-card {
+      background: var(--night-light-4);
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hosting-dashboard {
+    .header-card {
+      flex-direction: column;
+      text-align: center;
+
+      > img {
+        margin-bottom: 1rem;
+      }
+
+      .meta {
+        margin: 0;
+
+        .buttons {
+          justify-content: center;
+        }
+      }
+    }
+
+    .dashboard-title {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .meta {
+        margin: 0;
+        padding: 1rem 0;
+      }
+
+      .action {
+        margin: 0;
+      }
+    }
+
+    .dashboard-tabs .tab-content .tab-group .resource-cards .resource-card {
+      flex-direction: column;
+      text-align: center;
+
+      > .card-icon {
+        padding: 1rem 0;
+      }
+
+      .address {
+        margin: 0;
+        padding: 1rem 0;
+      }
+    }
+  }
+}

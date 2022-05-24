@@ -1,0 +1,286 @@
+---
+layout: default
+title: Dashboard
+---
+
+<div
+  x-data="initSupportDashboard()"
+  x-init="initAssignedTickets()"
+  class="support-dashboard"
+>
+  <div class="columns">
+    <div class="column is-8">
+      <div class="columns is-multiline b-columns-half-tablet-p">
+        <!--Card-->
+        <div class="column is-6">
+          <div class="support-box">
+            <h3 class="box-title has-text-centered">Waiting Time</h3>
+            <div class="chrono">
+              <div class="count">
+                <span>12</span>
+              </div>
+              <span id="supportPie" class="support-pie"></span>
+              <div id="mainCircle">
+                <div id="buttonOneBasis">
+                  <div id="buttonOne"></div>
+                </div>
+                <div id="buttonTwoBasis">
+                  <div id="buttonTwo"></div>
+                </div>
+              </div>
+            </div>
+            <div class="box-meta">
+              <p>My waiting time: 12 minutes</p>
+              <p>
+                The average wait time for the support team is about 26 minutes.
+              </p>
+              <a class="arrow-link rem-85">
+                <span>View Reports</span>
+                <i class="iconify" data-icon="feather:arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--Card-->
+        <div class="column is-6">
+          <div class="support-box">
+            <h3 class="box-title has-text-centered">Assigned</h3>
+            <div class="stacks">
+              <div class="left">
+                <div class="shape-left" data-step="0"></div>
+                <div class="shape-left" data-step="1"></div>
+                <div class="shape-left" data-step="2"></div>
+                <div class="shape-left" data-step="3"></div>
+                <div class="shape-left" data-step="4"></div>
+              </div>
+              <div class="right">
+                <div class="shape-right" data-step="0"></div>
+                <div class="shape-right" data-step="1"></div>
+                <div class="shape-right" data-step="2"></div>
+                <div class="shape-right" data-step="3"></div>
+                <div class="shape-right" data-step="4"></div>
+                <div class="shape-right" data-step="5"></div>
+                <div class="shape-right" data-step="6"></div>
+                <div class="shape-right" data-step="7"></div>
+                <div class="shape-right" data-step="8"></div>
+                <div class="shape-right" data-step="9"></div>
+                <div class="shape-right" data-step="10"></div>
+                <div class="shape-right" data-step="11"></div>
+                <div class="shape-right" data-step="12"></div>
+                <div class="shape-right" data-step="13"></div>
+                <div class="shape-right" data-step="14"></div>
+                <div class="shape-right" data-step="15"></div>
+                <div class="shape-right" data-step="16"></div>
+                <div class="shape-right" data-step="17"></div>
+                <div class="shape-right" data-step="18"></div>
+                <div class="shape-right" data-step="19"></div>
+                <div class="shape-right" data-step="20"></div>
+                <div class="shape-right" data-step="21"></div>
+                <div class="shape-right" data-step="22"></div>
+                <div class="shape-right" data-step="23"></div>
+                <div class="shape-right" data-step="24"></div>
+                <div class="shape-right" data-step="25"></div>
+                <div class="shape-right" data-step="26"></div>
+                <div class="shape-right" data-step="27"></div>
+                <div class="shape-right" data-step="28"></div>
+                <div class="shape-right" data-step="29"></div>
+                <div class="shape-right" data-step="30"></div>
+                <div class="shape-right" data-step="31"></div>
+                <div class="shape-right" data-step="32"></div>
+                <div class="shape-right" data-step="33"></div>
+                <div class="shape-right" data-step="34"></div>
+                <div class="shape-right" data-step="35"></div>
+                <div class="shape-right" data-step="36"></div>
+                <div class="shape-right" data-step="37"></div>
+                <div class="shape-right" data-step="38"></div>
+                <div class="shape-right" data-step="39"></div>
+                <div class="shape-right" data-step="40"></div>
+              </div>
+            </div>
+            <div class="box-meta">
+              <p>32 of 254 tickets assigned to me</p>
+              <p>
+                The average number of daily tickets assigned to you is around 21
+                / day.
+              </p>
+              <a class="arrow-link rem-85">
+                <span>View Reports</span>
+                <i class="iconify" data-icon="feather:arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--Card-->
+        <div class="column is-6">
+          <div class="support-box">
+            <h3 class="box-title has-text-centered">Escalation</h3>
+            <div class="box-image">
+              <img src="/img/icons/support-bubbles.svg" alt="Bubble icon" />
+            </div>
+
+            <div class="box-meta">
+              <p>0 of my tickets are escalated</p>
+              <p>
+                There is currently a total of 52 escalated tickets that have
+                been found.
+              </p>
+              <a class="arrow-link rem-85">
+                <span>View Reports</span>
+                <i class="iconify" data-icon="feather:arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--Card-->
+        <div class="column is-6">
+          <div class="flex-card support-box light-bordered">
+            <h3 class="box-title has-text-centered">Channels</h3>
+            <div class="channels">
+              <div class="channel-icon">
+                <i class="iconify" data-icon="mdi:email"></i>
+              </div>
+              <div class="channel-icon">
+                <i class="iconify" data-icon="fa6-solid:phone-flip"></i>
+              </div>
+              <div class="channel-icon">
+                <i class="iconify" data-icon="fa-brands:twitter"></i>
+              </div>
+              <div class="channel-icon">
+                <i class="iconify" data-icon="fa-brands:facebook-f"></i>
+              </div>
+            </div>
+            <div id="supportBar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-4">
+      <!--Card-->
+      <div class="team-card">
+        <h3 class="box-title">My Team</h3>
+
+        <div class="user-list">
+          <!--Item-->
+          <div class="user-list-item">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/21.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <h3 class="item-title">Elsa Walker</h3>
+              <p class="rem-80">Lvl 3 support</p>
+            </div>
+            <div class="action">
+              <!--dropdown-->
+              {{> support-team-dropdown}}
+            </div>
+          </div>
+          <!--Item-->
+          <div class="user-list-item">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/4.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <h3 class="item-title">Mike Delano</h3>
+              <p class="rem-80">Lvl 3 support</p>
+            </div>
+            <div class="action">
+              <!--dropdown-->
+              {{> support-team-dropdown}}
+            </div>
+          </div>
+          <!--Item-->
+          <div class="user-list-item">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/3.jpeg" alt="" />
+            </div>
+            <div class="meta">
+              <h3 class="item-title">Emily Cheng</h3>
+              <p class="rem-80">Lvl 2 support</p>
+            </div>
+            <div class="action">
+              <!--dropdown-->
+              {{> support-team-dropdown}}
+            </div>
+          </div>
+          <!--Item-->
+          <div class="user-list-item">
+            <div class="avatar is-fake is-xs is-green">
+              <span>C</span>
+            </div>
+            <div class="meta">
+              <h3 class="item-title">Craig Daniels</h3>
+              <p class="rem-80">Lvl 2 support</p>
+            </div>
+            <div class="action">
+              <!--dropdown-->
+              {{> support-team-dropdown}}
+            </div>
+          </div>
+          <!--Item-->
+          <div class="user-list-item">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/30.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <h3 class="item-title">Nataly Simonov</h3>
+              <p class="rem-80">Lvl 1 support</p>
+            </div>
+            <div class="action">
+              <!--dropdown-->
+              {{> support-team-dropdown}}
+            </div>
+          </div>
+          <!--Item-->
+          <div class="user-list-item">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/52.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <h3 class="item-title">Lucy Fieldman</h3>
+              <p class="rem-80">Lvl 1 support</p>
+            </div>
+            <div class="action">
+              <!--dropdown-->
+              {{> support-team-dropdown}}
+            </div>
+          </div>
+          <!--Item-->
+          <div class="user-list-item">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/57.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <h3 class="item-title">Ron Schwartz</h3>
+              <p class="rem-80">Lvl 1 support</p>
+            </div>
+            <div class="action">
+              <!--dropdown-->
+              {{> support-team-dropdown}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Card-->
+      <div class="link-card">
+        <h3 class="title is-6">Resources</h3>
+
+        <a class="link-group">
+          <h3 class="name">Documentation</h3>
+          <p class="rem-80">
+            Technical overviews, how-tos and tutorials, release notes and
+            support material.
+          </p>
+        </a>
+
+        <a class="link-group">
+          <h3 class="name">FAQs</h3>
+          <p class="rem-80">
+            DevOps and development guidelines to help you get started fast.
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

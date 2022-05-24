@@ -1,0 +1,332 @@
+/* ==========================================================================
+Support Dashboard
+========================================================================== */
+
+.support-dashboard {
+  .support-box {
+    @include zodCard();
+
+    padding: 1.5rem;
+
+    .box-title {
+      color: var(--title-color);
+      font-size: 1rem;
+      font-family: var(--font-alt);
+      font-weight: 600;
+    }
+
+    .box-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+
+      img {
+        max-width: 100px;
+      }
+    }
+
+    .channels {
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+
+      .channel-icon {
+        position: relative;
+        top: 1rem;
+        flex: 1 1 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 52px;
+
+        .iconify {
+          position: relative;
+          #{$start-direction}: .25rem;
+          opacity: .5;
+          font-size: 1rem;
+          color: var(--secondary);
+        }
+      }
+    }
+
+    #support-chart {
+      max-height: 200px;
+    }
+
+    .box-meta {
+      text-align: center;
+
+      p {
+        &:first-child {
+          color: var(--title-color);
+          font-size: .85rem;
+          font-family: var(--font-alt);
+          font-weight: 600;
+          margin-bottom: 0;
+        }
+
+        &:nth-child(2) {
+          font-size: .8rem;
+          font-family: var(--font);
+          color: var(--light-text);
+        }
+      }
+    }
+  }
+
+  .chrono {
+    position: relative;
+    min-height: 200px;
+
+    .count {
+      position: absolute;
+      top: 50%;
+      #{$start-direction}: 0;
+      #{$end-direction}: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90px;
+      width: 90px;
+      min-width: 90px;
+      margin: 0 auto;
+      transform: translateY(-50%);
+      z-index: 5;
+
+      span {
+        position: relative;
+        top: 0;
+        display: block;
+        font-size: 2.6rem;
+        font-weight: 600;
+        color: var(--white-smoke);
+        text-shadow: 1px 1px 16px rgba(150, 150, 150, 1);
+      }
+    }
+
+    .peity,
+    .support-pie {
+      display: block;
+      position: absolute;
+      top: 50%;
+      #{$start-direction}: 0;
+      #{$end-direction}: 0;
+      height: 90px;
+      width: 90px;
+      min-width: 90px;
+      margin: 0 auto;
+      transform: translateY(-50%);
+
+      .apexcharts-canvas {
+        top: 1px;
+        #{$start-direction}: -34px !important;
+      }
+    }
+
+    #mainCircle {
+      position: relative;
+      top: 40px;
+      margin: 0 auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: solid 12px var(--chrono-color);
+    }
+
+    #secondCircle {
+      position: relative;
+      top: 0;
+      #{$start-direction}: -12px;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background-color: #6eadea;
+    }
+
+    #thirdCircle {
+      position: relative;
+      top: -10px;
+      #{$start-direction}: -3px;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      border: solid 5px #f9f9f9;
+      background-color: #6eadea;
+    }
+
+    #buttonOneBasis {
+      position: absolute;
+      top: -22px;
+      #{$start-direction}: 41px;
+      width: 16px;
+      height: 7px;
+      background-color: var(--chrono-color);
+    }
+
+    #buttonOne {
+      position: absolute;
+      top: -12px;
+      #{$start-direction}: -6px;
+      width: 28px;
+      height: 10px;
+      background-color: var(--chrono-color);
+      border-top-#{$start-direction}-radius: 8px;
+      border-top-#{$end-direction}-radius: 8px;
+    }
+
+    #buttonTwoBasis {
+      position: absolute;
+      top: 0px;
+      #{$start-direction}: -9px;
+      width: 14px;
+      height: 7px;
+      background-color: var(--chrono-color);
+      transform: rotate(-48deg);
+    }
+
+    #buttonTwo {
+      position: absolute;
+      top: -10px;
+      #{$start-direction}: -4px;
+      width: 22px;
+      height: 8px;
+      background-color: var(--chrono-color);
+      border-top-#{$start-direction}-radius: 8px;
+      border-top-#{$end-direction}-radius: 8px;
+    }
+  }
+
+  .stacks {
+    height: 170px;
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 30px;
+
+    .left,
+    .right {
+      position: relative;
+      height: 100%;
+      width: 50%;
+      max-width: 100px;
+    }
+
+    .shape-#{$start-direction} {
+      position: absolute;
+      bottom: 0;
+      #{$end-direction}: 6px;
+      margin: 0 auto;
+      height: 10px;
+      width: 50px;
+      border-radius: 2px;
+      transform: skewX(-45deg);
+
+      &:nth-child(odd) {
+        background: var(--primary);
+      }
+
+      &:nth-child(even) {
+        background: var(--card-bg-color);
+      }
+    }
+
+    .shape-#{$end-direction} {
+      position: absolute;
+      bottom: 0;
+      #{$start-direction}: 6px;
+      margin: 0 auto;
+      height: 10px;
+      width: 50px;
+      border-radius: 2px;
+      transform: skewX(-45deg);
+
+      &:nth-child(odd) {
+        background: var(--stack-color);
+      }
+
+      &:nth-child(even) {
+        background: var(--card-bg-color);
+      }
+    }
+  }
+
+  .team-card {
+    @include zodCard();
+
+    padding: 1.5rem;
+
+    .box-title {
+      color: var(--title-color);
+      font-size: 1rem;
+      font-family: var(--font-alt);
+      font-weight: 600;
+    }
+
+    .user-list {
+      margin-top: 1.5rem;
+
+      .user-list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.25rem;
+
+        .meta {
+          margin-#{$start-direction}: 0.5rem;
+          line-height: 1.2;
+
+          .item-title {
+            font-family: var(--font-alt);
+            font-size: .85rem;
+            font-weight: 600;
+            color: var(--title-color);
+          }
+    
+          p {
+            color: var(--light-text);
+          }
+        }
+
+        .action {
+          margin-#{$start-direction}: auto;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .link-card {
+    @include zodCard();
+
+    padding: 2rem;
+
+    .link-group {
+      display: block;
+
+      .name {
+        font-size: .9rem;
+        color: var(--primary);
+      }
+
+      p {
+        color: var(--light-text);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}

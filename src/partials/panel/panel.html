@@ -1,0 +1,151 @@
+<div
+  class="panel"
+  :class="{
+  'is-active': $store.app.isPanelOpened,
+  '': !$store.app.isPanelOpened
+}"
+>
+  <div class="panel-header">
+    <h2 class="title is-narrow">My Schedule</h2>
+    <button
+      class="close-button mask mask-blob"
+      @click="$store.app.isPanelOpened = false"
+    >
+      <i class="iconify" data-icon="feather:arrow-right"></i>
+    </button>
+  </div>
+  <div class="panel-calendar">
+    {{> calendar}}
+    <div class="calendar-button">
+      <button class="button is-fullwidth">
+        <i class="iconify" data-icon="ion:calendar-outline"></i>
+        <span>Manage Schedule</span>
+      </button>
+    </div>
+  </div>
+  <div class="panel-conversations-header">
+    <h2 class="title is-narrow">My Team</h2>
+  </div>
+  <div class="panel-conversations-body has-slimscroll">
+    <!--Conversation-->
+    <a class="panel-conversation">
+      <img
+        class="avatar is-xxs is-reset mask mask-blob"
+        src="/img/avatars/42.jpg"
+        alt=""
+      />
+      <div class="meta">
+        <span>Helen Miller</span>
+        <span>Software Engineer</span>
+      </div>
+      <button class="mask mask-blob">
+        <i class="iconify" data-icon="feather:arrow-right"></i>
+      </button>
+    </a>
+    <!--Conversation-->
+    <a class="panel-conversation">
+      <img
+        class="avatar is-xxs is-reset mask mask-blob"
+        src="/img/avatars/19.jpg"
+        alt=""
+      />
+      <div class="meta">
+        <span>Gary Cole</span>
+        <span>Software Engineer</span>
+      </div>
+      <button class="mask mask-blob">
+        <i class="iconify" data-icon="feather:arrow-right"></i>
+      </button>
+    </a>
+    <!--Conversation-->
+    <a class="panel-conversation">
+      <img
+        class="avatar is-xxs is-reset mask mask-blob"
+        src="/img/avatars/29.jpg"
+        alt=""
+      />
+      <div class="meta">
+        <span>Christina Chu</span>
+        <span>Software Engineer</span>
+      </div>
+      <button class="mask mask-blob">
+        <i class="iconify" data-icon="feather:arrow-right"></i>
+      </button>
+    </a>
+    <!--Conversation-->
+    <a class="panel-conversation">
+      <img
+        class="avatar is-xxs is-reset mask mask-blob"
+        src="/img/avatars/21.jpg"
+        alt=""
+      />
+      <div class="meta">
+        <span>Emily Smith</span>
+        <span>Software Engineer</span>
+      </div>
+      <button class="mask mask-blob">
+        <i class="iconify" data-icon="feather:arrow-right"></i>
+      </button>
+    </a>
+    <!--Conversation-->
+    <a class="panel-conversation">
+      <img
+        class="avatar is-xxs is-reset mask mask-blob"
+        src="/img/avatars/52.jpg"
+        alt=""
+      />
+      <div class="meta">
+        <span>Ella Grunwald</span>
+        <span>Software Engineer</span>
+      </div>
+      <button class="mask mask-blob">
+        <i class="iconify" data-icon="feather:arrow-right"></i>
+      </button>
+    </a>
+    <!--Conversation-->
+    <a class="panel-conversation">
+      <img
+        class="avatar is-xxs is-reset mask mask-blob"
+        src="/img/avatars/17.jpg"
+        alt=""
+      />
+      <div class="meta">
+        <span>Natalya Simonova</span>
+        <span>Software Engineer</span>
+      </div>
+      <button class="mask mask-blob">
+        <i class="iconify" data-icon="feather:arrow-right"></i>
+      </button>
+    </a>
+    <!--Conversation-->
+    <a class="panel-conversation">
+      <img
+        class="avatar is-xxs is-reset mask mask-blob"
+        src="/img/avatars/25.jpg"
+        alt=""
+      />
+      <div class="meta">
+        <span>Anthony Miller</span>
+        <span>Software Engineer</span>
+      </div>
+      <button class="mask mask-blob">
+        <i class="iconify" data-icon="feather:arrow-right"></i>
+      </button>
+    </a>
+    <!--Conversation-->
+    <a class="panel-conversation">
+      <img
+        class="avatar is-xxs is-reset mask mask-blob"
+        src="/img/avatars/16.jpg"
+        alt=""
+      />
+      <div class="meta">
+        <span>Mark Rowland</span>
+        <span>Software Engineer</span>
+      </div>
+      <button class="mask mask-blob">
+        <i class="iconify" data-icon="feather:arrow-right"></i>
+      </button>
+    </a>
+  </div>
+</div>

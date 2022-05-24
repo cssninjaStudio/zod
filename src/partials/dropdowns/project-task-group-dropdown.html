@@ -1,0 +1,43 @@
+<div
+  x-data="initDropdown()"
+  @click.away="close()"
+  class="dropdown-wrap is-right"
+  :class="{
+    'is-active': open,
+    '': !open
+  }"
+>
+  <button @click="toggle()" class="dropdown-button">
+    <i class="iconify" data-icon="feather:more-horizontal"></i>
+  </button>
+  <div class="drop-menu">
+    <div class="menu-inner">
+      <div class="menu-header">
+        <h3>Actions</h3>
+      </div>
+      <div class="options-items">
+        <a class="options-item">
+            <i class="iconify" data-icon="ph:pencil-line-duotone"></i>
+          <div class="option-content">
+            <span>Edit</span>
+            <span>Change group name</span>
+          </div>
+        </a>
+        <a class="options-item">
+            <i class="iconify" data-icon="ph:lock-simple-duotone"></i>
+          <div class="option-content">
+            <span>Lock</span>
+            <span>Lock this group</span>
+          </div>
+        </a>
+        <a class="options-item">
+            <i class="iconify" data-icon="ph:circles-three-plus-duotone"></i>
+          <div class="option-content">
+            <span>New Task</span>
+            <span>Add a group task</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

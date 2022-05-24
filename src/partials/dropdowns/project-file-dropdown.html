@@ -1,0 +1,43 @@
+<div
+  x-data="initDropdown()"
+  @click.away="close()"
+  class="dropdown-wrap is-right"
+  :class="{
+    'is-active': open,
+    '': !open
+  }"
+>
+  <button @click="toggle()" class="dropdown-button">
+    <i class="iconify" data-icon="feather:more-horizontal"></i>
+  </button>
+  <div class="drop-menu">
+    <div class="menu-inner">
+      <div class="menu-header">
+        <h3>Actions</h3>
+      </div>
+      <div class="options-items">
+        <a class="options-item">
+            <i class="iconify" data-icon="ph:cloud-arrow-down-duotone"></i>
+          <div class="option-content">
+            <span>Download</span>
+            <span>Download this file</span>
+          </div>
+        </a>
+        <a class="options-item">
+            <i class="iconify" data-icon="ph:cloud-arrow-up-duotone"></i>
+          <div class="option-content">
+            <span>Upload</span>
+            <span>Upload new version</span>
+          </div>
+        </a>
+        <a class="options-item">
+            <i class="iconify" data-icon="ph:circles-three-plus-duotone"></i>
+          <div class="option-content">
+            <span>Share</span>
+            <span>Share with other people</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

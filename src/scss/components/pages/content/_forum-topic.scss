@@ -1,0 +1,313 @@
+/* ==========================================================================
+5. Topic
+========================================================================== */
+
+.topic-wrapper {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+
+  .topic-stats {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+
+    .stat-block {
+      display: flex;
+      align-items: center;
+      margin-#{$end-direction}: 40px;
+
+      .stat-meta {
+        margin-#{$start-direction}: 0.5rem;
+        line-height: 1.2;
+
+        span {
+          display: block;
+          font-size: 0.9rem;
+
+          &:first-child {
+            position: relative;
+            font-weight: 500;
+            color: var(--title-color);
+          }
+
+          &:nth-child(2) {
+            color: var(--light-text);
+          }
+        }
+      }
+    }
+  }
+}
+
+.full-topic {
+  width: 100%;
+  border: 1px solid var(--wrap-border-color-heavy);
+  background: var(--wrap-bg-color-heavy);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+
+  .post {
+    display: flex;
+    align-items: stretch;
+    padding: 20px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--card-border-color);
+    }
+
+    .post-meta {
+      .post-owner {
+        position: relative;
+      }
+    }
+
+    .post-content {
+      margin-#{$start-direction}: 1.25rem;
+      width: 100%;
+
+      iframe {
+        max-height: 160px;
+      }
+
+      .top-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .name-wrap {
+          .name {
+            font-family: var(--font-alt);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--title-color);
+
+            &:hover {
+              color: var(--secondary);
+            }
+          }
+
+          span {
+            display: block;
+            font-family: var(--font);
+            font-size: 0.8rem;
+            color: var(--light-text);
+          }
+        }
+
+        .top-actions {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          > span {
+            color: var(--light-text);
+          }
+
+          .dropdown-wrap {
+            margin-#{$start-direction}: 0.25rem;
+          }
+
+          .top-action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 34px;
+            width: 34px;
+            min-width: 34px;
+            border-radius: 50%;
+            border: 1px solid var(--wrap-border-color);
+            background: var(--wrap-bg-color);
+            font-family: var(--font);
+            margin-#{$start-direction}: 0.25rem;
+            transition: all 0.3s;
+
+            &.is-like {
+              &:hover,
+              &.is-active {
+                border-color: var(--danger);
+                background: var(--danger);
+
+                .iconify {
+                  color: var(--white-smoke);
+                }
+              }
+            }
+
+            &.is-secondary {
+              &:hover,
+              &.is-active {
+                border-color: var(--secondary);
+                background: var(--secondary);
+
+                .iconify {
+                  color: var(--white-smoke);
+                }
+              }
+            }
+
+            .iconify {
+              font-size: 1rem;
+              color: var(--title-color);
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+
+      .post-body {
+        margin: 1.25rem 0;
+        max-width: 800px;
+        font-family: var(--font);
+
+        p,
+        ul {
+          font-size: 0.95rem;
+          color: var(--medium-text) !important;
+        }
+
+        a {
+          color: var(--primary);
+        }
+
+        blockquote {
+          max-width: 600px;
+          background-color: var(--wrap-bg-color);
+          color: var(--light-text);
+          border-color: var(--secondary);
+
+          .quote-title {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--title-color);
+
+            .avatar {
+              margin-#{$end-direction}: 0.25rem;
+            }
+          }
+        }
+      }
+
+      .edited-text {
+        color: var(--light-text);
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+6. Reply box
+========================================================================== */
+
+.reply-box {
+  position: fixed;
+  bottom: 0;
+  #{$start-direction}: 0;
+  width: calc(100% - 320px);
+  margin-#{$start-direction}: 320px;
+  height: auto;
+  padding: 20px;
+  min-height: 300px;
+  border: 1px solid var(--card-border-color);
+  background: var(--card-bg-color);
+  transition: all 0.3s;
+  transform: translateY(100%);
+
+  &.is-expanded {
+    width: calc(100% - 80px);
+    margin-#{$start-direction}: 80px;
+  }
+
+  &.is-active {
+    transform: translateY(0);
+  }
+
+  .box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .reply-form {
+      .button-wrap {
+        padding: 1rem 0;
+
+        .button {
+          min-width: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  .topic-wrapper {
+    .topic-stats {
+      .stat-block:not(:first-child):not(:nth-child(2)) {
+        display: none;
+      }
+    }
+  }
+
+  .full-topic {
+    .post {
+      
+      .post-meta {
+        flex-direction: column;
+
+        .post-owner {
+          display: none;
+        }
+      }
+
+      .post-content {
+        margin: 0;
+
+        .top-wrap {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .name-wrap {
+            margin-bottom: 1rem;
+          }
+
+          .top-actions {
+            width: 100%;
+            justify-content: flex-start;
+
+            .dropdown-wrap {
+              margin-#{$start-direction}: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .reply-box {
+    width: 100% !important;
+    margin-#{$start-direction}: 0 !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .topic-wrapper {
+    .topic-stats {
+      .stat-block:not(:first-child):not(:nth-child(2)) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1299px) and (orientation: landscape) {
+  .reply-box {
+    width: calc(100% - 280px);
+    margin-#{$start-direction}: 280px;
+  }
+}

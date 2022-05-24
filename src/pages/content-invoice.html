@@ -1,0 +1,321 @@
+---
+layout: default
+title: Invoice
+---
+
+<div class="invoice-wrapper">
+  <!--Toolbar-->
+  <div class="toolbar is-spaced-bottom is-responsive">
+    <div class="toolbar-start">
+      <h2 class="title is-4 is-narrow">Invoice</h2>
+    </div>
+    <div class="toolbar-end">
+      <div class="under-links">
+        <a href="#" class="under-link">
+          <i class="iconify" data-icon="feather:phone"></i>
+          <span>Help</span>
+        </a>
+        <a href="#" class="under-link">
+          <i class="iconify" data-icon="feather:printer"></i>
+          <span>Print</span>
+        </a>
+        <a href="#" class="under-link">
+          <i class="iconify" data-icon="feather:flag"></i>
+          <span>Report</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <!--Card-->
+    <div class="column is-8">
+      <div class="invoice-card">
+        <div class="columns is-flex-mobile">
+          <!-- Invoice Brand -->
+          <div class="column is-7">
+            <img
+              class="logo"
+              src="/img/logo/zod-text-primary.svg"
+              alt="Invoice logo"
+            />
+          </div>
+          <!-- Invoice Meta -->
+          <div class="column is-5">
+            <p class="invoice-meta has-text-right">
+              <span>
+                Invoice N°
+                <small>INV-832</small>
+              </span>
+              <br />
+              <span>
+                Order N°
+                <small>6-D820</small>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="columns">
+          <!-- Supplier Info -->
+          <div class="column is-7">
+            <p class="seller">
+              <span>CssNinja Inc.</span>
+              <br />
+              23, Raccoon City
+              <br />
+              45345 OR, USA
+            </p>
+            <br />
+            <!-- Invoice date -->
+            <p class="invoice-meta has-text-left">
+              <span>Issued on : <small class="date">mar 23 2018</small></span>
+            </p>
+          </div>
+          <!-- Customer Info -->
+          <div class="column is-5">
+            <p class="buyer has-text-right">
+              <span>Anthony Miller</span><br />
+              anthonymiller@gmail.com<br />
+              78, Lost Manor Road<br />
+              78659 CA, USA
+            </p>
+          </div>
+        </div>
+        <br />
+        <br />
+        <!-- Rows -->
+        <div class="columns">
+          <div class="column">
+            <!-- Products -->
+            <table class="table table-striped responsive-table">
+              <!-- Header -->
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th class="has-text-centered">Quantity</th>
+                  <th>Price</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Row -->
+                <tr>
+                  <td>
+                    <span class="product">Shipping</span>
+                    <br />
+                    <span class="sku">Drone Delivery</span>
+                  </td>
+                  <td class="has-text-centered">
+                    <span class="quantity">1</span>
+                  </td>
+                  <td class="text-right">
+                    <span class="unit-price">35,00</span>
+                  </td>
+                  <td class="text-right">
+                    <span class="total-price">35,00</span>
+                  </td>
+                </tr>
+                <!-- Row -->
+                <tr>
+                  <td>
+                    <span class="product">Graphical pen</span>
+                    <br />
+                    <span class="sku">SKU-P456</span>
+                  </td>
+                  <td class="has-text-centered">
+                    <span class="quantity">1</span>
+                  </td>
+                  <td class="text-right">
+                    <span class="unit-price">80,00</span>
+                  </td>
+                  <td class="text-right">
+                    <span class="total-price">80,00</span>
+                  </td>
+                </tr>
+                <!-- Row -->
+                <tr>
+                  <td>
+                    <span class="product">Optical mouse</span>
+                    <br />
+                    <span class="sku">SKU-P89265</span>
+                  </td>
+                  <td class="has-text-centered">
+                    <span class="quantity">1</span>
+                  </td>
+                  <td class="text-right">
+                    <span class="unit-price">72,00</span>
+                  </td>
+                  <td class="text-right">
+                    <span class="total-price">72,00</span>
+                  </td>
+                </tr>
+                <!-- Row -->
+                <tr>
+                  <td>
+                    <span class="product">Nomad keyboard</span>
+                    <br />
+                    <span class="sku">SKU-P2648</span>
+                  </td>
+                  <td class="has-text-centered">
+                    <span class="quantity">1</span>
+                  </td>
+                  <td class="text-right">
+                    <span class="unit-price">80,00</span>
+                  </td>
+                  <td class="text-right">
+                    <span class="total-price">80,00</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-7"></div>
+          <!-- Total & Subtotal -->
+          <div class="column is-5">
+            <table class="table table-sm sub-table text-right">
+              <tr>
+                <td><span class="subtotal">Subtotal</span></td>
+                <td class="text-right">
+                  <span class="subtotal-value">267,00</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="vat">VAT (20%)</span></td>
+                <td class="text-right"><span class="vat-value">53,40</span></td>
+              </tr>
+              <tr>
+                <td><span class="total">Total</span></td>
+                <td class="text-right">
+                  <span class="total-value">320,40</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <br />
+        <!-- Bank Account Info -->
+        <p class="bottom-page has-text-right">
+          <span class="company">CssNinja Inc.</span> <br />
+          <span class="id">ID° ER-T-5564OR</span><br />
+          <span class="url">https://cssninja.io</span><br />
+          <span class="code">IBAN DR74 4568 3498 2849</span><br />
+          <span class="code">SWIFT CEMEACM</span>
+        </p>
+      </div>
+    </div>
+    <!--Invoice info-->
+    <div class="column is-4">
+      <div class="invoice-info">
+        <div class="invoice-info-card">
+          <div class="info-card-section is-dashed">
+            <!--Company-->
+            <div class="company">
+              <div class="avatar is-md">
+                <img src="/img/logo/companies/airbnb.svg" alt="company logo" />
+              </div>
+              <div class="flex-meta">
+                <h3 class="title is-6 is-narrow">Airbnb</h3>
+                <p class="rem-80">Issued 3 months ago</p>
+              </div>
+              <div class="flex-end">
+                {{> invoice-actions-dropdown}}
+              </div>
+            </div>
+          </div>
+          <div class="info-card-section is-dashed">
+            <h4 class="section-heading">Created by</h4>
+
+            <ul class="inner-list">
+              <li>
+                <div class="widget-list-item">
+                  <div class="list-item-data">
+                    <div class="avatar is-xs">
+                      <img src="/img/avatars/25.jpg" alt="user photo" />
+                    </div>
+                    <div class="item-info">
+                      <span class="item-title">Anthony Miller</span>
+                      <span>1 month ago</span>
+                    </div>
+                    <div class="item-action">
+                      <a class="text-light">
+                        <i class="iconify" data-icon="feather:arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="info-card-section is-dashed">
+            <h4 class="section-heading">Reviewed by</h4>
+
+            <ul class="inner-list">
+              <li>
+                <div class="widget-list-item">
+                  <div class="list-item-data">
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/6.jpg" alt="user photo" />
+                    </div>
+                    <div class="item-info">
+                      <span class="item-title">Andrew Higgins</span>
+                      <span>3 days ago</span>
+                    </div>
+                    <div class="item-action">
+                      <a class="text-light">
+                        <i class="iconify" data-icon="feather:arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="widget-list-item">
+                  <div class="list-item-data">
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/42.jpg" alt="user photo" />
+                    </div>
+                    <div class="item-info">
+                      <span class="item-title">Helen Miller</span>
+                      <span>1 week ago</span>
+                    </div>
+                    <div class="item-action">
+                      <a class="text-light">
+                        <i class="iconify" data-icon="feather:arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="widget-list-item">
+                  <div class="list-item-data">
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/19.jpg" alt="user photo" />
+                    </div>
+                    <div class="item-info">
+                      <span class="item-title">Josh Stevens</span>
+                      <span>2 weeks ago</span>
+                    </div>
+                    <div class="item-action">
+                      <a class="text-light">
+                        <i class="iconify" data-icon="feather:arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="info-card-section">
+            <div class="buttons is-centered">
+              <a class="button is-primary raised">Edit</a>
+              <a class="button is-solid">Share</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

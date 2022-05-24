@@ -1,0 +1,208 @@
+.project-list {
+  .project-list-item {
+    @include zodCard();
+
+    padding: 0.875rem 2rem 0.875rem 0.875rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+
+    .project {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .project-image {
+        img {
+          display: block;
+          width: 100%;
+          max-width: 110px;
+          background-color: var(--wrap-bg-color);
+          border-radius: 0.65rem;
+        }
+      }
+
+      .meta {
+        max-width: 160px;
+
+        p {
+          font-size: 0.8rem;
+          color: var(--light-text);
+        }
+      }
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+      margin-#{$start-direction}: auto;
+
+      .status {
+        padding: 0 2rem;
+
+        .tag {
+          height: 2.75em;
+          line-height: 2.75;
+          min-width: 84px;
+          text-align: center;
+          padding-#{$start-direction}: 1.5em;
+          padding-#{$end-direction}: 1.5em;
+        }
+      }
+
+      .amount {
+        margin-#{$end-direction}: 2rem;
+
+        span {
+          display: block;
+          line-height: 1.3;
+
+          &:first-child {
+            text-transform: uppercase;
+            font-family: var(--font);
+            font-size: 0.7rem;
+            color: var(--light-text);
+          }
+
+          &:nth-child(2) {
+            font-family: var(--font);
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: var(--title-color);
+          }
+        }
+      }
+
+      .users {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-#{$end-direction}: 2rem;
+        min-width: 164px;
+
+        .meta {
+          margin-#{$start-direction}: 0.75rem;
+
+          span {
+            display: block;
+            line-height: 1.3;
+
+            &:first-child {
+              font-family: var(--font-alt);
+              font-size: 0.9rem;
+              font-weight: 600;
+              color: var(--title-color);
+            }
+
+            &:nth-child(2) {
+              font-family: var(--font);
+              font-size: 0.9rem;
+              color: var(--light-text);
+            }
+          }
+        }
+      }
+
+      .button-combo {
+        display: flex;
+
+        .button {
+          display: flex;
+          min-width: 80px;
+
+          &:first-child {
+            border-top-#{$end-direction}-radius: 0;
+            border-bottom-#{$end-direction}-radius: 0;
+          }
+
+          &:nth-child(2) {
+            border-top-#{$start-direction}-radius: 0;
+            border-bottom-#{$start-direction}-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .project-list {
+    .project-list-item {
+      position: relative;
+      flex-direction: column;
+      padding: 0.875rem;
+
+      .project {
+        flex-direction: column;
+        text-align: center;
+
+        .project-image {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .users {
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5rem 0 !important;
+      }
+
+      .details {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        .amount {
+          margin: 1rem 0 !important;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+
+    .project-list-item {
+      position: relative;
+      flex-direction: column;
+      width: calc(50% - 1rem);
+      margin: 0.5rem;
+      padding: 1rem;
+
+      .project {
+        flex-direction: column;
+        text-align: center;
+
+        .project-image {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+
+      .users {
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5rem 0 !important;
+      }
+
+      .details {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        .amount {
+          margin: 1rem 0 !important;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

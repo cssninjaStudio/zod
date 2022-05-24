@@ -1,0 +1,87 @@
+.ecommerce-dashboard {
+  .dashboard-tiles {
+    .dashboard-tile {
+      @include zodCard();
+
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+
+      .tile-content {
+        .tile-label {
+          text-transform: uppercase;
+          font-size: 0.75rem;
+          font-weight: 500;
+          color: var(--medium-text);
+        }
+
+        .tile-value {
+          font-weight: 700;
+          font-size: 1.5rem;
+          color: var(--title-color);
+        }
+
+        .tile-footer {
+          @include flexMediaAligned();
+
+          padding-top: 0.5rem;
+        }
+      }
+
+      .tile-bar {
+        position: relative;
+        min-height: 100px;
+        width: 8px;
+        background: var(--wrap-muted-color);
+        border-radius: 50rem;
+
+        .animated-bar {
+          position: absolute;
+          bottom: 0;
+          #{$end-direction}: 0;
+          width: 100%;
+          height: 0;
+          background: var(--primary);
+          border-radius: 50rem;
+          z-index: 1;
+          transition: all 0.5s ease-in-out;
+
+          &.is-primary {
+            background: var(--primary);
+          }
+
+          &.is-success {
+            background: var(--success);
+          }
+
+          &.is-secondary {
+            background: var(--secondary);
+          }
+
+          &.is-yellow {
+            background: var(--yellow);
+          }
+
+          &.is-purple {
+            background: var(--purple);
+          }
+        }
+      }
+    }
+  }
+
+  .dashboard-charts {
+    .dashboard-chart {
+      @include zodCard();
+
+      padding: 2rem;
+
+      .chart-footer {
+        @include flexMediaAligned();
+
+        margin-top: 1rem;
+      }
+    }
+  }
+}

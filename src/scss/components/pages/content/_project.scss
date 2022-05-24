@@ -1,0 +1,439 @@
+.projects-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  .project-header-wrap {
+    display: flex;
+    align-items: center;
+
+    .project-title {
+      font-size: 1.75rem;
+      color: var(--title-color);
+      line-height: 1;
+      padding: 0 6px;
+      font-family: var(--font-alt);
+      font-weight: 700;
+    }
+
+    .project-tagline {
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--medium-text);
+      margin-bottom: 16px;
+      padding: 0 6px;
+    }
+
+    .task-count {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-#{$start-direction}: auto;
+      margin-#{$end-direction}: 1rem;
+
+      span {
+        display: block;
+        padding: 0 5px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--light-text);
+      }
+
+      .iconify {
+        font-size: 1.5rem;
+        color: var(--secondary);
+      }
+    }
+
+    .project-members-avatars {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1.25rem !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--wrap-muted-color);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  .iconify {
+    color: var(--light-text);
+    font-size: 18px;
+    transition: inherit;
+  }
+
+  &:hover {
+    background: var(--secondary);
+
+    .iconify {
+      color: var(--white);
+    }
+  }
+}
+
+.projects-list-wrapper {
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.75rem;
+
+    .list-title {
+      display: inherit;
+      align-items: inherit;
+
+      span {
+        font-family: var(--font-alt);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--title-color);
+        display: block;
+      }
+    }
+
+    .list-filter {
+      min-width: 250px;
+    }
+  }
+}
+
+.tasks-wrapper {
+  padding: 1rem;
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 0.65rem;
+  margin-bottom: 1.5rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h4 {
+      font-family: var(--font-alt);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--title-color);
+    }
+
+    span {
+      display: block;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  .task-card {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 0.85rem;
+    margin-bottom: 1.25rem;
+    background: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    overflow: visible;
+    transition: box-shadow 0.3s;
+
+    .card-progress {
+      position: absolute;
+      top: 0;
+      #{$start-direction}: 0;
+      height: 4px;
+      width: 0;
+      min-width: 0;
+      background: var(--secondary);
+      transition: all 0.5s;
+    }
+
+    .card-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .task-meta {
+        line-height: 1.2;
+
+        span {
+          display: block;
+        }
+
+        .task-title {
+          font-family: var(--font-alt);
+          font-size: 1rem;
+          font-weight: 500;
+          color: var(--title-color);
+        }
+
+        .task-due-date {
+          font-size: 0.9rem;
+          font-family: var(--font);
+          color: var(--light-text);
+        }
+      }
+
+      .task-info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .task-progress {
+          display: flex;
+          min-width: 110px;
+          margin-#{$end-direction}: 1.5rem;
+        }
+
+        .task-members {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          min-width: 150px;
+        }
+
+        .subtasks-count {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 0 2rem;
+
+          span {
+            display: block;
+            padding: 0 0.25rem;
+            font-size: 0.95rem;
+            font-family: var(--font);
+            color: var(--light-text);
+          }
+
+          .iconify {
+            font-size: 22px;
+            color: var(--light-text);
+          }
+        }
+
+        .more-drop {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .button {
+            .material-icons {
+              color: var(--light-text);
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      box-shadow: var(--light-box-shadow);
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+/* ==========================================================================
+6. Files and Activity
+========================================================================== */
+
+.project-files-wrapper,
+.project-activity-wrapper {
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 6px;
+
+  .file-item,
+  .activity-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    margin-top: 0 !important;
+    border-color: var(--card-border-color);
+
+    .image {
+      position: relative;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .file-action {
+        position: absolute;
+        #{$end-direction}: -0.4rem;
+        bottom: -0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        border: 3px solid var(--card-bg-color);
+        background: var(--wrap-muted-color);
+
+        .iconify {
+          font-size: 1rem;
+          color: var(--title-color);
+        }
+      }
+    }
+
+    .meta {
+      span,
+      a {
+        display: block;
+      }
+
+      a {
+        font-family: var(--font-alt);
+        color: var(--title-color);
+        font-size: 1rem;
+        font-weight: 600;
+
+        &:hover {
+          color: var(--secondary);
+        }
+
+        &.is-activity {
+          font-size: 1rem;
+        }
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        font-family: var(--font);
+        color: var(--light-text);
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+7. Media Queries
+========================================================================== */
+
+@media (max-width: 767px) {
+  .projects-wrapper {
+    .project-header-wrap {
+      flex-direction: column;
+      text-align: center;
+
+      .project-members-avatars {
+        margin-bottom: 2rem;
+      }
+
+      .task-count {
+        margin-#{$start-direction}: auto;
+        margin-#{$end-direction}: auto;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .projects-list-wrapper {
+    .list-header {
+      flex-direction: column;
+
+      .list-filter {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .tasks-wrapper {
+    .task-card {
+      padding-top: 3.5rem;
+
+      .task-meta {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .card-inner {
+        flex-direction: column;
+
+        .task-info {
+          flex-direction: column;
+
+          .task-progress {
+            margin: 1rem 0;
+          }
+
+          .task-members {
+            justify-content: center;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .more-drop {
+        position: absolute;
+        top: 1rem;
+        #{$end-direction}: 1rem;
+      }
+    }
+  }
+
+  .activity-item {
+    flex-direction: column;
+
+    .meta {
+      text-align: center;
+      margin: 10px 0;
+
+      a,
+      span {
+        display: inline-block !important;
+      }
+    }
+
+    .media-right {
+      margin-#{$start-direction}: 0;
+    }
+  }
+
+  .profile-heading {
+    h2,
+    h4 {
+      text-align: left;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .projects-wrapper {
+    .project-header-wrap {
+      flex-direction: column;
+      text-align: center;
+
+      .task-count {
+        margin-#{$start-direction}: auto;
+        margin-#{$end-direction}: auto;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .tasks-wrapper {
+    .task-card {
+      .card-inner {
+        .task-info {
+          .task-progress {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
