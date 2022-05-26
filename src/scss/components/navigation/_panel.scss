@@ -1,13 +1,13 @@
 .panel {
   position: fixed;
   top: 0;
-  right: 0;
+  #{$end-direction}: 0;
   width: 340px;
   height: 100%;
   background: var(--sidebar-default-bg-color);
-  border-left: 1px solid var(--sidebar-default-border-color);
+  border-#{$start-direction}: 1px solid var(--sidebar-default-border-color);
   transition: all 0.3s;
-  transform: translateX(100%);
+  transform: translateX(calc(100% * #{$transform-direction}));
   z-index: 11;
 
   &.is-active {
@@ -15,7 +15,7 @@
   }
 
   &.is-pushed {
-    transform: translateX(100%);
+    transform: translateX(calc(100% * #{$transform-direction}));
   }
 
   .panel-header {
@@ -62,7 +62,7 @@
         min-height: 48px;
 
         span {
-          margin-left: 0.25rem;
+          margin-#{$start-direction}: 0.25rem;
         }
       }
     }
@@ -128,7 +128,7 @@
         background: var(--wrap-bg-color);
         padding: 0;
         border: 0;
-        margin-left: auto;
+        margin-#{$start-direction}: auto;
 
         .iconify {
           color: var(--medium-text);
@@ -169,6 +169,23 @@
   }
 }
 
+//RTL adjustment
+[dir="rtl"] .panel {
+  .panel-header {
+    .close-button {
+      transform: rotate(180deg);
+    }
+  }
+
+  .panel-conversations-body {
+    .panel-conversation {
+      button {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1600px) {
   .panel {
     transform: translateX(0);
@@ -181,7 +198,7 @@
     }
 
     &.is-pushed {
-      transform: translateX(250px) !important;
+      transform: translateX(calc(250px * #{$transform-direction})) !important;
     }
   }
 

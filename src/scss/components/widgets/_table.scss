@@ -88,7 +88,7 @@
           position: absolute;
           top: 50%;
           #{$start-direction}: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(calc(-50% * #{$transform-direction}), -50%);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -100,7 +100,7 @@
           span {
             position: relative;
             top: -2px;
-            #{$end-direction}: -2px;
+            #{$end-direction}: calc(-2px * #{$transform-direction});
             font-family: var(--font);
             font-weight: 700;
             color: var(--title-color);

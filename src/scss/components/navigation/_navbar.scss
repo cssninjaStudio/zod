@@ -7,9 +7,9 @@ Navbar
 .nav-wrapper {
   position: fixed;
   top: 0;
-  left: 0;
+  #{$start-direction}: 0;
   width: calc(100% - 280px);
-  margin-left: 280px;
+  margin-#{$start-direction}: 280px;
   z-index: 10;
   transition: all 0.3s;
 
@@ -140,7 +140,7 @@ Navbar
 
   &.is-expanded {
     width: 100%;
-    margin-left: 0;
+    margin-#{$start-direction}: 0;
   }
 
   &.is-active {
@@ -185,6 +185,7 @@ Search Results
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 2rem;
 
     .placeholder-content {
       img {
@@ -310,7 +311,7 @@ Search Results
     .dashboard-nav {
       .nav-start {
         .field {
-          margin-left: 1rem;
+          margin-#{$start-direction}: 1rem;
         }
       }
 
@@ -351,7 +352,7 @@ Search Results
 
       .nav-start {
         .field {
-          margin-left: 1rem;
+          margin-#{$start-direction}: 1rem;
         }
       }
 
@@ -367,11 +368,11 @@ Search Results
 @media only screen and (min-width: 1600px) {
   .nav-wrapper {
     width: calc(100% - 620px);
-    margin-right: 340px;
+    margin-#{$end-direction}: 340px;
 
     &.is-expanded {
       width: calc(100% - 340px);
-      margin-right: 340px;
+      margin-#{$end-direction}: 340px;
     }
   }
 }

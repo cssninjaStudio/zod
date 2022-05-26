@@ -201,7 +201,7 @@ Custom Dropdown
     }
   }
 
-  &.is-#{$end-direction} {
+  &.is-right {
     .drop-menu {
       #{$start-direction}: unset !important;
       #{$end-direction}: -12px;

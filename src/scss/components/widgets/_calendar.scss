@@ -102,3 +102,20 @@
     color: #cacaca;
   }
 }
+
+//RTL adjustment
+[dir="rtl"] .calendar-widget {
+  .calendar-toolbar {
+    .actions {
+      .action-icon {
+        &:first-child {
+          transform: rotate(180deg);
+        }
+
+        &:nth-child(2) {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+}
