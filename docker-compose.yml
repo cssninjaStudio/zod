@@ -1,23 +1,22 @@
 version: '3.7'
 
 services:
-  altitude-demo:
-    build:
-      context: .
+  zod-demo:
+    image: digisquad/cssninja.zod-demo:latest
     networks:
       - cssninja-services
-    restart: '${MOEBIUS_DEMO_RESTART:-no}'
+    restart: 'unless-stopped'
     labels:
       traefik.enable: true
       traefik.docker.network: 'cssninja-services'
-      traefik.http.routers.altitude-demo.entrypoints: 'http'
-      traefik.http.routers.altitude-demo.rule: 'Host(`altitude.${HOST:-127.0.0.1.nip.io}`)'
-      traefik.http.routers.altitude-demo.middlewares: 'https-redirect@file'
-      traefik.http.services.altitude-demo-https.loadbalancer.server.port: 8080
-      traefik.http.routers.altitude-demo-https.rule: 'Host(`altitude.${HOST:-127.0.0.1.nip.io}`)'
-      traefik.http.routers.altitude-demo-https.tls: true
-      traefik.http.routers.altitude-demo-https.entrypoints: 'https'
-      traefik.http.routers.altitude-demo-https.tls.certresolver: 'http'
+      traefik.http.routers.zod-demo.entrypoints: 'http'
+      traefik.http.routers.zod-demo.rule: 'Host(`zod.${HOST:-127.0.0.1.nip.io}`)'
+      traefik.http.routers.zod-demo.middlewares: 'https-redirect@file'
+      traefik.http.services.zod-demo-https.loadbalancer.server.port: 8080
+      traefik.http.routers.zod-demo-https.rule: 'Host(`zod.${HOST:-127.0.0.1.nip.io}`)'
+      traefik.http.routers.zod-demo-https.tls: true
+      traefik.http.routers.zod-demo-https.entrypoints: 'https'
+      traefik.http.routers.zod-demo-https.tls.certresolver: 'http'
 
 networks:
   cssninja-services:
