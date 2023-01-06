@@ -1,16 +1,17 @@
 "use strict";
 
 //Alpine JS and plugins import
-import Alpine from "alpinejs";
-import intersect from "@alpinejs/intersect";
-import collapse from "@alpinejs/collapse";
+import Alpine from "alpinejs"
+import intersect from "@alpinejs/intersect"
+import collapse from '@alpinejs/collapse';
 import persist from "@alpinejs/persist";
+import Iconify from '@iconify/iconify';
 
-window.Alpine = Alpine;
+window.Alpine = Alpine
 //Init intersect plugin
-Alpine.plugin(intersect);
+Alpine.plugin(intersect)
 //Init persist plugin
-Alpine.plugin(persist);
+Alpine.plugin(persist)
 //Init collapse plugin
 Alpine.plugin(collapse);
 //Init store
@@ -26,16 +27,17 @@ Alpine.store("app", {
   isPanelOpened: Alpine.$persist(false),
 });
 //Start Alpine JS
-Alpine.start();
+Alpine.start()
 
 import { insertBgImages } from "./libs/utils/utils";
-import { initLazyLoading } from "./libs/utils/lazyload";
+import { initLazyLoading } from './libs/utils/lazyload';
 import "./libs/demo";
 import "./libs/components";
 import "./libs/pages";
 
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
+
     //Lazy Loading
     const lazy = initLazyLoading();
 

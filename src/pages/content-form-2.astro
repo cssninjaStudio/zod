@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Default.astro';
+const title = 'Form'
+---
+
+<Layout title={title}>
+  <div class="form-wrapper">
+    <!--Toolbar-->
+    <div class="toolbar is-spaced-bottom">
+      <div class="toolbar-start">
+        <h2 class="title is-4 is-narrow">Vertical Form</h2>
+      </div>
+      <div class="toolbar-end">
+        <button class="button is-long-1">
+          <span>Cancel</span>
+        </button>
+      </div>
+    </div>
+
+    <!--Form-->
+    <div class="columns">
+      <div class="column is-8">
+        <div class="form-outer is-vertical">
+          <form>
+            <div class="field">
+              <label class="form-label">Full Name</label>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control is-expanded has-icon">
+                    <input class="input" type="text" placeholder="First Name">
+                    <div class="form-icon">
+                      <i class="iconify" data-icon="feather:user"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control is-expanded has-icon">
+                    <input class="input" type="text" placeholder="Last Name">
+                    <div class="form-icon">
+                      <i class="iconify" data-icon="feather:user"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="field">
+              <label class="form-label">Company</label>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control is-expanded has-icon">
+                    <input class="input" type="text" placeholder="Company Name">
+                    <div class="form-icon">
+                      <i class="iconify" data-icon="feather:briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control is-expanded has-icon">
+                    <input class="input" type="text" placeholder="Role">
+                    <div class="form-icon">
+                      <i class="iconify" data-icon="feather:briefcase"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="form-label">Phone</label>
+              <div class="field-body">
+                <div class="field is-expanded">
+                  <div class="field has-addons">
+                    <div class="control">
+                      <a class="button is-static">
+                        +44
+                      </a>
+                    </div>
+                    <div class="control is-expanded">
+                      <input class="input" type="tel" placeholder="Your phone number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="form-label">Department</label>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <div class="select is-fullwidth">
+                      <select>
+                        <option>Business development</option>
+                        <option>Marketing</option>
+                        <option>Sales</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="form-label">Contact type</label>
+              <div class="field-body">
+                <div class="field is-narrow">
+                  <div class="control">
+                    <div class="radio is-primary">
+                      <label for="radio-1" class="radio-inner-wrap">
+                        <span class="radio-inner">
+                          <input
+                            id="radio-1"
+                            name="radio_1"
+                            checked
+                            type="radio"
+                          />
+                          <i class="iconify rem-50" data-icon="feather:circle"></i>
+                          <span class="inner-overlay"></span>
+                        </span>
+                        <span class="radio-label">Lead</span>
+                      </label>
+                    </div>
+                    <div class="radio is-primary">
+                      <label for="radio-2" class="radio-inner-wrap">
+                        <span class="radio-inner">
+                          <input
+                            id="radio-2"
+                            name="radio_1"
+                            type="radio"
+                          />
+                          <i class="iconify rem-50" data-icon="feather:circle"></i>
+                          <span class="inner-overlay"></span>
+                        </span>
+                        <span class="radio-label">Partner</span>
+                      </label>
+                    </div>
+                    <div class="radio is-primary">
+                      <label for="radio-3" class="radio-inner-wrap">
+                        <span class="radio-inner">
+                          <input
+                            id="radio-3"
+                            name="radio_1"
+                            type="radio"
+                          />
+                          <i class="iconify rem-50" data-icon="feather:circle"></i>
+                          <span class="inner-overlay"></span>
+                        </span>
+                        <span class="radio-label">Supplier</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="form-label">Email</label>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control has-icon">
+                    <input class="input" type="text" placeholder="Email address">
+                    <div class="form-icon">
+                      <i class="iconify" data-icon="feather:mail"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="form-label">Notes</label>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <textarea class="textarea" placeholder="Some quick notes about this contact..."></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="form-label">Notifications</label>
+              <div class="field-body">
+                <div class="field is-narrow">
+                  <div class="control">
+                    <div class="checkbox is-primary">
+                      <label for="checkbox-1" class="checkbox-inner-wrap">
+                        <span class="checkbox-inner">
+                          <input
+                            id="checkbox-1"
+                            type="checkbox"
+                          />
+                          <i class="iconify rem-70" data-icon="feather:check"></i>
+                          <span class="inner-overlay"></span>
+                        </span>
+                        <span class="checkbox-label">Yes, notify me</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="field">
+              <div class="field-label">
+                <!-- Left empty for spacing -->
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <div class="form-buttons">
+                      <button type="button" class="button is-primary is-long-3 raised is-full-mobile">
+                        Create Contact
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="column is-4">
+        <div class="action-widget">
+          <img src="/img/illustrations/sorcerer.svg" alt="Widget picture" />
+          <div class="widget-content">
+            <h3 class="title is-6 is-leading">Need some help?</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui non
+              moveatur et offensione
+            </p>
+          </div>
+          <div class="buttons is-centered">
+            <a class="button is-secondary is-outlined is-fullwidth raised">Open Help Center</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</Layout>

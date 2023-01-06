@@ -1,0 +1,331 @@
+---
+import Layout from '../layouts/Default.astro';
+import DashboardHostingDropdown from '../components/DashboardHostingDropdown.astro';
+const title = 'Hosting Dashboard'
+---
+
+<Layout title={title}>
+  <div x-data="iniHostingDashboard()" class="hosting-dashboard">
+    <div class="columns">
+      <div class="column is-8">
+        <!--Header-->
+        <div x-show="headerActive" class="header-card">
+          <img class="light-image-block" src="/img/illustrations/hosting-1.svg" alt="illustration" />
+          <img class="dark-image-block" src="/img/illustrations/hosting-1-dark.svg" alt="illustration" />
+          <div class="meta">
+            <h3 class="title is-5 is-leading">Collaboration got easier</h3>
+            <p class="mb-2 rem-90">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proclivi
+              currit oratio. Ita multa dicunt, quae.
+            </p>
+            <div class="buttons">
+              <a class="button is-primary">Invite Members</a>
+              <a class="button is-outlined is-primary">Manage Team</a>
+            </div>
+          </div>
+          <button class="header-close" @click="removeHeader()">
+            <i class="iconify rem-125" data-icon="feather:x" @click="removeHeader()"></i>
+          </button>
+        </div>
+        <!--Title-->
+        <div class="dashboard-title">
+          <svg
+            class="logo"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            fill="currentColor"
+            viewBox="0 0 160 160"
+            xml:space="preserve"
+          >
+            <g>
+              <g>
+                <path
+                  class="right"
+                  d="M67.3,55.7L75.6,70l3.7,6.4l22.1,38.3l35.9-0.1L78.2,14.1L61.2,45L67.3,55.7z M130.1,114.5l-21.3,0.1"
+                ></path>
+                <path
+                  class="left"
+                  d="M39.1,145.9l11.7-20.3l2.7-4.7l3.7-6.4l22.1-38.3L61.2,45L3.6,145.9H39.1z M64.8,51.5l2.5,4.2l8.3,14.2V70
+            L64.8,51.5z"
+                ></path>
+                <path
+                  class="bottom"
+                  d="M39,145.9h117.4l-19.1-31.4l-80.1,0.1L39,145.9z M53.4,121l-10.6,18.5l7.9-13.9L53.4,121z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <div class="meta">
+            <h3 class="title is-5 is-narrow">Vuero App</h3>
+            <p class="rem-90">Project group · 2 running servers</p>
+          </div>
+          <div class="action">
+            <button class="button is-solid">
+              <span>Move Resources</span>
+              <i class="iconify ml-2" data-icon="feather:arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!--Tabs-->
+        <div class="dashboard-tabs">
+          <div class="tabs">
+            <ul>
+              <li
+                :class="{
+                  'is-active': activeTab === 'resources'
+                }"
+              >
+                <a data-target="resources" @click.prevent="toggleTabs($event)"
+                  >Resources</a
+                >
+              </li>
+              <li
+                :class="{
+                  'is-active': activeTab === 'activity'
+                }"
+              >
+                <a data-target="activity" @click.prevent="toggleTabs($event)"
+                  >Activity</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content">
+            <!--Group-->
+            <div x-show="activeTab === 'resources'" class="tab-group">
+              <h4 class="group-label">Servers</h4>
+              <div class="resource-cards">
+                <!--Card-->
+                <div class="resource-card">
+                  <div class="dot"></div>
+                  <div class="card-icon">
+                    <i class="iconify" data-icon="iconoir:server"></i>
+                  </div>
+                  <div class="meta">
+                    <h3 class="title is-6 is-narrow">docker-ubuntu-s-451-x998</h3>
+                    <p class="rem-80">FRA1 / 2GB / 50GB disk</p>
+                  </div>
+                  <div class="address">
+                    <span>178.228.559.42</span>
+                  </div>
+                  <div class="actions">
+                    <div class="card-icon">
+                      <i
+                        class="iconify text-info"
+                        data-icon="ph:drop-duotone"
+                      ></i>
+                    </div>
+                    <!--dropdown-->
+                    <DashboardHostingDropdown />
+                  </div>
+                </div>
+                <!--Card-->
+                <div class="resource-card">
+                  <div class="dot"></div>
+                  <div class="card-icon">
+                    <i class="iconify" data-icon="iconoir:server"></i>
+                  </div>
+                  <div class="meta">
+                    <h3 class="title is-6 is-narrow">docker-ubuntu-s-728-y440</h3>
+                    <p class="rem-80">USA3 /5GB / 150GB disk</p>
+                  </div>
+                  <div class="address">
+                    <span>128.178.211.12</span>
+                  </div>
+                  <div class="actions">
+                    <div class="card-icon">
+                      <i
+                        class="iconify text-info"
+                        data-icon="ph:drop-duotone"
+                      ></i>
+                    </div>
+                    <!--dropdown-->
+                    <DashboardHostingDropdown />
+                  </div>
+                </div>
+              </div>
+
+              <h4 class="group-label">Create</h4>
+              <div class="creation-actions">
+                <div class="columns is-multiline b-columns-half-tablet-p">
+                  <!--Action-->
+                  <div class="column is-6">
+                    <a class="creation-action">
+                      <div class="icon-box is-secondary is-rounded">
+                        <i class="iconify" data-icon="ph:database-duotone"></i>
+                      </div>
+                      <div class="meta">
+                        <h3 class="title is-6 is-narrow">Managed database</h3>
+                        <p class="rem-80">Worry free database management</p>
+                      </div>
+                    </a>
+                  </div>
+                  <!--Action-->
+                  <div class="column is-6">
+                    <a class="creation-action">
+                      <div class="icon-box is-info is-rounded">
+                        <i
+                          class="iconify"
+                          data-icon="ph:squares-four-duotone"
+                        ></i>
+                      </div>
+                      <div class="meta">
+                        <h3 class="title is-6 is-narrow">Start using spaces</h3>
+                        <p class="rem-80">Setup scalable storage</p>
+                      </div>
+                    </a>
+                  </div>
+                  <!--Action-->
+                  <div class="column is-6">
+                    <a class="creation-action">
+                      <div class="icon-box is-yellow is-rounded">
+                        <i class="iconify" data-icon="ph:magnet-duotone"></i>
+                      </div>
+                      <div class="meta">
+                        <h3 class="title is-6 is-narrow">Load balancer</h3>
+                        <p class="rem-80">Distribute traffic between machines</p>
+                      </div>
+                    </a>
+                  </div>
+                  <!--Action-->
+                  <div class="column is-6">
+                    <a class="creation-action">
+                      <div class="icon-box is-danger is-rounded">
+                        <i class="iconify" data-icon="ph:drop-duotone"></i>
+                      </div>
+                      <div class="meta">
+                        <h3 class="title is-6 is-narrow">Snapshots</h3>
+                        <p class="rem-80">Take snapshots of your servers</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--Group-->
+            <div x-show="activeTab === 'activity'" class="tab-group">
+              <div class="activity-items">
+                <!--Item-->
+                <div class="activity-item">
+                  <div class="card-icon">
+                    <i class="iconify" data-icon="ph:note-duotone"></i>
+                  </div>
+                  <div class="meta">
+                    <h3 class="title is-6 is-narrow">New invoice generated</h3>
+                    <p class="rem-80">55 minutes ago</p>
+                  </div>
+                  <div class="actions">
+                    <div class="card-icon">
+                      <i
+                        class="iconify text-yellow"
+                        data-icon="ph:bell-duotone"
+                      ></i>
+                    </div>
+                    <button class="button">Clear</button>
+                  </div>
+                </div>
+                <!--Item-->
+                <div class="activity-item">
+                  <div class="card-icon">
+                    <i class="iconify" data-icon="ph:cloud-check-duotone"></i>
+                  </div>
+                  <div class="meta">
+                    <h3 class="title is-6 is-narrow">Cloud sync complete</h3>
+                    <p class="rem-80">2 hours ago</p>
+                  </div>
+                  <div class="actions">
+                    <div class="card-icon">
+                      <i
+                        class="iconify text-yellow"
+                        data-icon="ph:bell-duotone"
+                      ></i>
+                    </div>
+                    <button class="button">Clear</button>
+                  </div>
+                </div>
+                <!--Item-->
+                <div class="activity-item">
+                  <div class="card-icon">
+                    <i class="iconify" data-icon="ph:database-duotone"></i>
+                  </div>
+                  <div class="meta">
+                    <h3 class="title is-6 is-narrow">Database installation complete</h3>
+                    <p class="rem-80">5 hours ago</p>
+                  </div>
+                  <div class="actions">
+                    <div class="card-icon">
+                      <i
+                        class="iconify text-light"
+                        data-icon="ph:bell-simple-z-duotone"
+                      ></i>
+                    </div>
+                    <button class="button">Clear</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column is-4">
+        <!--Card-->
+        <div class="cta-card">
+          <img
+            class="light-image-block"
+            src="/img/illustrations/hosting-2.svg"
+            alt="illustration"
+          />
+          <img
+            class="dark-image-block"
+            src="/img/illustrations/hosting-2-dark.svg"
+            alt="illustration"
+          />
+          <div class="cta-content">
+            <h3 class="title is-6 is-leading">Activate your domain</h3>
+            <p class="rem-80 mb-2">
+              Your plan comes with one custom domain that you can enable
+              immediately.
+            </p>
+            <a class="arrow-link rem-90">
+              <span>Enable Now</span>
+              <i class="iconify" data-icon="feather:arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <!--Card-->
+        <div class="link-card">
+          <h3 class="title is-6">Learn More</h3>
+
+          <a class="link-group">
+            <h3 class="name">Product docs</h3>
+            <p class="rem-80">
+              Technical overviews, how-tos and tutorials, release notes and
+              support material.
+            </p>
+          </a>
+
+          <a class="link-group">
+            <h3 class="name">Tutorials</h3>
+            <p class="rem-80">
+              DevOps and development guidelines to help you get started fast.
+            </p>
+          </a>
+
+          <a class="link-group">
+            <h3 class="name">API & CLI docs</h3>
+            <p class="rem-80">
+              Everything you need to know to be able to run your resources
+              programmatically.
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

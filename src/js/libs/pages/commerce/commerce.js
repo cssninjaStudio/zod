@@ -1,5 +1,5 @@
-import { initECommerceLineChart } from '../../charts/ecommerce/line-chart';
-import { initECommerceDonutChart } from '../../charts/ecommerce/donut-chart';
+import { initECommerceLineChart } from "../../charts/ecommerce/line-chart";
+import { initECommerceDonutChart } from "../../charts/ecommerce/donut-chart";
 
 export function initCommerceDashboard() {
   return {
@@ -29,5 +29,5 @@ export function initCommerceDashboard() {
     },
     lineChart: initECommerceLineChart(),
     donutChart: initECommerceDonutChart(),
-  }
+  };
 }

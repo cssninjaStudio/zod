@@ -1,0 +1,283 @@
+---
+import Layout from '../layouts/Default.astro';
+import CrmBoardDropdown from '../components/CrmBoardDropdown.astro';
+const title = 'Kanban Board'
+---
+
+<Layout title={title}>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.css" integrity="sha512-49xW99xceMN8dDoWaoCaXvuVMjnUctHv/jOlZxzFSMJYhqDZmSF/UnM6pLJjQu0YEBLSdO1DP0er6rUdm8/VqA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <div
+    id="kanban-boards"
+    class="boards-wrapper"
+    x-data="initCrmKanban()"
+    x-init="setupKanban()"
+  >
+    <!-- Boards Wrapper -->
+    <div class="boards">
+      <div class="board-columns">
+        <!-- Board Column -->
+        <div class="board-column board">
+          <div class="board-box">
+            <!-- Column header -->
+            <div class="box-header">
+              <div class="control is-hidden">
+                <input type="text" class="input rename-input" />
+              </div>
+              <div class="header-meta">
+                <div class="name">Prospects</div>
+                <div class="count">
+                  <span>3</span>
+                </div>
+              </div>
+              <!--Dropdown-->
+              <CrmBoardDropdown />
+            </div>
+            <!-- deals list -->
+            <div class="items">
+              <!-- Placeholder -->
+              <div class="column-placeholder">
+                <img
+                  class="placeholder-image"
+                  src="/img/illustrations/kanban-placeholder.svg"
+                  alt=""
+                />
+                <div class="placeholder-text has-text-centered">
+                  <h3>No Deals</h3>
+                  <p>
+                    Nothing in here yet. Create a deal or drag an exiting one in
+                    here.
+                  </p>
+                </div>
+              </div>
+              <!-- Single Deal -->
+              <div class="kanban-box">
+                <div class="box-head">
+                  <a href="/content-crm-deal" class="box-title-wrap">
+                    <div class="box-title">Tesla Motors deal</div>
+                    <div class="time">2 days ago</div>
+                  </a>
+                  <img src="/img/logo/companies/tesla.svg" alt="Company logo" />
+                </div>
+
+                <div class="box-meta">
+                  <div class="avatars">
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/18.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/17.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/6.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-fake is-xxs is-count">
+                      <span>+6</span>
+                    </div>
+                  </div>
+                  <div class="deal-value">$5,800</div>
+                </div>
+              </div>
+
+              <!-- Single Deal -->
+              <div class="kanban-box">
+                <div class="box-head">
+                  <a href="/content-crm-deal" class="box-title-wrap">
+                    <div class="box-title">Atlassian team training</div>
+                    <div class="time">4 days ago</div>
+                  </a>
+                  <img
+                    src="/img/logo/companies/atlassian.svg"
+                    alt="Company logo"
+                  />
+                </div>
+
+                <div class="box-meta">
+                  <div class="avatars">
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/25.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/42.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/55.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-fake is-xxs is-count">
+                      <span>+2</span>
+                    </div>
+                  </div>
+                  <div class="deal-value">$25,250</div>
+                </div>
+              </div>
+
+              <!-- Single Deal -->
+              <div class="kanban-box">
+                <div class="box-head">
+                  <a href="/content-crm-deal" class="box-title-wrap">
+                    <div class="box-title">Airbnb consulting</div>
+                    <div class="time">1 week ago</div>
+                  </a>
+                  <img src="/img/logo/companies/airbnb.svg" alt="Company logo" />
+                </div>
+
+                <div class="box-meta">
+                  <div class="avatars">
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/12.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/21.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/29.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-fake is-xxs is-count">
+                      <span>+1</span>
+                    </div>
+                  </div>
+                  <div class="deal-value">$14,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="board-column board">
+          <div class="board-box is-empty">
+            <!-- Column header -->
+            <div class="box-header">
+              <div class="control is-hidden">
+                <input type="text" class="input rename-input" />
+              </div>
+              <div class="header-meta">
+                <div class="name">Reached</div>
+                <div class="count">
+                  <span>0</span>
+                </div>
+              </div>
+              <!--Dropdown-->
+              <CrmBoardDropdown />
+            </div>
+            <div class="items">
+              <!-- Placeholder -->
+              <div class="column-placeholder">
+                <img
+                  class="placeholder-image"
+                  src="/img/illustrations/kanban-placeholder.svg"
+                  alt=""
+                />
+                <div class="placeholder-text has-text-centered">
+                  <h3>No Deals</h3>
+                  <p>
+                    Nothing in here yet. Create a deal or drag an exiting one in
+                    here.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="board-column board">
+          <div class="board-box">
+            <!-- Column header -->
+            <div class="box-header">
+              <div class="control is-hidden">
+                <input type="text" class="input rename-input" />
+              </div>
+              <div class="header-meta">
+                <div class="name">Qualified</div>
+                <div class="count">
+                  <span>2</span>
+                </div>
+              </div>
+              <!--Dropdown-->
+              <CrmBoardDropdown />
+            </div>
+            <div class="items">
+              <!-- Placeholder -->
+              <div class="column-placeholder">
+                <img
+                  class="placeholder-image"
+                  src="/img/illustrations/kanban-placeholder.svg"
+                  alt=""
+                />
+                <div class="placeholder-text has-text-centered">
+                  <h3>No Deals</h3>
+                  <p>
+                    Nothing in here yet. Create a deal or drag an exiting one in
+                    here.
+                  </p>
+                </div>
+              </div>
+              <!-- Single Deal -->
+              <div class="kanban-box">
+                <div class="box-head">
+                  <a href="/content-crm-deal" class="box-title-wrap">
+                    <div class="box-title">Google consulting</div>
+                    <div class="time">3 weeks ago</div>
+                  </a>
+                  <img src="/img/logo/companies/google.svg" alt="Company logo" />
+                </div>
+
+                <div class="box-meta">
+                  <div class="avatars">
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/44.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/27.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xxs">
+                      <img src="/img/avatars/43.jpg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-fake is-xxs is-count">
+                      <span>+4</span>
+                    </div>
+                  </div>
+                  <div class="deal-value">$19,000</div>
+                </div>
+              </div>
+
+              <!-- Single Deal -->
+              <div class="kanban-box">
+                  <div class="box-head">
+                    <a href="/content-crm-deal" class="box-title-wrap">
+                      <div class="box-title">Slack redesign</div>
+                      <div class="time">1 month ago</div>
+                    </a>
+                    <img src="/img/logo/companies/slack.svg" alt="Company logo" />
+                  </div>
+    
+                  <div class="box-meta">
+                    <div class="avatars">
+                      <div class="avatar is-xxs">
+                        <img src="/img/avatars/22.jpg" alt="user photo" />
+                      </div>
+                      <div class="avatar is-xxs">
+                        <img src="/img/avatars/19.jpg" alt="user photo" />
+                      </div>
+                      <div class="avatar is-xxs">
+                        <img src="/img/avatars/48.jpg" alt="user photo" />
+                      </div>
+                      <div class="avatar is-fake is-xxs is-count">
+                        <span>+7</span>
+                      </div>
+                    </div>
+                    <div class="deal-value">$42,000</div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- Create New Board -->
+        <div class="board-column is-create-board">
+          <button class="board-placeholder">
+            <div class="placeholder-inner">Create New Board</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.js" integrity="sha512-MrA7WH8h42LMq8GWxQGmWjrtalBjrfIzCQ+i2EZA26cZ7OBiBd/Uct5S3NP9IBqKx5b+MMNH1PhzTsk6J9nPQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</Layout>

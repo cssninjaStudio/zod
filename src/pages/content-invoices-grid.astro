@@ -1,0 +1,490 @@
+---
+import Layout from '../layouts/Default.astro';
+const title = 'Invoices Grid'
+---
+
+<Layout title={title}>
+  <div class="bills-grid-wrapper">
+    <!--Toolbar-->
+    <div class="toolbar is-spaced-bottom is-responsive">
+      <div class="toolbar-start">
+        <h2 class="title is-4 is-narrow">Invoices</h2>
+      </div>
+      <div class="toolbar-end">
+        <div class="control hidden-item">
+          <div class="select sorting-select">
+            <select>
+              <option value="5">Sort by</option>
+              <option value="10">Latest</option>
+              <option value="25">Oldest</option>
+              <option value="50">Amount</option>
+              <option value="100">Company</option>
+            </select>
+          </div>
+        </div>
+        <div class="icon-links">
+          <a href="/content-invoices-list" class="icon-link">
+            <i class="iconify" data-icon="feather:list"></i>
+          </a>
+          <a href="/content-invoices-grid" class="icon-link is-active">
+            <i class="iconify" data-icon="feather:grid"></i>
+          </a>
+        </div>
+        <button class="button is-primary is-long-2 raised">
+          <i class="iconify mr-2" data-icon="feather:plus"></i>
+          <span>New Invoice</span>
+        </button>
+      </div>
+    </div>
+
+    <!--Grid-->
+    <div class="invoices-grid">
+      <div class="columns is-multiline b-columns-half-tablet-p">
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45687</h4>
+                  <p>Created 25 days ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>153.49</span>
+                <span class="tag is-light is-info is-rounded is-uppercase"
+                  >Pending</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/5.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>3 days ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45698</h4>
+                  <p>Created 30 days ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>275.00</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/42.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>6 days ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45592</h4>
+                  <p>Created 1 month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>912.49</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/19.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>12 days ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45571</h4>
+                  <p>Created 1 month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>631.18</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/36.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>2 weeks ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45571</h4>
+                  <p>Created 1 month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>112.79</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/17.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>2 weeks ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45569</h4>
+                  <p>Created 1 month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>874.23</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/52.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>2 weeks ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45562</h4>
+                  <p>Created 1 month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>1254.19</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/30.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>2 weeks ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45554</h4>
+                  <p>Created 1 month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>165.49</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/37.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>2 weeks ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45551</h4>
+                  <p>Created 1 month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>598.29</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/38.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>2 weeks ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45536</h4>
+                  <p>Created 2 months ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>789.32</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/45.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>1 month ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45525</h4>
+                  <p>Created 2 months ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>114.98</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/7.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>1 month ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="invoices-grid-item">
+            <div class="item-body">
+              <div class="invoice">
+                <div class="file-icon">
+                  <i class="iconify" data-icon="feather:file-text"></i>
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#INV-45521</h4>
+                  <p>Created 2 months ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>298.42</span>
+                <span class="tag is-light is-success is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatar is-xxs">
+                  <img src="/img/avatars/11.jpg" alt="user photo" />
+                </div>
+                <div class="meta">
+                  <span>Last updated</span>
+                  <span>1 month ago</span>
+                </div>
+              </div>
+              <div class="button-combo">
+                <a href="/content-invoice" class="button is-solid">View</a>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

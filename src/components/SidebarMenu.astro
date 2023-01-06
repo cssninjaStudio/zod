@@ -1,0 +1,453 @@
+<ul
+  id="sidebar-menu"
+  class="sidebar-menu"
+>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'dashboard-menu',
+      '': !$store.app.activeSidebarMenu !== 'dashboard-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('dashboard-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:layout-duotone"></i>
+      <span>Dashboards</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'dashboard-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/dashboard-elearning">E-Learning</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/dashboard-ecommerce">Ecommerce</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/dashboard-domotic">Domotic</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/dashboard-support">Support</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/dashboard-hosting">Hosting</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/dashboard-accounting">Accounting</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'datatables-menu',
+      '': !$store.app.activeSidebarMenu !== 'datatables-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('datatables-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:table-duotone"></i>
+      <span>Datatables</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'datatables-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-datatable">Datatable</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'charts-menu',
+      '': !$store.app.activeSidebarMenu !== 'charts-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('charts-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:chart-pie-slice-duotone"></i>
+      <span>Charts</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'charts-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/charts-apex">Apex Charts</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'auth-menu',
+      '': !$store.app.activeSidebarMenu !== 'auth-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('auth-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:lock-duotone"></i>
+      <span>Authentication</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'auth-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/auth-signup">Signup</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/auth-login">Sign In</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/auth-forgot">Forgot Password</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'accounting-menu',
+      '': !$store.app.activeSidebarMenu !== 'accounting-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('accounting-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:calculator-duotone"></i>
+      <span>Accounting</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'accounting-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-bills-list">Bills List</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-bills-grid">Bills Grid</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-invoices-list">Invoices List</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-invoices-grid">Invoices Grid</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-invoice">Invoice</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'social-menu',
+      '': !$store.app.activeSidebarMenu !== 'social-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('social-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:confetti-duotone"></i>
+      <span>Social</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'social-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-feed">Social Feed</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-events">Events</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'forum-menu',
+      '': !$store.app.activeSidebarMenu !== 'forum-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('forum-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:chat-circle-text-duotone"></i>
+      <span>Forum</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'forum-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-forum-index">Forum Home</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-forum-channel">Forum Channel</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-forum-topic">Forum Topic</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'support-menu',
+      '': !$store.app.activeSidebarMenu !== 'support-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('support-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:lifebuoy-duotone"></i>
+      <span>Support</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'support-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-support-ticket">Ticket Details</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'projects-menu',
+      '': !$store.app.activeSidebarMenu !== 'projects-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('projects-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:projector-screen-chart-duotone"></i>
+      <span>Projects</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'projects-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-project-list">Project List</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-project-grid">Project Grid</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-project">Project Details</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'crm-menu',
+      '': !$store.app.activeSidebarMenu !== 'crm-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('crm-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:crown-duotone"></i>
+      <span>CRM</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'crm-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-crm-segments">Segments</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-crm-board">Kanban Board</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-crm-deal">Deal</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'contacts-menu',
+      '': !$store.app.activeSidebarMenu !== 'contacts-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('contacts-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:users-four-duotone"></i>
+      <span>Contacts</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'contacts-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-contact-list">Contact List</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-contact-grid">Contact Grid</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-contact">Contact Details</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'messages-menu',
+      '': !$store.app.activeSidebarMenu !== 'messages-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('messages-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:envelope-duotone"></i>
+      <span>Messages</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'messages-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-inbox">Message Inbox</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'forms-menu',
+      '': !$store.app.activeSidebarMenu !== 'forms-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('forms-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:keyboard-duotone"></i>
+      <span>Forms</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'forms-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-form-1">Horizontal Form</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-form-2">Vertical Form</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'empty-menu',
+      '': !$store.app.activeSidebarMenu !== 'empty-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('empty-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:selection-duotone"></i>
+      <span>Empty States</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'empty-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/content-placeholder">Placeholder</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/404">Error 404</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'others-menu',
+      '': !$store.app.activeSidebarMenu !== 'others-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('others-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:cookie-duotone"></i>
+      <span>Misc</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'others-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="/elements">UI Elements</a>
+      </li>
+    </ul>
+  </li>
+</ul>

@@ -12,7 +12,10 @@ export function searchJSON(searchTerm, url, list) {
         console.log(data);
         if (data.length > 0) {
           data.forEach(function (value, index) {
-            if ( value.title.search(expression) != -1 || value.content.search(expression) != -1 ) {
+            if (
+              value.title.search(expression) != -1 ||
+              value.content.search(expression) != -1
+            ) {
               if (value.photoUrl === null) {
                 var template = `
                       <a class="search-result">
@@ -31,7 +34,9 @@ export function searchJSON(searchTerm, url, list) {
                 var template = `
                       <a class="search-result">
                           <img class="${
-                            value.type === "user" ? "avatar is-reset mask mask-blob" : "record"
+                            value.type === "user"
+                              ? "avatar is-reset mask mask-blob"
+                              : "record"
                           }" src="${value.photoUrl}" alt="">
                           <div class="meta">
                               <span>${value.title}</span>

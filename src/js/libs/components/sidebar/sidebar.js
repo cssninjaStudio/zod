@@ -1,19 +1,5 @@
 export function initSidebar() {
   return {
-    openSidebar(param) {
-      if (this.$store.app.sidebarOpenedState === false) {
-        this.$store.app.sidebarOpenedState = !this.$store.app
-          .sidebarOpenedState;
-      }
-      this.$store.app.activeSidebar = param;
-      this.$store.app.isPanelOpened = false
-      console.log(this.$store.app.activeSidebar);
-    },
-  };
-}
-
-export function initSidebarLeft() {
-  return {
     init() {
       let location = window.location.href;
       let links = document.getElementsByClassName("sub-menu-item");

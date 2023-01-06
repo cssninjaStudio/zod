@@ -1,0 +1,125 @@
+---
+import InboxMessageDropdown from './InboxMessageDropdown.astro'
+import InboxReplyDropdown from './InboxReplyDropdown.astro'
+---
+
+<!-- Message details -->
+<div
+  x-show="activeMessage === 'message-3'"
+  id="message-3"
+  class="inbox-message-details"
+  :class="{
+        'mobile-active tablet-active': isMobileMessageActive,
+        '': !isMobileMessageActive
+    }"
+>
+  <div class="header-area">
+    <img class="sender-pic" src="/img/avatars/48.jpg" alt="sender photo" />
+    <div class="message-meta">
+      <span class="message-title"
+        >Don't forget to send me those budget notes</span
+      >
+    </div>
+    <div class="attachments is-vhidden inbox-hidden-mobile">
+      <i class="iconify" data-icon="feather:paperclip"></i>
+      <span>2</span>
+    </div>
+    <InboxMessageDropdown />
+    <a
+      @click="closeMobileMessage()"
+      class="inbox-action inbox-close-details-mobile"
+    >
+      <i class="iconify" data-icon="feather:x"></i>
+    </a>
+  </div>
+  <!--Message-->
+  <div class="message-wrapper has-slimscroll">
+    <div class="message-inner">
+      <div class="message-head">
+        <div class="info">
+          <span>Sent by</span>
+          <span>lakisha@gmail.com</span>
+        </div>
+        <div class="message-actions">
+          <a class="inbox-action">
+            <i class="iconify" data-icon="feather:tag"></i>
+          </a>
+          <a class="inbox-action">
+            <i class="iconify" data-icon="feather:message-circle"></i>
+          </a>
+          <a class="inbox-action">
+            <i class="iconify" data-icon="feather:trash-2"></i>
+          </a>
+        </div>
+      </div>
+      <!--Mail Content-->
+      <div class="mail-content content">
+        <p>Hi Anthony,</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suo genere
+          perveniant ad extremum; Non potes, nisi retexueris illa.
+        </p>
+        <ul>
+          <li>Si id dicis, vicimus.</li>
+          <li>
+            Roges enim Aristonem, bonane ei videantur haec: vacuitas doloris,
+            divitiae, valitudo;
+          </li>
+          <li>Sed ille, ut dixi, vitiose.</li>
+          <li>
+            Nam, ut paulo ante docui, augendae voluptatis finis est doloris
+            omnis amotio.
+          </li>
+          <li>
+            Nam, ut saepe iam dixi, in infirma aetate inbecillaque mente vis
+            naturae quasi per caliginem cernitur;
+          </li>
+        </ul>
+        <p>
+          <mark
+            >Deinde disputat, quod cuiusque generis animantium statui deceat
+            extremum.</mark
+          >
+          Ne amores quidem sanctos a sapiente alienos esse arbitrantur. Qui est
+          in parvis malis. Sit enim idem caecus, debilis. Hic nihil fuit, quod
+          quaereremus.
+        </p>
+        <p>
+          Negat esse eam, inquit, propter se expetendam. Collatio igitur ista te
+          nihil iuvat. Rationis enim perfectio est virtus; At certe gravius.
+          Laboro autem non sine causa; Nam Pyrrho, Aristo, Erillus iam diu
+          abiecti.
+        </p>
+        <p>
+          Nam quid possumus facere melius? Primum divisit ineleganter; Duo
+          Reges: constructio interrete. Erat enim Polemonis. Equidem e Cn.
+        </p>
+
+        <p>Lakisha Williams</p>
+      </div>
+    </div>
+
+    <!--Reply-->
+    <div class="reply-box-wrap">
+      <div class="reply-bubble">
+        <div class="reply-as">
+          <img src="/img/avatars/25.jpg" alt="user photo" />
+          <div class="reply-details">
+            <span>Reply as</span>
+            <span>anthonym@gmail.com</span>
+          </div>
+          <InboxReplyDropdown />
+        </div>
+        <!--textarea-->
+        <div class="control">
+          <textarea
+            class="textarea"
+            rows="6"
+            placeholder="Type your message..."
+          ></textarea>
+          <button type="button" class="button">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

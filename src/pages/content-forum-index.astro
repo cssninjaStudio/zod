@@ -1,0 +1,412 @@
+---
+import Layout from '../layouts/Default.astro';
+import ForumCategoryDropdown from '../components/ForumCategoryDropdown.astro';
+const title = 'Forum Home'
+---
+
+<Layout title={title}>
+  <!--Toolbar-->
+  <div class="toolbar is-spaced-bottom">
+    <div class="toolbar-start">
+      <h2 class="title is-4 is-narrow">Forum</h2>
+    </div>
+    <div class="toolbar-end">
+      <button class="button is-primary is-long-2 raised">
+        <i class="iconify mr-1" data-icon="feather:plus"></i>
+        <span>New Topic</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Forum -->
+  <div class="forum-wrap">
+    <div class="forum-container">
+      <!-- Heading -->
+      <div class="channel-heading">
+        <h3>Annoucements</h3>
+        <ForumCategoryDropdown />
+      </div>
+
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:globe-hemisphere-west-duotone"></i>
+          <div class="new-indicator">
+            <span>3</span>
+          </div>
+        </div>
+        <div class="channel-meta">
+          <span>Company Annoucements</span>
+          <span>Dedicated channel for company annoucements and heads up.</span>
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>49</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/42.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/29.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/21.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-fake is-xs is-count">
+              <span>+2</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:users-three-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>Team Annoucements</span>
+          <span>Dedicated channel for team annoucements.</span>
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>12</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/19.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/55.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/6.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-fake is-xs is-count">
+              <span>+6</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:handshake-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>Partners Annoucements</span>
+          <span>Dedicated channel for partners annoucements and news.</span>
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>27</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/16.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/36.jpg" alt="user photo" />
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="forum-wrap">
+    <!-- Forum Category -->
+    <div class="forum-container">
+      <!-- Heading -->
+      <div class="channel-heading">
+        <h3>Human Resources</h3>
+        <ForumCategoryDropdown />
+      </div>
+
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:timer-duotone"></i>
+          <!-- New Topics -->
+          <div class="new-indicator">
+            <span>22</span>
+          </div>
+        </div>
+        <div class="channel-meta">
+          <span>Timesheets</span>
+          <span>Any questions about timesheets? All answers are here.</span>
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>92</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/5.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/21.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/6.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-fake is-xs is-count">
+              <span>+1</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:wine-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>Vacations</span>
+          <span
+            >Post your vacation requests in here. Only HR employees can see your
+            posts.</span
+          >
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>294</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/40.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/52.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/58.jpg" alt="user photo" />
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:leaf-duotone"></i>
+          <!-- New Topics -->
+          <div class="new-indicator">
+            <span>7</span>
+          </div>
+        </div>
+        <div class="channel-meta">
+          <span>Freelancers</span>
+          <span
+            >Found an interesting profile? This is where you should post it.</span
+          >
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>119</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/49.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/59.jpg" alt="user photo" />
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:chats-circle-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>Recruitment</span>
+          <span>Discussion about the internal recruitment process.</span>
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>51</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/42.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/30.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/58.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-fake is-xs is-count">
+              <span>+7</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="forum-wrap">
+    <!-- Forum Category -->
+    <div class="forum-container">
+      <!-- Heading -->
+      <div class="channel-heading">
+        <h3>Payments</h3>
+        <ForumCategoryDropdown />
+      </div>
+
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:crown-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>About Payments</span>
+          <span
+            >Any questions about payments? find the answers in this section.</span
+          >
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>134</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/38.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/31.jpg" alt="user photo" />
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:coins-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>Cash Payments</span>
+          <span>Ask about what's to know for cash payments in this section.</span>
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>42</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/30.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/19.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/21.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-fake is-xs is-count">
+              <span>+1</span>
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:credit-card-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>Credit Card Payments</span>
+          <span
+            >Ask about what's to know for credit card payments in this
+            section.</span
+          >
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>72</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/42.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/25.jpg" alt="user photo" />
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:wallet-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>E-Wallet Payments</span>
+          <span
+            >Ask about what's to know for E-Wallet payments in this section.</span
+          >
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>29</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/55.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/52.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/30.jpg" alt="user photo" />
+            </div>
+          </div>
+        </div>
+      </a>
+      <!-- Channel -->
+      <a href="/content-forum-channel" class="forum-channel">
+        <div class="channel-icon">
+          <i class="iconify" data-icon="ph:detective-duotone"></i>
+        </div>
+        <div class="channel-meta">
+          <span>Cryptocurrency Payments</span>
+          <span
+            >Ask about what's to know for Cryptocurrency payments in this
+            section.</span
+          >
+        </div>
+        <div class="channel-topics">
+          <span>Topics</span>
+          <span>143</span>
+        </div>
+        <div class="top-contributors">
+          <div class="avatars">
+            <div class="avatar is-xs">
+              <img src="/img/avatars/35.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/37.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-xs">
+              <img src="/img/avatars/34.jpg" alt="user photo" />
+            </div>
+            <div class="avatar is-fake is-xs is-count">
+              <span>+8</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</Layout>

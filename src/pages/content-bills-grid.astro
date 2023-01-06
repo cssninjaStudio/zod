@@ -1,0 +1,520 @@
+---
+import Layout from '../layouts/Default.astro';
+const title = 'Bills Grid'
+---
+
+<Layout title={title}>
+  <div class="bills-grid-wrapper">
+    <!--Toolbar-->
+    <div class="toolbar is-spaced-bottom is-responsive">
+      <div class="toolbar-start">
+        <h2 class="title is-4 is-narrow">Bills</h2>
+      </div>
+      <div class="toolbar-end">
+        <div class="control hidden-item">
+          <div class="select sorting-select">
+            <select>
+              <option value="5">Sort by</option>
+              <option value="10">Latest</option>
+              <option value="25">Oldest</option>
+              <option value="50">Amount</option>
+              <option value="100">Company</option>
+            </select>
+          </div>
+        </div>
+        <div class="icon-links">
+          <a href="/content-bills-list" class="icon-link">
+            <i class="iconify" data-icon="feather:list"></i>
+          </a>
+          <a href="/content-bills-grid" class="icon-link is-active">
+            <i class="iconify" data-icon="feather:grid"></i>
+          </a>
+        </div>
+        <button class="button is-primary is-long-2 raised">
+          <i class="iconify mr-2" data-icon="feather:plus"></i>
+          <span>New Bill</span>
+        </button>
+      </div>
+    </div>
+
+    <!--Grid-->
+    <div class="bills-grid">
+      <div class="columns is-multiline b-columns-half-tablet-p">
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/airbnb.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15654</h4>
+                  <p>Updated 2d ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>1228.21</span>
+                <span class="tag is-light is-info is-rounded is-uppercase"
+                  >Approved</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/5.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/21.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-fake is-xxs is-count">
+                    <span>+2</span>
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img
+                    src="/img/logo/companies/atlassian.svg"
+                    alt="company logo"
+                  />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-16551</h4>
+                  <p>Updated 5d ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>768.49</span>
+                <span class="tag is-light is-orange is-rounded is-uppercase"
+                  >Pending</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/42.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/45.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-fake is-xxs is-count">
+                    <span>+1</span>
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/google.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15321</h4>
+                  <p>Updated 5d ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>112.31</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/33.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/29.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-fake is-xxs is-count">
+                    <span>+1</span>
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/hubspot.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15371</h4>
+                  <p>Updated a week ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>912.49</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/55.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/39.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-fake is-xxs is-count">
+                    <span>+1</span>
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/slack.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15119</h4>
+                  <p>Updated a week ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>272.25</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/17.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/43.jpg" alt="user photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/amazon.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15265</h4>
+                  <p>Updated a week ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>643.19</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/30.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/52.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/5.jpg" alt="user photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/tesla.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15261</h4>
+                  <p>Updated 2 weeks ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>4892.53</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/42.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/25.jpg" alt="user photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/gitlab.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15224</h4>
+                  <p>Updated 2 weeks ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>125.49</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/30.jpg" alt="user photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/figma.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15161</h4>
+                  <p>Updated 2 weeks ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>459.99</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/19.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/44.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/50.jpg" alt="user photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/dribbble.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15159</h4>
+                  <p>Updated a month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>59.99</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/16.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/52.jpg" alt="user photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/facebook.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15144</h4>
+                  <p>Updated a month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>129.99</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/4.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/25.jpg" alt="user photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Item-->
+        <div class="column is-4">
+          <div class="bills-grid-item">
+            <div class="item-body">
+              <div class="company">
+                <div class="company-logo">
+                  <img src="/img/logo/companies/hm.svg" alt="company logo" />
+                </div>
+                <div class="meta">
+                  <h4 class="title is-6 is-narrow">#B-15129</h4>
+                  <p>Updated a month ago</p>
+                </div>
+              </div>
+              <div class="amount">
+                <span>924.31</span>
+                <span class="tag is-light is-green is-rounded is-uppercase"
+                  >Paid</span
+                >
+              </div>
+            </div>
+            <div class="item-footer">
+              <div class="users">
+                <div class="avatars is-loose">
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/46.jpg" alt="user photo" />
+                  </div>
+                  <div class="avatar is-xxs">
+                    <img src="/img/avatars/35.jpg" alt="user photo" />
+                  </div>
+                </div>
+              </div>
+              <div class="button-combo">
+                <button class="button is-solid">View</button>
+                <button class="button is-solid">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

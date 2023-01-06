@@ -1,0 +1,512 @@
+---
+import Layout from '../layouts/Default.astro';
+const title = 'Elements'
+---
+
+<Layout title={title}>
+  <div class="elements-wrapper">
+    <!--Toolbar-->
+    <div class="toolbar is-spaced-bottom">
+      <div class="toolbar-start">
+        <h2 class="title is-4 is-narrow">Elements</h2>
+      </div>
+    </div>
+
+    <!--Solid Buttons-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Solid Buttons</h3>
+      <div class="buttons">
+        <button class="button is-long-1">Button</button>
+        <button class="button is-primary is-long-1">Button</button>
+        <button class="button is-secondary is-long-1">Button</button>
+        <button class="button is-info is-long-1">Button</button>
+        <button class="button is-success is-long-1">Button</button>
+        <button class="button is-warning is-long-1">Button</button>
+        <button class="button is-danger is-long-1">Button</button>
+      </div>
+    </div>
+
+    <!--Raised Buttons-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Raised Buttons</h3>
+      <div class="buttons">
+        <button class="button raised is-primary is-long-1">Button</button>
+        <button class="button raised is-secondary is-long-1">Button</button>
+        <button class="button raised is-info is-long-1">Button</button>
+        <button class="button raised is-success is-long-1">Button</button>
+        <button class="button raised is-warning is-long-1">Button</button>
+        <button class="button raised is-danger is-long-1">Button</button>
+      </div>
+    </div>
+
+    <!--Outline Buttons-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Outline Buttons</h3>
+      <div class="buttons">
+        <button class="button is-outlined is-primary is-long-1">Button</button>
+        <button class="button is-outlined is-secondary is-long-1">Button</button>
+        <button class="button is-outlined is-info is-long-1">Button</button>
+        <button class="button is-outlined is-success is-long-1">Button</button>
+        <button class="button is-outlined is-warning is-long-1">Button</button>
+        <button class="button is-outlined is-danger is-long-1">Button</button>
+      </div>
+    </div>
+
+    <!--Icon Buttons-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Icon Buttons</h3>
+      <div class="buttons">
+        <button class="button icon-button">
+          <i class="iconify" data-icon="feather:box"></i>
+        </button>
+        <button class="button icon-button is-primary">
+          <i class="iconify" data-icon="feather:award"></i>
+        </button>
+        <button class="button icon-button is-secondary">
+          <i class="iconify" data-icon="feather:cpu"></i>
+        </button>
+        <button class="button icon-button is-info">
+          <i class="iconify" data-icon="feather:user"></i>
+        </button>
+        <button class="button icon-button is-success">
+          <i class="iconify" data-icon="feather:archive"></i>
+        </button>
+        <button class="button icon-button is-warning">
+          <i class="iconify" data-icon="feather:chrome"></i>
+        </button>
+        <button class="button icon-button is-danger">
+          <i class="iconify" data-icon="feather:droplet"></i>
+        </button>
+        <button class="button icon-button is-circle">
+          <i class="iconify" data-icon="feather:home"></i>
+        </button>
+        <button class="button icon-button is-primary is-circle">
+          <i class="iconify" data-icon="feather:layout"></i>
+        </button>
+        <button class="button icon-button is-secondary is-circle">
+          <i class="iconify" data-icon="feather:moon"></i>
+        </button>
+        <button class="button icon-button is-info is-circle">
+          <i class="iconify" data-icon="feather:twitter"></i>
+        </button>
+        <button class="button icon-button is-success is-circle">
+          <i class="iconify" data-icon="feather:zap"></i>
+        </button>
+        <button class="button icon-button is-warning is-circle">
+          <i class="iconify" data-icon="feather:gitlab"></i>
+        </button>
+        <button class="button icon-button is-danger is-circle">
+          <i class="iconify" data-icon="feather:clock"></i>
+        </button>
+      </div>
+    </div>
+
+    <!--Icon Buttons-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Raised Icon Buttons</h3>
+      <div class="buttons">
+        <button class="button icon-button is-primary raised">
+          <i class="iconify" data-icon="feather:award"></i>
+        </button>
+        <button class="button icon-button is-secondary raised">
+          <i class="iconify" data-icon="feather:cpu"></i>
+        </button>
+        <button class="button icon-button is-info raised">
+          <i class="iconify" data-icon="feather:user"></i>
+        </button>
+        <button class="button icon-button is-success raised">
+          <i class="iconify" data-icon="feather:archive"></i>
+        </button>
+        <button class="button icon-button is-warning raised">
+          <i class="iconify" data-icon="feather:chrome"></i>
+        </button>
+        <button class="button icon-button is-danger raised">
+          <i class="iconify" data-icon="feather:droplet"></i>
+        </button>
+        <button class="button icon-button is-primary is-circle raised">
+          <i class="iconify" data-icon="feather:layout"></i>
+        </button>
+        <button class="button icon-button is-secondary is-circle raised">
+          <i class="iconify" data-icon="feather:moon"></i>
+        </button>
+        <button class="button icon-button is-info is-circle raised">
+          <i class="iconify" data-icon="feather:twitter"></i>
+        </button>
+        <button class="button icon-button is-success is-circle raised">
+          <i class="iconify" data-icon="feather:zap"></i>
+        </button>
+        <button class="button icon-button is-warning is-circle raised">
+          <i class="iconify" data-icon="feather:gitlab"></i>
+        </button>
+        <button class="button icon-button is-danger is-circle raised">
+          <i class="iconify" data-icon="feather:clock"></i>
+        </button>
+      </div>
+    </div>
+
+    <!--Tags-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Tags</h3>
+      <div class="tags">
+        <span class="tag is-curved">Label</span>
+        <span class="tag is-solid is-curved">Label</span>
+        <span class="tag is-primary is-curved">Label</span>
+        <span class="tag is-secondary is-curved">Label</span>
+        <span class="tag is-info is-curved">Label</span>
+        <span class="tag is-success is-curved">Label</span>
+        <span class="tag is-warning is-curved">Label</span>
+        <span class="tag is-danger is-curved">Label</span>
+        <span class="tag is-primary is-curved is-light">Label</span>
+        <span class="tag is-secondary is-curved is-light">Label</span>
+        <span class="tag is-info is-curved is-light">Label</span>
+        <span class="tag is-success is-curved is-light">Label</span>
+        <span class="tag is-warning is-curved is-light">Label</span>
+        <span class="tag is-danger is-curved is-light">Label</span>
+      </div>
+    </div>
+
+    <!--Tags Rounded-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Rounded Tags</h3>
+      <div class="tags">
+        <span class="tag is-rounded">Label</span>
+        <span class="tag is-solid is-rounded">Label</span>
+        <span class="tag is-primary is-rounded">Label</span>
+        <span class="tag is-secondary is-rounded">Label</span>
+        <span class="tag is-info is-rounded">Label</span>
+        <span class="tag is-success is-rounded">Label</span>
+        <span class="tag is-warning is-rounded">Label</span>
+        <span class="tag is-danger is-rounded">Label</span>
+        <span class="tag is-primary is-rounded is-light">Label</span>
+        <span class="tag is-secondary is-rounded is-light">Label</span>
+        <span class="tag is-info is-rounded is-light">Label</span>
+        <span class="tag is-success is-rounded is-light">Label</span>
+        <span class="tag is-warning is-rounded is-light">Label</span>
+        <span class="tag is-danger is-rounded is-light">Label</span>
+      </div>
+    </div>
+
+    <!--Elevated Tags-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Elevated Tags</h3>
+      <div class="tags">
+        <span class="tag is-primary is-curved is-elevated">Label</span>
+        <span class="tag is-secondary is-curved is-elevated">Label</span>
+        <span class="tag is-info is-curved is-elevated">Label</span>
+        <span class="tag is-success is-curved is-elevated">Label</span>
+        <span class="tag is-warning is-curved is-elevated">Label</span>
+        <span class="tag is-danger is-curved is-elevated">Label</span>
+      </div>
+    </div>
+
+    <!--Inputs & Selects-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Inputs & Selects</h3>
+
+      <div class="mb-4">
+        <div class="columns">
+          <div class="column is-5">
+            <div class="field">
+              <label class="form-label">Email address</label>
+              <div class="control">
+                <input type="text" class="input" placeholder="Email address" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <div class="columns">
+          <div class="column is-5">
+            <div class="field is-expanded">
+              <label class="form-label">Phone number</label>
+              <div class="field has-addons">
+                <div class="control">
+                  <a class="button is-static"> +44 </a>
+                </div>
+                <div class="control is-expanded">
+                  <input
+                    class="input"
+                    type="tel"
+                    placeholder="Your phone number"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <div class="columns">
+          <div class="column is-5">
+            <div class="field">
+              <label class="form-label">Search people</label>
+              <div class="control has-icon">
+                <input type="text" class="input" placeholder="Search something" />
+                <div class="form-icon">
+                  <i class="iconify" data-icon="feather:search"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <div class="columns">
+          <div class="column is-5">
+            <div class="field">
+              <label class="form-label">Search people</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>Business development</option>
+                    <option>Marketing</option>
+                    <option>Sales</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <div class="columns">
+          <div class="column is-5">
+            <div class="field">
+              <label class="form-label">Search people</label>
+              <div class="control has-icon">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>Business development</option>
+                    <option>Marketing</option>
+                    <option>Sales</option>
+                  </select>
+                </div>
+                <div class="form-icon">
+                  <i class="iconify" data-icon="feather:briefcase"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <div class="columns">
+          <div class="column is-5">
+            <div class="field">
+              <label class="form-label">Message</label>
+              <div class="control">
+                <textarea class="textarea" rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Radios-->
+    <div class="form-outer mb-6">
+      <h3 class="title is-6">Toggles</h3>
+
+      <div class="mb-4">
+        <div class="columns">
+          <div class="column">
+            <div class="field is-narrow mb-5">
+              <div class="control">
+                <div class="radio is-default">
+                  <label for="radio-1" class="radio-inner-wrap">
+                    <span class="radio-inner">
+                      <input id="radio-1" name="radio_1" checked type="radio" />
+                      <i class="iconify rem-50" data-icon="feather:circle"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="radio-label">Option 1</span>
+                  </label>
+                </div>
+                <div class="radio is-primary">
+                  <label for="radio-2" class="radio-inner-wrap">
+                    <span class="radio-inner">
+                      <input id="radio-2" name="radio_1" type="radio" />
+                      <i class="iconify rem-50" data-icon="feather:circle"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="radio-label">Option 2</span>
+                  </label>
+                </div>
+                <div class="radio is-secondary">
+                  <label for="radio-3" class="radio-inner-wrap">
+                    <span class="radio-inner">
+                      <input id="radio-3" name="radio_1" type="radio" />
+                      <i class="iconify rem-50" data-icon="feather:circle"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="radio-label">Option 3</span>
+                  </label>
+                </div>
+                <div class="radio is-info">
+                  <label for="radio-4" class="radio-inner-wrap">
+                    <span class="radio-inner">
+                      <input id="radio-4" name="radio_1" type="radio" />
+                      <i class="iconify rem-50" data-icon="feather:circle"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="radio-label">Option 4</span>
+                  </label>
+                </div>
+                <div class="radio is-success">
+                  <label for="radio-5" class="radio-inner-wrap">
+                    <span class="radio-inner">
+                      <input id="radio-5" name="radio_1" type="radio" />
+                      <i class="iconify rem-50" data-icon="feather:circle"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="radio-label">Option 5</span>
+                  </label>
+                </div>
+                <div class="radio is-warning">
+                  <label for="radio-6" class="radio-inner-wrap">
+                    <span class="radio-inner">
+                      <input id="radio-6" name="radio_1" type="radio" />
+                      <i class="iconify rem-50" data-icon="feather:circle"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="radio-label">Option 6</span>
+                  </label>
+                </div>
+                <div class="radio is-danger">
+                  <label for="radio-7" class="radio-inner-wrap">
+                    <span class="radio-inner">
+                      <input id="radio-7" name="radio_1" type="radio" />
+                      <i class="iconify rem-50" data-icon="feather:circle"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="radio-label">Option 7</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-narrow mb-5">
+              <div class="control">
+                <div class="checkbox is-default mr-4">
+                  <label for="checkbox-1" class="checkbox-inner-wrap">
+                    <span class="checkbox-inner">
+                      <input id="checkbox-1" type="checkbox" checked />
+                      <i class="iconify rem-70" data-icon="feather:check"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="checkbox-label">Label 1</span>
+                  </label>
+                </div>
+                <div class="checkbox is-primary mr-4">
+                  <label for="checkbox-2" class="checkbox-inner-wrap">
+                    <span class="checkbox-inner">
+                      <input id="checkbox-2" type="checkbox" checked />
+                      <i class="iconify rem-70" data-icon="feather:check"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="checkbox-label">Label 2</span>
+                  </label>
+                </div>
+                <div class="checkbox is-secondary mr-4">
+                  <label for="checkbox-3" class="checkbox-inner-wrap">
+                    <span class="checkbox-inner">
+                      <input id="checkbox-3" type="checkbox" checked />
+                      <i class="iconify rem-70" data-icon="feather:check"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="checkbox-label">Label 3</span>
+                  </label>
+                </div>
+                <div class="checkbox is-success mr-4">
+                  <label for="checkbox-4" class="checkbox-inner-wrap">
+                    <span class="checkbox-inner">
+                      <input id="checkbox-4" type="checkbox" checked />
+                      <i class="iconify rem-70" data-icon="feather:check"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="checkbox-label">Label 4</span>
+                  </label>
+                </div>
+                <div class="checkbox is-info mr-4">
+                  <label for="checkbox-5" class="checkbox-inner-wrap">
+                    <span class="checkbox-inner">
+                      <input id="checkbox-5" type="checkbox" checked />
+                      <i class="iconify rem-70" data-icon="feather:check"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="checkbox-label">Label 5</span>
+                  </label>
+                </div>
+                <div class="checkbox is-warning mr-4">
+                  <label for="checkbox-6" class="checkbox-inner-wrap">
+                    <span class="checkbox-inner">
+                      <input id="checkbox-6" type="checkbox" checked />
+                      <i class="iconify rem-70" data-icon="feather:check"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="checkbox-label">Label 6</span>
+                  </label>
+                </div>
+                <div class="checkbox is-danger mr-4">
+                  <label for="checkbox-7" class="checkbox-inner-wrap">
+                    <span class="checkbox-inner">
+                      <input id="checkbox-7" type="checkbox" checked />
+                      <i class="iconify rem-70" data-icon="feather:check"></i>
+                      <span class="inner-overlay"></span>
+                    </span>
+                    <span class="checkbox-label">Label 7</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-grouped mb-5">
+              <div class="control">
+                <label class="f-switch is-primary">
+                  <input type="checkbox" class="is-switch" checked />
+                  <i></i>
+                </label>
+              </div>
+              <div class="control">
+                <label class="f-switch is-secondary">
+                  <input type="checkbox" class="is-switch" checked />
+                  <i></i>
+                </label>
+              </div>
+              <div class="control">
+                <label class="f-switch is-info">
+                  <input type="checkbox" class="is-switch" checked />
+                  <i></i>
+                </label>
+              </div>
+              <div class="control">
+                <label class="f-switch is-success">
+                  <input type="checkbox" class="is-switch" checked />
+                  <i></i>
+                </label>
+              </div>
+              <div class="control">
+                <label class="f-switch is-warning">
+                  <input type="checkbox" class="is-switch" checked />
+                  <i></i>
+                </label>
+              </div>
+              <div class="control">
+                <label class="f-switch is-danger">
+                  <input type="checkbox" class="is-switch" checked />
+                  <i></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

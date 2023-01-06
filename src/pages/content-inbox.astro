@@ -1,0 +1,197 @@
+---
+import Layout from '../layouts/Default.astro';
+import InboxMainDropdown from '../components/InboxMainDropdown.astro';
+import InboxMessagesDropdown from '../components/InboxMessagesDropdown.astro';
+import InboxMessagesList from '../components/InboxMessagesList.astro';
+import Message1 from '../components/Message1.astro';
+import Message2 from '../components/Message2.astro';
+import Message3 from '../components/Message3.astro';
+import Message4 from '../components/Message4.astro';
+import Message5 from '../components/Message5.astro';
+import Message6 from '../components/Message6.astro';
+import Message7 from '../components/Message7.astro';
+import Message8 from '../components/Message8.astro';
+import Message9 from '../components/Message9.astro';
+import Message10 from '../components/Message10.astro';
+const title = 'Inbox'
+---
+
+<Layout title={title}>
+  <div class="inbox-wrapper" x-data="initInbox()">
+    <div class="inbox-wrapper-inner">
+      <!--Inbox sidebar-->
+      <div
+        class="inbox-sidebar"
+        :class="{
+            'mobile-active': isMobileActive,
+            '': !isMobileActive
+
+            }"
+      >
+        <!-- Header -->
+        <div class="header-area">
+          <h2 class="inbox-title">Inbox</h2>
+          <InboxMainDropdown />
+          <a
+            @click="toggleMobileSidebar()"
+            class="inbox-action inbox-close-sidebar-mobile"
+          >
+            <i class="iconify" data-icon="feather:x">close</i>
+          </a>
+        </div>
+        <!--Inner-->
+        <div class="sidebar-inner">
+          <!--Inner menu-->
+          <div class="inner-menu">
+            <a class="button compose-button is-fullwidth">Compose</a>
+            <div class="inbox-menu">
+              <ul>
+                <li>
+                  <a class="is-active">
+                    <i class="iconify" data-icon="ph:envelope-duotone"></i>
+                    <span>Inbox</span>
+                    <span class="tag">24</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i class="iconify" data-icon="ph:note-duotone"></i>
+                    <span>Drafts</span>
+                    <span class="tag">2</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i
+                      class="iconify"
+                      data-icon="ph:paper-plane-right-duotone"
+                    ></i>
+                    <span>Sent</span>
+                    <span class="tag">7</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i class="iconify" data-icon="ph:trash-duotone"></i>
+                    <span>Trash</span>
+                    <span class="tag">18</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <i class="iconify" data-icon="ph:warning-octagon-duotone"></i>
+                    <span>Spam</span>
+                    <span class="tag">29</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Scroll menu-->
+          <div class="scroll-menu">
+            <div class="title-wrap">
+              <h3>Contacts</h3>
+              <a class="search-button">
+                <i class="iconify" data-icon="feather:search"></i>
+              </a>
+            </div>
+            <div class="contact-list has-slimscroll">
+              <!--Contact-->
+              <div class="contact-block">
+                <img src="/img/avatars/29.jpg" alt="user photo" />
+                <div class="contact-meta">
+                  <span>Christina Chu</span>
+                  <span>cchu@gmail.com</span>
+                </div>
+              </div>
+              <!--Contact-->
+              <div class="contact-block">
+                <img src="/img/avatars/6.jpg" alt="user photo" />
+                <div class="contact-meta">
+                  <span>Daniel Wellington</span>
+                  <span>dwellington@gmail.com</span>
+                </div>
+              </div>
+              <!--Contact-->
+              <div class="contact-block">
+                <img src="/img/avatars/16.jpg" alt="user photo" />
+                <div class="contact-meta">
+                  <span>Robert Filburr</span>
+                  <span>robert@gmail.com</span>
+                </div>
+              </div>
+              <!--Contact-->
+              <div class="contact-block">
+                <img src="/img/avatars/48.jpg" alt="user photo" />
+                <div class="contact-meta">
+                  <span>Lakisha Williams</span>
+                  <span>lakisha@gmail.com</span>
+                </div>
+              </div>
+              <!--Contact-->
+              <div class="contact-block">
+                <img src="/img/avatars/19.jpg" alt="user photo" />
+                <div class="contact-meta">
+                  <span>Ray Stockton</span>
+                  <span>ray@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Messages list-->
+      <div class="inbox-messages">
+        <div class="header-area">
+          <div class="actions">
+            <a
+              @click="toggleMobileSidebar()"
+              class="inbox-action mobile-menu-action"
+            >
+              <i class="iconify" data-icon="feather:arrow-right"></i>
+            </a>
+          </div>
+          <div class="actions">
+            <div class="control inbox-search">
+              <input type="text" class="input" placeholder="Search Inbox..." />
+              <div class="inbox-search-icon">
+                <i class="iconify" data-icon="feather:search"></i>
+              </div>
+            </div>
+
+            <InboxMessagesDropdown />
+          </div>
+        </div>
+        <!--Messages-->
+        <div class="messages-list has-slimscroll">
+          <!--messages list partial-->
+          <InboxMessagesList />
+        </div>
+      </div>
+
+      <!--Loader-->
+      <div
+        class="inbox-message-overlay"
+        :class="{
+                'tablet-active': isMobileMessageActive,
+                '': !isMobileMessageActive
+            }"
+      >
+        <div class="loader is-loading"></div>
+      </div>
+
+      <!--Message details 1-->
+      <Message1 />
+      <Message2 />
+      <Message3 />
+      <Message4 />
+      <Message5 />
+      <Message6 />
+      <Message7 />
+      <Message8 />
+      <Message9 />
+      <Message10 />
+    </div>
+  </div>
+</Layout>

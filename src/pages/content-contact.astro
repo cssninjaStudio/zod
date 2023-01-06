@@ -1,0 +1,513 @@
+---
+import Layout from '../layouts/Default.astro';
+import ContactEventDropdown from '../components/ContactEventDropdown.astro';
+const title = 'Contact Details'
+---
+
+<Layout title={title}>
+  <div class="contact-profile-wrap" x-data="initContactDetails()">
+    <div class="contact-profile">
+      <!--Toolbar-->
+      <div class="toolbar is-spaced-bottom">
+        <div class="toolbar-start">
+          <h2 class="title is-4 is-narrow">Contact Details</h2>
+        </div>
+        <div class="toolbar-end">
+          <button class="button is-primary is-long-1 raised">
+            <span>Edit</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="columns">
+        <!-- Left Card -->
+        <div class="column is-4">
+          <div class="profile-card">
+            <div class="inner">
+              <div class="contact-block">
+                <div class="avatar-wrapper">
+                  <img src="/img/avatars/19.jpg" alt="Contact photo" />
+                </div>
+                <div class="contact-meta">
+                  <div class="contact-name">Daniel Craig</div>
+                  <div class="contact-company">Plex Inc.</div>
+                </div>
+                <div class="stats-block">
+                  <div class="stat">
+                    <span>Deals</span>
+                    <span>24</span>
+                  </div>
+                  <div class="stat">
+                    <span>Won</span>
+                    <span>17</span>
+                  </div>
+                  <div class="stat">
+                    <span>Lost</span>
+                    <span>7</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Right Card-->
+        <div class="column is-8">
+          <div class="info-card">
+            <div
+              class="navigation-tabs single-contact-tabs animated-tabs simple-tabs"
+            >
+              <div class="tabs">
+                <ul>
+                  <li
+                    @click="toggleTabs('overview-tab')"
+                    :class="{
+                                  'is-active': activeTab === 'overview-tab',
+                                  '': activeTab !== 'overview-tab',
+                              }"
+                  >
+                    <a>General</a>
+                  </li>
+                  <li
+                    @click="toggleTabs('events-tab')"
+                    :class="{
+                                  'is-active': activeTab === 'events-tab',
+                                  '': activeTab !== 'events-tab',
+                              }"
+                  >
+                    <a>Events</a>
+                  </li>
+                  <li
+                    @click="toggleTabs('calls-tab')"
+                    :class="{
+                                  'is-active': activeTab === 'calls-tab',
+                                  '': activeTab !== 'calls-tab',
+                              }"
+                  >
+                    <a>Calls</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- General info -->
+              <div
+                x-show.transition="activeTab === 'overview-tab'"
+                class="navtab-content is-active"
+              >
+                <div class="columns">
+                  <div class="column is-6">
+                    <!-- Item -->
+                    <div class="info-block">
+                      <i
+                        class="iconify text-primary"
+                        data-icon="ph:envelope-duotone"
+                      ></i>
+                      <div>
+                        <div class="info-label">Email</div>
+                        <div class="info-content is-email">
+                          jbarker@multicorp.co
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="info-block">
+                      <i
+                        class="iconify text-primary"
+                        data-icon="ph:phone-disconnect-duotone"
+                      ></i>
+                      <div>
+                        <div class="info-label">Phone</div>
+                        <div class="info-content">+1 555 28 354</div>
+                      </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="info-block">
+                      <i
+                        class="iconify text-primary"
+                        data-icon="ph:briefcase-simple-duotone"
+                      ></i>
+                      <div>
+                        <div class="info-label">Position</div>
+                        <div class="info-content">HR Manager</div>
+                      </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="info-block">
+                      <i
+                        class="iconify text-primary"
+                        data-icon="ph:map-pin-duotone"
+                      ></i>
+                      <div>
+                        <div class="info-label">Location</div>
+                        <div class="info-content">New York, USA</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="column is-6">
+                    <!-- Item -->
+                    <div class="info-block">
+                      <i
+                        class="iconify text-primary"
+                        data-icon="ph:buildings-duotone"
+                      ></i>
+                      <div>
+                        <div class="info-label">Company</div>
+                        <div class="info-content">Multicorp Inc.</div>
+                      </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="info-block">
+                      <div>
+                        <div class="info-label">Quick Summary</div>
+                        <div class="info-content is-notes">
+                          Lorem ipsum dolor sit amet, ad blandit intellegam cum,
+                          nulla legere possit id vim, clita nullam graecis duo ne.
+                        </div>
+                        <div class="field is-prospect">
+                          <label class="f-switch is-secondary scale-7">
+                            <input
+                              id="prospectSwitch"
+                              type="checkbox"
+                              class="is-secondary"
+                            />
+                            <i></i>
+                          </label>
+                          <label for="prospectSwitch"
+                            ><span>This contact is a prospect</span></label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <hr />
+
+                <!-- Earnings -->
+                <div class="lifetime-wrapper">
+                  <div class="lifetime-won">
+                    <div class="lifetime-label">Lifetime Earnings</div>
+                    <span>20,453.76</span>
+                  </div>
+
+                  <div class="avatars is-loose">
+                    <div class="avatar is-xs">
+                      <img src="/img/logo/companies/airbnb.svg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xs">
+                      <img src="/img/logo/companies/atlassian.svg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-xs">
+                      <img src="/img/logo/companies/google.svg" alt="user photo" />
+                    </div>
+                    <div class="avatar is-fake is-xs is-count">
+                      <span>+8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Events -->
+              <div
+                x-show.transition="activeTab === 'events-tab'"
+                class="navtab-content"
+              >
+                <div class="columns">
+                  <div class="column">
+                    <!-- Item -->
+                    <div class="event-block">
+                      <i
+                        class="iconify text-success"
+                        data-icon="ph:app-window-duotone"
+                      ></i>
+                      <div class="date-block">
+                        <span>18</span>
+                        <span>Oct</span>
+                      </div>
+                      <div class="event-meta">
+                        <span class="event-name">
+                          Presentation of our latest release.
+                        </span>
+                        <span class="meta">
+                          <span class="meta-element">
+                            <i class="sl icon-location"></i>
+                            <span>Customer's Office</span>
+                          </span>
+                          <span class="px-2">·</span>
+                          <span class="meta-element">
+                            <i class="sl icon-clock"></i>
+                            <span>10:30am</span>
+                          </span>
+                        </span>
+                      </div>
+                      <!-- Dropdown -->
+                      <ContactEventDropdown />
+                    </div>
+
+                    <!-- Item -->
+                    <div class="event-block is-disabled">
+                      <i
+                        class="iconify text-secondary"
+                        data-icon="ph:users-three-duotone"
+                      ></i>
+                      <div class="date-block">
+                        <span>16</span>
+                        <span>Oct</span>
+                      </div>
+                      <div class="event-meta">
+                        <span class="event-name">
+                          Project review with the team.
+                        </span>
+                        <span class="meta">
+                          <span class="meta-element">
+                            <i class="sl icon-location"></i>
+                            <span>Meeting Room B</span>
+                          </span>
+                          <span class="px-2">·</span>
+                          <span class="meta-element">
+                            <i class="sl icon-clock"></i>
+                            <span>11:30am</span>
+                          </span>
+                        </span>
+                      </div>
+                      <!-- Dropdown -->
+                      <ContactEventDropdown />
+                    </div>
+
+                    <!-- Item -->
+                    <div class="event-block is-disabled">
+                      <i
+                        class="iconify text-secondary"
+                        data-icon="ph:gear-six-duotone"
+                      ></i>
+                      <div class="date-block">
+                        <span>13</span>
+                        <span>Oct</span>
+                      </div>
+                      <div class="event-meta">
+                        <span class="event-name">
+                          Product review with Melinda.
+                        </span>
+                        <span class="meta">
+                          <span class="meta-element">
+                            <i class="sl icon-location"></i>
+                            <span>Melinda's office</span>
+                          </span>
+                          <span class="px-2">·</span>
+                          <span class="meta-element">
+                            <i class="sl icon-clock"></i>
+                            <span>4:30pm</span>
+                          </span>
+                        </span>
+                      </div>
+                      <!-- Dropdown -->
+                      <ContactEventDropdown />
+                    </div>
+
+                    <!-- Item -->
+                    <div class="event-block is-disabled">
+                      <i
+                        class="iconify text-secondary"
+                        data-icon="ph:confetti-duotone"
+                      ></i>
+                      <div class="date-block">
+                        <span>09</span>
+                        <span>Oct</span>
+                      </div>
+                      <div class="event-meta">
+                        <span class="event-name">
+                          Department party for Bob's leave
+                        </span>
+                        <span class="meta">
+                          <span class="meta-element">
+                            <i class="sl icon-location"></i>
+                            <span>Meeting Room A</span>
+                          </span>
+                          <span class="px-2">·</span>
+                          <span class="meta-element">
+                            <i class="sl icon-clock"></i>
+                            <span>7:30pm</span>
+                          </span>
+                        </span>
+                      </div>
+                      <!-- Dropdown -->
+                      <ContactEventDropdown />
+                    </div>
+
+                    <!-- Item -->
+                    <div class="event-block is-disabled">
+                      <i
+                        class="iconify text-secondary"
+                        data-icon="ph:projector-screen-chart-duotone"
+                      ></i>
+                      <div class="date-block">
+                        <span>05</span>
+                        <span>Oct</span>
+                      </div>
+                      <div class="event-meta">
+                        <span class="event-name">
+                          Heartmann project team review
+                        </span>
+                        <span class="meta">
+                          <span class="meta-element">
+                            <i class="sl icon-location"></i>
+                            <span>Meeting Room A</span>
+                          </span>
+                          <span class="px-2">·</span>
+                          <span class="meta-element">
+                            <i class="sl icon-clock"></i>
+                            <span>9:30am</span>
+                          </span>
+                        </span>
+                      </div>
+                      <!-- Dropdown -->
+                      <ContactEventDropdown />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Calls -->
+              <div
+                x-show.transition="activeTab === 'calls-tab'"
+                class="navtab-content"
+              >
+                <!-- Logged call -->
+                <div class="call-block">
+                  <div class="block-wrap">
+                    <span class="block-head">
+                      <a href="#">
+                        <i class="iconify" data-icon="ph:phone-call-duotone"></i>
+                        <small>Mar 18, 2022</small>
+                      </a>
+                      <div class="people">
+                        <div class="avatars">
+                          <div class="avatar is-xs">
+                            <img src="/img/avatars/5.jpg" alt="user photo" />
+                          </div>
+                          <div class="avatar is-xs">
+                            <img src="/img/avatars/21.jpg" alt="user photo" />
+                          </div>
+                          <div class="avatar is-xs">
+                            <img src="/img/avatars/6.jpg" alt="user photo" />
+                          </div>
+                          <div class="avatar is-fake is-xs is-count">
+                            <span>+2</span>
+                          </div>
+                        </div>
+                      </div>
+                    </span>
+                    <!-- Content -->
+                    <div class="block-container">
+                      <div class="meta-group">
+                        <div class="meta-block">
+                          <div class="call-label">Called at</div>
+                          <div class="call-info">10:23 am</div>
+                        </div>
+                        <div class="meta-block">
+                          <div class="call-label">Call Type</div>
+                          <div class="call-info">Outgoing call</div>
+                        </div>
+                        <div class="meta-block">
+                          <div class="call-label">Call Duration</div>
+                          <div class="call-info">15 minutes</div>
+                        </div>
+                      </div>
+
+                      <div class="meta-block">
+                        <div class="call-label">Conversation abstract</div>
+                        <div class="call-info">
+                          Lorem ipsum dolor sit amet, cu ius oratio appareat
+                          partiendo. Solet civibus nam te. Eu vel veri putent. Et
+                          suas reprimique adversarium duo, ex vel ridens graecis.
+                          Mel ipsum oratio voluptatum et.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-footer">
+                      <div class="buttons">
+                        <a class="button is-rounded-md">Edit Log</a>
+                        <a class="button is-rounded-md">Remove</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Logged call -->
+                <div class="call-block">
+                  <div class="block-wrap">
+                    <span class="block-head">
+                      <a href="#">
+                        <i class="iconify" data-icon="ph:phone-call-duotone"></i>
+                        <small>Mar 12, 2022</small>
+                      </a>
+                      <div class="people">
+                        <div class="avatars">
+                          <div class="avatar is-xs">
+                            <img src="/img/avatars/17.jpg" alt="user photo" />
+                          </div>
+                          <div class="avatar is-xs">
+                            <img src="/img/avatars/42.jpg" alt="user photo" />
+                          </div>
+                          <div class="avatar is-xs">
+                            <img src="/img/avatars/55.jpg" alt="user photo" />
+                          </div>
+                          <div class="avatar is-fake is-xs is-count">
+                            <span>+4</span>
+                          </div>
+                        </div>
+                      </div>
+                    </span>
+                    <!-- Content -->
+                    <div class="block-container">
+                      <div class="meta-group">
+                        <div class="meta-block">
+                          <div class="call-label">Called at</div>
+                          <div class="call-info">9:12 am</div>
+                        </div>
+                        <div class="meta-block">
+                          <div class="call-label">Call Type</div>
+                          <div class="call-info">Outgoing call</div>
+                        </div>
+                        <div class="meta-block">
+                          <div class="call-label">Call Duration</div>
+                          <div class="call-info">7 minutes</div>
+                        </div>
+                      </div>
+
+                      <div class="meta-block">
+                        <div class="call-label">Conversation abstract</div>
+                        <div class="call-info">
+                          Lorem ipsum dolor sit amet, cu ius oratio appareat
+                          partiendo. Solet civibus nam te. Eu vel veri putent. Et
+                          suas reprimique adversarium duo, ex vel ridens graecis.
+                          Mel ipsum oratio voluptatum et.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-footer">
+                      <div class="buttons">
+                        <a class="button is-rounded-md">Edit Log</a>
+                        <a class="button is-rounded-md">Remove</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Log call action -->
+                <div class="action-wrapper">
+                  <a class="button is-solid">
+                    <span>Log a New Call</span>
+                  </a>
+                </div>
+              </div>
+              <!-- /Calls -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

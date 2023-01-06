@@ -31,7 +31,7 @@ export function initTheme() {
     searchData(e) {
       let searchTerm = e.target.value;
       let selector = e.target.getAttribute("data-selector");
-      const batch = searchJSON(searchTerm, "/data/search.json", selector);
+      const batch = searchJSON(searchTerm, "/api/search.json", selector);
     },
 
     isMobileSearchActive: false,
