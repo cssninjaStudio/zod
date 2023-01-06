@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/cssninjaStudio/zod/compare/v1.0.1...v2.0.0) (2023-01-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate from gulp to astro
+
+### Features
+
+* migrate from gulp to astro ([bfdc856](https://github.com/cssninjaStudio/zod/commit/bfdc85673d324e742b428f79054f37c866278aba))
+
 ### [1.0.1](https://github.com/cssninjaStudio/zod/compare/v1.0.0...v1.0.1) (2022-11-28)
 
 ## 1.0.0 (2022-10-26)
