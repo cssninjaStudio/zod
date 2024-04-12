@@ -1,14 +1,9 @@
-<div
-  x-data="initDropdown()"
-  @click.away="close()"
-  class="dropdown-wrap is-right"
-  :class="{
+<div x-data="initDropdown()" @click.away="close()" class="dropdown-wrap is-right" :class=`{
     'is-active': open,
     '': !open
-  }"
->
+  }`>
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,21 +12,21 @@
       </div>
       <div class="options-items">
         <a class="options-item">
-            <i class="iconify" data-icon="ph:pencil-line-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:pencil-line-duotone"></iconify-icon>
           <div class="option-content">
             <span>Edit</span>
             <span>Change group name</span>
           </div>
         </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:lock-simple-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:lock-simple-duotone"></iconify-icon>
           <div class="option-content">
             <span>Lock</span>
             <span>Lock this group</span>
           </div>
         </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:circles-three-plus-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:circles-three-plus-duotone"></iconify-icon>
           <div class="option-content">
             <span>New Task</span>
             <span>Add a group task</span>

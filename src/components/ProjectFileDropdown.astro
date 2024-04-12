@@ -1,14 +1,9 @@
-<div
-  x-data="initDropdown()"
-  @click.away="close()"
-  class="dropdown-wrap is-right"
-  :class="{
+<div x-data="initDropdown()" @click.away="close()" class="dropdown-wrap is-right" :class=`{
     'is-active': open,
     '': !open
-  }"
->
+  }`>
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,21 +12,21 @@
       </div>
       <div class="options-items">
         <a class="options-item">
-            <i class="iconify" data-icon="ph:cloud-arrow-down-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:cloud-arrow-down-duotone"></iconify-icon>
           <div class="option-content">
             <span>Download</span>
             <span>Download this file</span>
           </div>
         </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:cloud-arrow-up-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:cloud-arrow-up-duotone"></iconify-icon>
           <div class="option-content">
             <span>Upload</span>
             <span>Upload new version</span>
           </div>
         </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:circles-three-plus-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:circles-three-plus-duotone"></iconify-icon>
           <div class="option-content">
             <span>Share</span>
             <span>Share with other people</span>

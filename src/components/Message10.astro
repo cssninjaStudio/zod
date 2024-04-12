@@ -8,10 +8,10 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
   x-show="activeMessage === 'message-10'"
   id="message-10"
   class="inbox-message-details"
-  :class="{
+  :class=`{
         'mobile-active tablet-active': isMobileMessageActive,
         '': !isMobileMessageActive
-    }"
+    }`
 >
   <div class="header-area">
     <img class="sender-pic" src="/img/avatars/19.jpg" alt="sender photo" />
@@ -19,15 +19,12 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
       <span class="message-title">Hop in for the next project review</span>
     </div>
     <div class="attachments inbox-hidden-mobile">
-      <i class="iconify" data-icon="feather:paperclip"></i>
+      <iconify-icon class="iconify" icon="lucide:paperclip"></iconify-icon>
       <span>1</span>
     </div>
     <InboxMessageDropdown />
-    <a
-      @click="closeMobileMessage()"
-      class="inbox-action inbox-close-details-mobile"
-    >
-      <i class="iconify" data-icon="feather:x"></i>
+    <a @click="closeMobileMessage()" class="inbox-action inbox-close-details-mobile">
+      <iconify-icon class="iconify" icon="lucide:x"></iconify-icon>
     </a>
   </div>
   <!--Message-->
@@ -40,13 +37,13 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
         </div>
         <div class="message-actions">
           <a class="inbox-action">
-            <i class="iconify" data-icon="feather:tag"></i>
+            <iconify-icon class="iconify" icon="lucide:tag"></iconify-icon>
           </a>
           <a class="inbox-action">
-            <i class="iconify" data-icon="feather:message-circle"></i>
+            <iconify-icon class="iconify" icon="lucide:message-circle"></iconify-icon>
           </a>
           <a class="inbox-action">
-            <i class="iconify" data-icon="feather:trash-2"></i>
+            <iconify-icon class="iconify" icon="lucide:trash-2"></iconify-icon>
           </a>
         </div>
       </div>
@@ -54,33 +51,22 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
       <div class="mail-content content">
         <p>Hi Anthony,</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid adiuvas?
-          Dat enim intervalla et relaxat. Et nemo nimium beatus est; Claudii
-          libidini, qui tum erat summo ne imperio, dederetur. Duo Reges:
-          constructio interrete.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid adiuvas? Dat enim intervalla et relaxat. Et nemo nimium beatus est; Claudii libidini, qui tum erat summo ne imperio, dederetur.
+          Duo Reges: constructio interrete.
         </p>
         <p>
           Sedulo, inquam, faciam. Certe, nisi voluptatem tanti aestimaretis.
-          <a href="http://loripsum.net/" target="_blank"
-            >Recte, inquit, intellegis.</a
-          >
+          <a href="http://loripsum.net/" target="_blank">Recte, inquit, intellegis.</a>
           Ergo, inquit, tibi Q. Recte, inquit, intellegis.
         </p>
         <ul>
           <li>Quid nunc honeste dicit?</li>
-          <li>
-            Nos quidem Virtutes sic natae sumus, ut tibi serviremus, aliud
-            negotii nihil habemus.
-          </li>
-          <li>
-            Negabat igitur ullam esse artem, quae ipsa a se proficisceretur;
-          </li>
+          <li>Nos quidem Virtutes sic natae sumus, ut tibi serviremus, aliud negotii nihil habemus.</li>
+          <li>Negabat igitur ullam esse artem, quae ipsa a se proficisceretur;</li>
         </ul>
         <p>
-          Satis est ad hoc responsum. Quod iam a me expectare noli. Confecta res
-          esset. Bonum integritas corporis: misera debilitas. Illum mallem
-          levares, quo optimum atque humanissimum virum, Cn. Utrum igitur tibi
-          litteram videor an totas paginas commovere?
+          Satis est ad hoc responsum. Quod iam a me expectare noli. Confecta res esset. Bonum integritas corporis: misera debilitas. Illum mallem levares, quo optimum atque humanissimum virum, Cn.
+          Utrum igitur tibi litteram videor an totas paginas commovere?
         </p>
         <p>Ray</p>
       </div>
@@ -90,7 +76,7 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
         <div class="attachment">
           <span>iteration-4.pdf</span>
           <div class="download-icon">
-            <i class="iconify" data-icon="feather:arrow-down"></i>
+            <iconify-icon class="iconify" icon="lucide:arrow-down"></iconify-icon>
           </div>
         </div>
       </div>
@@ -109,11 +95,7 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
         </div>
         <!--textarea-->
         <div class="control">
-          <textarea
-            class="textarea"
-            rows="6"
-            placeholder="Type your message..."
-          ></textarea>
+          <textarea class="textarea" rows="6" placeholder="Type your message..."></textarea>
           <button type="button" class="button">Send Message</button>
         </div>
       </div>

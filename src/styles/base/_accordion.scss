@@ -45,7 +45,7 @@
     }
 
     .accordion-title {
-      font-family: var(--font-alt);
+      font-family: var(--font);
       color: var(--title-color);
       padding: 1em 1.5em 1em 0;
     }
@@ -55,10 +55,10 @@
       position: absolute;
       top: 18px;
       #{$end-direction}: 0;
-      width: 22px;
-      height: 22px;
+      width: 1.5rem;
+      height: 1.5rem;
       border: 1px solid var(--wrap-border-color);
-      border-radius: 22px;
+      border-radius: 50%;
       color: var(--light-text);
       transition: transform 0.3s;
 
@@ -66,8 +66,8 @@
         display: block;
         position: absolute;
         content: "";
-        top: 9px;
-        #{$start-direction}: 5px;
+        top: 10px;
+        #{$start-direction}: 6px;
         width: 10px;
         height: 2px;
         background: currentColor;
@@ -77,8 +77,8 @@
         display: block;
         position: absolute;
         content: "";
-        top: 5px;
-        #{$start-direction}: 9px;
+        top: 6px;
+        #{$start-direction}: 10px;
         width: 2px;
         height: 10px;
         background: currentColor;

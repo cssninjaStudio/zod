@@ -1,11 +1,10 @@
 ---
-import Layout from '../layouts/Default.astro';
+import Layout from '../layouts/Default.astro'
 const title = 'Datatable'
 ---
 
 <Layout title={title}>
   <div class="datatable-wrapper">
-
     <!--Toolbar-->
     <div class="toolbar is-spaced-bottom">
       <div class="toolbar-start">
@@ -13,19 +12,17 @@ const title = 'Datatable'
       </div>
       <div class="toolbar-end">
         <button class="button is-primary is-long-2 raised">
-          <i class="iconify mr-2" data-icon="feather:plus"></i>
+          <iconify-icon class="iconify mr-2" icon="lucide:plus"></iconify-icon>
           <span>New Entry</span>
         </button>
       </div>
     </div>
 
-    <div x-data="initDatatable()"
-      x-init="
-      initData()
-      $watch('searchInput', value => {
+    <div x-data="initDatatable()" x-init=`
+        initData()
+        $watch('searchInput', value => {
         search(value)
-      })" 
-      class="datatable-container">
+      })` class="datatable-container">
       <div class="datatable-header">
         <div class="header-format">
           <p>Show</p>
@@ -44,67 +41,160 @@ const title = 'Datatable'
         <div>
           <div class="control has-icon">
             <div class="form-icon">
-              <i class="iconify" data-icon="feather:search"></i>
+              <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
             </div>
-            <input x-model="searchInput" type="text" class="input" placeholder="Search...">
+            <input x-model="searchInput" type="text" class="input" placeholder="Search..." />
           </div>
         </div>
       </div>
       <table class="inner-table">
         <thead class="table-head">
-          <th width="20%">
+          <th style="width: 20%">
             <div class="head-cell">
-              <span class="head-label">
-                Name
-              </span>
-              </span>
+              <span class="head-label"> Name </span>
               <div class="head-sort">
-                <svg @click="sort('name', 'asc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'name' && sorted.rule === 'asc'}"><path d="M5 15l7-7 7 7"></path></svg>
-                <svg @click="sort('name', 'desc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'name' && sorted.rule === 'desc'}"><path d="M19 9l-7 7-7-7"></path></svg>
+                <svg
+                  @click="sort('name', 'asc')"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'name' && sorted.rule === 'asc'}`><path d="M5 15l7-7 7 7"></path></svg
+                >
+                <svg
+                  @click="sort('name', 'desc')"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'name' && sorted.rule === 'desc'}`><path d="M19 9l-7 7-7-7"></path></svg
+                >
               </div>
             </div>
           </th>
-          <th width="20%">
+          <th style="width: 20%">
             <div class="head-cell">
-              <span class="head-label">
-                Job
-              </span>
+              <span class="head-label"> Job </span>
               <div class="head-sort">
-                <svg @click="sort('job', 'asc')" fill="none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'job' && sorted.rule === 'asc'}"><path d="M5 15l7-7 7 7"></path></svg>
-                <svg @click="sort('job', 'desc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'job' && sorted.rule === 'desc'}"><path d="M19 9l-7 7-7-7"></path></svg>
+                <svg
+                  @click="sort('job', 'asc')"
+                  fill="none"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'job' && sorted.rule === 'asc'}`><path d="M5 15l7-7 7 7"></path></svg
+                >
+                <svg
+                  @click="sort('job', 'desc')"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'job' && sorted.rule === 'desc'}`><path d="M19 9l-7 7-7-7"></path></svg
+                >
               </div>
             </div>
           </th>
-          <th width="30%">
+          <th style="width: 30%">
             <div class="head-cell">
-              <span class="head-label">
-                Email
-              </span>
+              <span class="head-label"> Email </span>
               <div class="head-sort">
-                <svg @click="sort('email', 'asc')" fill="none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'email' && sorted.rule === 'asc'}"><path d="M5 15l7-7 7 7"></path></svg>
-                <svg @click="sort('email', 'desc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'email' && sorted.rule === 'desc'}"><path d="M19 9l-7 7-7-7"></path></svg>
+                <svg
+                  @click="sort('email', 'asc')"
+                  fill="none"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'email' && sorted.rule === 'asc'}`><path d="M5 15l7-7 7 7"></path></svg
+                >
+                <svg
+                  @click="sort('email', 'desc')"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'email' && sorted.rule === 'desc'}`><path d="M19 9l-7 7-7-7"></path></svg
+                >
               </div>
             </div>
           </th>
-          <th width="10%">
+          <th style="width: 10%">
             <div class="head-cell">
-              <span class="head-label">
-                Year
-              </span>
+              <span class="head-label"> Year </span>
               <div class="head-sort">
-                <svg @click="sort('year', 'asc')" fill="none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'year' && sorted.rule === 'asc'}"><path d="M5 15l7-7 7 7"></path></svg>
-                <svg @click="sort('year', 'desc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'year' && sorted.rule === 'desc'}"><path d="M19 9l-7 7-7-7"></path></svg>
+                <svg
+                  @click="sort('year', 'asc')"
+                  fill="none"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'year' && sorted.rule === 'asc'}`><path d="M5 15l7-7 7 7"></path></svg
+                >
+                <svg
+                  @click="sort('year', 'desc')"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'year' && sorted.rule === 'desc'}`><path d="M19 9l-7 7-7-7"></path></svg
+                >
               </div>
             </div>
           </th>
-          <th width="15%">
+          <th style="width: 15%">
             <div class="head-cell">
-              <span class="head-label">
-                Country
-              </span>
+              <span class="head-label"> Country </span>
               <div class="head-sort">
-                <svg @click="sort('country', 'asc')" fill="none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'country' && sorted.rule === 'asc'}"><path d="M5 15l7-7 7 7"></path></svg>
-                <svg @click="sort('country', 'desc')" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" viewBox="0 0 24 24" stroke="currentColor" class="sort-icon" x-bind:class="{'text-primary': sorted.field === 'country' && sorted.rule === 'desc'}"><path d="M19 9l-7 7-7-7"></path></svg>
+                <svg
+                  @click="sort('country', 'asc')"
+                  fill="none"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'country' && sorted.rule === 'asc'}`><path d="M5 15l7-7 7 7"></path></svg
+                >
+                <svg
+                  @click="sort('country', 'desc')"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="sort-icon"
+                  x-bind:class=`{'text-primary': sorted.field === 'country' && sorted.rule === 'desc'}`><path d="M19 9l-7 7-7-7"></path></svg
+                >
               </div>
             </div>
           </th>
@@ -124,7 +214,7 @@ const title = 'Datatable'
                       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="placeholder" />
                     </div>
                   </template>
-                  
+
                   <span class="table-text table-text-dark" x-text="item.name"></span>
                 </div>
               </td>
@@ -152,22 +242,22 @@ const title = 'Datatable'
           <div class="table-pagination-link" @click.prevent="changePage(1)">
             <span>First</span>
           </div>
-          <span class="px-2 table-pagination-link"">·</span>
+          <span class="px-2 table-pagination-link">·</span>
           <div class="table-pagination-link" @click.prevent="changePage(pagination.lastPage)">
             <span>Last</span>
           </div>
         </div>
         <div class="table-pagination-group is-end">
           <button class="table-pagination-button" @click="changePage(currentPage - 1)">
-            <i class="iconify" data-icon="feather:chevron-left"></i>
+            <iconify-icon class="iconify" icon="lucide:chevron-left"></iconify-icon>
           </button>
           <template x-for="item in pages">
-            <button @click="changePage(item)" class="table-pagination-button" x-bind:class="{ 'is-active': currentPage === item }">
+            <button @click="changePage(item)" class="table-pagination-button" x-bind:class=`{ 'is-active': currentPage === item }`>
               <span x-text="item"></span>
             </button>
           </template>
           <button class="table-pagination-button" @click="changePage(currentPage + 1)">
-            <i class="iconify" data-icon="feather:chevron-right"></i>
+            <iconify-icon class="iconify" icon="lucide:chevron-right"></iconify-icon>
           </button>
         </div>
       </div>

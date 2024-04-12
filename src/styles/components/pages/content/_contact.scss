@@ -112,8 +112,8 @@
             }
 
             &.is-active a {
-              border-color: var(--secondary) !important;
-              color: var(--secondary);
+              border-color: var(--primary) !important;
+              color: var(--primary);
               font-weight: 500;
             }
           }
@@ -280,7 +280,7 @@
             &.is-inner {
               .fa,
               .fas {
-                color: var(--secondary);
+                color: var(--primary);
               }
             }
 
@@ -299,7 +299,7 @@
               a {
                 display: flex;
                 align-items: center;
-                color: var(--secondary);
+                color: var(--primary);
 
                 small {
                   font-size: 1rem;

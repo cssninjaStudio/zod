@@ -1,25 +1,15 @@
-<ul
-  id="sidebar-menu"
-  class="sidebar-menu"
->
+<ul id="sidebar-menu" class="sidebar-menu">
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'dashboard-menu',
       '': !$store.app.activeSidebarMenu !== 'dashboard-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('dashboard-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:layout-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:layout-duotone"></iconify-icon>
       <span>Dashboards</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'dashboard-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'dashboard-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/dashboard-elearning">E-Learning</a>
@@ -47,23 +37,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'datatables-menu',
       '': !$store.app.activeSidebarMenu !== 'datatables-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('datatables-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:table-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:table-duotone"></iconify-icon>
       <span>Datatables</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'datatables-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'datatables-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-datatable">Datatable</a>
@@ -71,23 +54,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'charts-menu',
       '': !$store.app.activeSidebarMenu !== 'charts-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('charts-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:chart-pie-slice-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:chart-pie-slice-duotone"></iconify-icon>
       <span>Charts</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'charts-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'charts-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/charts-apex">Apex Charts</a>
@@ -95,23 +71,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'auth-menu',
       '': !$store.app.activeSidebarMenu !== 'auth-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('auth-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:lock-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:lock-duotone"></iconify-icon>
       <span>Authentication</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'auth-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'auth-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/auth-signup">Signup</a>
@@ -127,23 +96,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'accounting-menu',
       '': !$store.app.activeSidebarMenu !== 'accounting-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('accounting-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:calculator-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:calculator-duotone"></iconify-icon>
       <span>Accounting</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'accounting-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'accounting-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-bills-list">Bills List</a>
@@ -167,23 +129,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'social-menu',
       '': !$store.app.activeSidebarMenu !== 'social-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('social-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:confetti-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:confetti-duotone"></iconify-icon>
       <span>Social</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'social-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'social-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-feed">Social Feed</a>
@@ -195,23 +150,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'forum-menu',
       '': !$store.app.activeSidebarMenu !== 'forum-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('forum-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:chat-circle-text-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:chat-circle-text-duotone"></iconify-icon>
       <span>Forum</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'forum-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'forum-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-forum-index">Forum Home</a>
@@ -227,23 +175,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'support-menu',
       '': !$store.app.activeSidebarMenu !== 'support-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('support-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:lifebuoy-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:lifebuoy-duotone"></iconify-icon>
       <span>Support</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'support-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'support-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-support-ticket">Ticket Details</a>
@@ -251,23 +192,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'projects-menu',
       '': !$store.app.activeSidebarMenu !== 'projects-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('projects-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:projector-screen-chart-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:projector-screen-chart-duotone"></iconify-icon>
       <span>Projects</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'projects-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'projects-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-project-list">Project List</a>
@@ -283,23 +217,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'crm-menu',
       '': !$store.app.activeSidebarMenu !== 'crm-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('crm-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:crown-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:crown-duotone"></iconify-icon>
       <span>CRM</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'crm-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'crm-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-crm-segments">Segments</a>
@@ -315,23 +242,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'contacts-menu',
       '': !$store.app.activeSidebarMenu !== 'contacts-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('contacts-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:users-four-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:users-four-duotone"></iconify-icon>
       <span>Contacts</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'contacts-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'contacts-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-contact-list">Contact List</a>
@@ -347,23 +267,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'messages-menu',
       '': !$store.app.activeSidebarMenu !== 'messages-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('messages-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:envelope-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:envelope-duotone"></iconify-icon>
       <span>Messages</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'messages-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'messages-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-inbox">Message Inbox</a>
@@ -371,23 +284,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'forms-menu',
       '': !$store.app.activeSidebarMenu !== 'forms-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('forms-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:keyboard-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:keyboard-duotone"></iconify-icon>
       <span>Forms</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'forms-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'forms-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-form-1">Horizontal Form</a>
@@ -399,23 +305,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'empty-menu',
       '': !$store.app.activeSidebarMenu !== 'empty-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('empty-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:selection-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:selection-duotone"></iconify-icon>
       <span>Empty States</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'empty-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'empty-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/content-placeholder">Placeholder</a>
@@ -427,23 +326,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'others-menu',
       '': !$store.app.activeSidebarMenu !== 'others-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('others-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:cookie-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:cookie-duotone"></iconify-icon>
       <span>Misc</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="lucide:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'others-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'others-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/elements">UI Elements</a>

@@ -65,7 +65,7 @@ Navbar
         &.is-hoverable:hover {
           background: var(--wrap-muted-color);
 
-          svg {
+          svg, .iconify {
             stroke: var(--title-color);
             color: var(--title-color);
           }
@@ -79,7 +79,7 @@ Navbar
           }
 
           &:hover {
-            background: var(--wrap-muted-color);
+            background: var(--wrap-bg-color);
           }
         }
 
@@ -106,7 +106,7 @@ Navbar
           height: 8px;
           width: 8px;
           border-radius: 50%;
-          background: var(--secondary);
+          background: var(--primary);
           z-index: 2;
         }
 
@@ -114,6 +114,13 @@ Navbar
           height: 18px;
           width: 18px;
           stroke-width: 1.6px;
+          stroke: var(--light-text);
+          color: var(--light-text);
+          transition: stroke 0.3s;
+        }
+
+        .iconify {
+          font-size: 1rem;
           stroke: var(--light-text);
           color: var(--light-text);
           transition: stroke 0.3s;
@@ -128,6 +135,10 @@ Navbar
           svg {
             height: 18px;
             width: 18px;
+          }
+
+          .iconify {
+            font-size: 1rem;
           }
         }
 

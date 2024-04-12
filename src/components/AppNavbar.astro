@@ -7,34 +7,34 @@ import AccountDropdown from './AccountDropdown.astro'
 <div
   x-on:scroll.window="scroll()"
   class="nav-wrapper"
-  :class="{
+  :class=`{
     'is-active': scrolled,
     '': !scrolled,
     '': $store.app.sidebarOpenedState,
     'is-expanded': !$store.app.sidebarOpenedState
-}"
+}`
 >
   <div class="nav-wrapper-inner">
     <div class="dashboard-nav">
       <div
         class="nav-start"
-        :class="{
-                'is-hidden': isMobileSearchActive,
-                '': !isMobileSearchActive
-            }"
+        :class=`{
+            'is-hidden': isMobileSearchActive,
+            '': !isMobileSearchActive
+        }`
       >
         <div class="nav-item is-flex mr-2" 
-        :class="{
+        :class=`{
             'is-hidden': $store.app.sidebarOpenedState,
             '': !$store.app.sidebarOpenedState
-        }">
+        }`>
           <button
             @click="$store.app.sidebarOpenedState = true"
             class="menu-icon v-2 mobile-sidebar-trigger"
-            :class="{
+            :class=`{
               'is-open': $store.app.isSidebarOpenedMobile,
               '': !$store.app.isSidebarOpenedMobile
-            }"
+            }`
           >
             <span></span>
           </button>
@@ -50,7 +50,7 @@ import AccountDropdown from './AccountDropdown.astro'
               placeholder="Search for anything..."
             />
             <div class="form-icon">
-              <i class="iconify" data-icon="feather:search"></i>
+              <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
             </div>
             <div
               id="static-results"
@@ -61,16 +61,16 @@ import AccountDropdown from './AccountDropdown.astro'
       </div>
       <div
         class="nav-end"
-        :class="{
+        :class=`{
             'is-hidden': isMobileSearchActive,
             '': !isMobileSearchActive
-        }"
+        }`
       >
         <div
           @click="toggleMobileSearch()"
           class="nav-item mobile-item is-flex mobile-search-trigger"
         >
-          <i class="iconify" data-icon="feather:search"></i>
+          <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
         </div>
 
         <MessagesDropdown />
@@ -78,7 +78,7 @@ import AccountDropdown from './AccountDropdown.astro'
         <NotificationsDropdown />
 
         <button @click="$store.app.isPanelOpened = true" class="nav-item panel-trigger mask mask-blob">
-          <i class="iconify" data-icon="ph:circles-four-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:circles-four-duotone"></iconify-icon>
         </button>
 
         <label class="theme-toggle mask mask-blob">
@@ -88,8 +88,8 @@ import AccountDropdown from './AccountDropdown.astro'
             :checked="$store.app.isDark"
           />
           <span class="theme-toggle-inner">
-            <i class="sun-icon iconify" data-icon="feather:sun"></i>
-            <i class="moon-icon iconify" data-icon="feather:moon"></i>
+            <iconify-icon class="sun-icon iconify" icon="lucide:sun"></iconify-icon>
+            <iconify-icon class="moon-icon iconify" icon="lucide:moon"></iconify-icon>
           </span>
         </label>
 
@@ -98,10 +98,10 @@ import AccountDropdown from './AccountDropdown.astro'
 
       <div
         class="mobile-search"
-        :class="{
-              'is-active': isMobileSearchActive,
-              '': !isMobileSearchActive
-          }"
+        :class=`{
+            'is-active': isMobileSearchActive,
+            '': !isMobileSearchActive
+        }`
       >
         <div class="field">
           <div class="control has-icon has-icon-right">
@@ -114,13 +114,13 @@ import AccountDropdown from './AccountDropdown.astro'
               placeholder="Search for transactions, accounts..."
             />
             <div class="form-icon">
-              <i class="iconify" data-icon="feather:search"></i>
+              <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
             </div>
             <div
               @click="toggleMobileSearch(), $refs.searchmobilestatic.value = ''"
               class="form-icon right-icon mobile-search-trigger"
             >
-              <i class="iconify" data-icon="feather:x"></i>
+            <iconify-icon class="iconify" icon="lucide:x"></iconify-icon>
             </div>
             <div
               id="mobile-static-results"

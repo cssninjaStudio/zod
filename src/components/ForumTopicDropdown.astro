@@ -1,14 +1,9 @@
-<div
-  x-data="initDropdown()"
-  @click.away="close()"
-  class="dropdown-wrap is-right"
-  :class="{
+<div x-data="initDropdown()" @click.away="close()" class="dropdown-wrap is-right" :class=`{
     'is-active': open,
     '': !open
-  }"
->
+  }`>
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,28 +12,28 @@
       </div>
       <div class="options-items">
         <a href="/content-forum-topic" class="options-item">
-            <i class="iconify" data-icon="ph:note-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:note-duotone"></iconify-icon>
           <div class="option-content">
             <span>View Topic</span>
             <span>Open this topic</span>
           </div>
         </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:pencil-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:pencil-duotone"></iconify-icon>
           <div class="option-content">
             <span>Edit</span>
             <span>Edit this topic</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:lock-duotone"></i>
-        <div class="option-content">
-          <span>Lock</span>
-          <span>Lock this topic</span>
-        </div>
-      </a>
+          <iconify-icon class="iconify" icon="ph:lock-duotone"></iconify-icon>
+          <div class="option-content">
+            <span>Lock</span>
+            <span>Lock this topic</span>
+          </div>
+        </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:trash-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:trash-duotone"></iconify-icon>
           <div class="option-content">
             <span>Delete</span>
             <span>Delete this topic</span>

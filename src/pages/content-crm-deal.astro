@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Default.astro';
-import CrmDealDropdown from '../components/CrmDealDropdown.astro';
+import Layout from '../layouts/Default.astro'
+import CrmDealDropdown from '../components/CrmDealDropdown.astro'
 const title = 'Deal Details'
 ---
 
@@ -8,16 +8,12 @@ const title = 'Deal Details'
   <div class="deal-wrapper" x-data="initCrmDeal()" x-init="initDatePicker()">
     <!-- Toolbar -->
     <div class="deal-title-wrapper is-mobile">
-      <img
-        class="deal-image"
-        src="/img/logo/companies/tesla.svg"
-        alt="Company logo"
-      />
+      <img class="deal-image" src="/img/logo/companies/tesla.svg" alt="Company logo" />
       <div class="inner-wrap">
         <h3 class="deal-title">Tesla Motors Deal</h3>
       </div>
       <div class="actions">
-        <a class="button is-secondary is-raised"> Won </a>
+        <a class="button is-primary is-raised"> Won </a>
         <a class="button ripple"> Lost </a>
       </div>
     </div>
@@ -30,31 +26,31 @@ const title = 'Deal Details'
       <div class="stages">
         <div class="stage is-done">
           <span>
-            <i class="iconify" data-icon="feather:check"></i>
+            <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
             <small>Prospect</small>
           </span>
         </div>
         <div class="stage">
           <span>
-            <i class="iconify" data-icon="feather:check"></i>
+            <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
             <small>Reached</small>
           </span>
         </div>
         <div class="stage">
           <span>
-            <i class="iconify" data-icon="feather:check"></i>
+            <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
             <small>Qualified</small>
           </span>
         </div>
         <div class="stage">
           <span>
-            <i class="iconify" data-icon="feather:check"> </i>
+            <i class="iconify" data-icon="lucide:check"> </i>
             <small>Negociation</small>
           </span>
         </div>
         <div class="stage">
           <span>
-            <i class="iconify" data-icon="feather:check"></i>
+            <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
             <small>End</small>
           </span>
         </div>
@@ -88,21 +84,21 @@ const title = 'Deal Details'
             <div
               class="deal-card-header is-toggle"
               @click="detailsPanelOpened = !detailsPanelOpened"
-              :class="{
+              :class=`{
                       'is-active': detailsPanelOpened,
                       '': !detailsPanelOpened,
-                  }"
+                  }`
             >
               <h3>Details</h3>
               <div class="toggle-icon">
-                <i class="iconify" data-icon="feather:chevron-right"></i>
+                <iconify-icon class="iconify" icon="lucide:chevron-right"></iconify-icon>
               </div>
             </div>
             <div x-show="detailsPanelOpened" class="deal-card-content" x-collapse>
               <div class="details-placeholder">
                 <span>What do you know about this deal?</span>
                 <a>
-                  <i class="iconify" data-icon="feather:plus"></i>
+                  <iconify-icon class="iconify" icon="lucide:plus"></iconify-icon>
                   <span>Add more details</span>
                 </a>
               </div>
@@ -114,14 +110,14 @@ const title = 'Deal Details'
             <div
               class="deal-card-header is-toggle"
               @click="contactPanelOpened = !contactPanelOpened"
-              :class="{
+              :class=`{
                           'is-active': contactPanelOpened,
                           '': !contactPanelOpened,
-                      }"
+                      }`
             >
               <h3>Contact</h3>
               <div class="toggle-icon">
-                <i class="iconify" data-icon="feather:chevron-right"></i>
+                <iconify-icon class="iconify" icon="lucide:chevron-right"></iconify-icon>
               </div>
             </div>
             <div x-show="contactPanelOpened" class="deal-card-content" x-collapse>
@@ -136,7 +132,7 @@ const title = 'Deal Details'
               <!-- Info block -->
               <div class="info-block">
                 <div class="block-icon">
-                  <i class="iconify" data-icon="ph:briefcase-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:briefcase-duotone"></iconify-icon>
                 </div>
                 <div class="block-meta">
                   <span>Job title</span>
@@ -146,7 +142,7 @@ const title = 'Deal Details'
               <!-- Info block -->
               <div class="info-block">
                 <div class="block-icon">
-                  <i class="iconify" data-icon="ph:phone-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:phone-duotone"></iconify-icon>
                 </div>
                 <div class="block-meta">
                   <span>Phone</span>
@@ -156,7 +152,7 @@ const title = 'Deal Details'
               <!-- Info block -->
               <div class="info-block">
                 <div class="block-icon">
-                  <i class="iconify" data-icon="ph:envelope-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:envelope-duotone"></iconify-icon>
                 </div>
                 <div class="block-meta">
                   <span>Email</span>
@@ -166,7 +162,7 @@ const title = 'Deal Details'
               <!-- Info block -->
               <div class="info-block is-add">
                 <a class="block-icon">
-                  <i class="iconify" data-icon="feather:plus"></i>
+                  <iconify-icon class="iconify" icon="lucide:plus"></iconify-icon>
                 </a>
                 <div class="block-meta">
                   <span>Add</span>
@@ -181,21 +177,17 @@ const title = 'Deal Details'
             <div
               class="deal-card-header is-toggle"
               @click="organisationPanelOpened = !organisationPanelOpened"
-              :class="{
+              :class=`{
                       'is-active': organisationPanelOpened,
                       '': !organisationPanelOpened,
-                  }"
+                  }`
             >
               <h3>Organization</h3>
               <div class="toggle-icon">
-                <i class="iconify" data-icon="feather:chevron-right"></i>
+                <iconify-icon class="iconify" icon="lucide:chevron-right"></iconify-icon>
               </div>
             </div>
-            <div
-              x-show="organisationPanelOpened"
-              class="deal-card-content"
-              x-collapse
-            >
+            <div x-show="organisationPanelOpened" class="deal-card-content" x-collapse>
               <!-- Deal contact -->
               <div class="deal-contact">
                 <img src="/img/logo/companies/tesla.svg" alt="Company logo" />
@@ -207,7 +199,7 @@ const title = 'Deal Details'
               <!-- Info block -->
               <div class="info-block">
                 <div class="block-icon">
-                  <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                 </div>
                 <div class="block-meta">
                   <span>Status</span>
@@ -217,7 +209,7 @@ const title = 'Deal Details'
               <!-- Info block -->
               <div class="info-block">
                 <div class="block-icon">
-                  <i class="iconify" data-icon="ph:phone-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:phone-duotone"></iconify-icon>
                 </div>
                 <div class="block-meta">
                   <span>Phone</span>
@@ -227,7 +219,7 @@ const title = 'Deal Details'
               <!-- Info block -->
               <div class="info-block">
                 <div class="block-icon">
-                  <i class="iconify" data-icon="ph:envelope-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:envelope-duotone"></iconify-icon>
                 </div>
                 <div class="block-meta">
                   <span>Email</span>
@@ -237,7 +229,7 @@ const title = 'Deal Details'
               <!-- Info block -->
               <div class="info-block is-add">
                 <div class="block-icon">
-                  <i class="iconify" data-icon="feather:plus"></i>
+                  <iconify-icon class="iconify" icon="lucide:plus"></iconify-icon>
                 </div>
                 <div class="block-meta">
                   <span>Add</span>
@@ -254,12 +246,12 @@ const title = 'Deal Details'
               <div
                 class="action"
                 @click="toggleActionTabs('note-tab')"
-                :class="{
+                :class=`{
                       'is-active': activeActionTab === 'note-tab',
                       '': activeActionTab !== 'note-tab',
-                  }"
+                  }`
               >
-                <i class="iconify" data-icon="ph:pencil-line-duotone"></i>
+                <iconify-icon class="iconify" icon="ph:pencil-line-duotone"></iconify-icon>
                 <span>Write a note</span>
                 <div class="arrow-down"></div>
               </div>
@@ -267,12 +259,12 @@ const title = 'Deal Details'
                 class="action"
                 class="action"
                 @click="toggleActionTabs('event-tab')"
-                :class="{
+                :class=`{
                       'is-active': activeActionTab === 'event-tab',
                       '': activeActionTab !== 'event-tab',
-                  }"
+                  }`
               >
-                <i class="iconify" data-icon="ph:timer-duotone"></i>
+                <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                 <span>Schedule event</span>
                 <div class="arrow-down"></div>
               </div>
@@ -280,35 +272,25 @@ const title = 'Deal Details'
                 class="action"
                 class="action"
                 @click="toggleActionTabs('file-tab')"
-                :class="{
+                :class=`{
                       'is-active': activeActionTab === 'file-tab',
                       '': activeActionTab !== 'file-tab',
-                  }"
+                  }`
               >
-                <i class="iconify" data-icon="ph:cloud-arrow-up-duotone"></i>
+                <iconify-icon class="iconify" icon="ph:cloud-arrow-up-duotone"></iconify-icon>
                 <span>Upload files</span>
                 <div class="arrow-down"></div>
               </div>
             </div>
 
             <div class="action-card-body">
-              <div
-                x-show.transition="activeActionTab === 'note-tab'"
-                class="action-wrap"
-              >
+              <div x-show.transition="activeActionTab === 'note-tab'" class="action-wrap">
                 <div class="control">
-                  <textarea
-                    class="textarea"
-                    rows="2"
-                    placeholder="Click here to write a Note ..."
-                  ></textarea>
+                  <textarea class="textarea" rows="2" placeholder="Click here to write a Note ..."></textarea>
                 </div>
               </div>
 
-              <div
-                x-show.transition="activeActionTab === 'event-tab'"
-                class="action-wrap"
-              >
+              <div x-show.transition="activeActionTab === 'event-tab'" class="action-wrap">
                 <!-- Form -->
                 <form class="event-form">
                   <div class="columns is-multiline">
@@ -316,13 +298,9 @@ const title = 'Deal Details'
                       <div class="field">
                         <label>Event name</label>
                         <div class="control has-icon">
-                          <input
-                            type="text"
-                            class="input"
-                            placeholder="Name the event"
-                          />
+                          <input type="text" class="input" placeholder="Name the event" />
                           <div class="form-icon">
-                            <i class="iconify" data-icon="feather:hexagon"></i>
+                            <iconify-icon class="iconify" icon="lucide:hexagon"></iconify-icon>
                           </div>
                         </div>
                       </div>
@@ -332,13 +310,9 @@ const title = 'Deal Details'
                       <div class="field">
                         <label class="grey-label-compact">Event date</label>
                         <div class="control has-icon">
-                          <input
-                            type="text"
-                            class="input event-datepicker"
-                            placeholder="Pick a date"
-                          />
+                          <input type="text" class="input event-datepicker" placeholder="Pick a date" />
                           <div class="form-icon">
-                            <i class="iconify" data-icon="feather:calendar"></i>
+                            <iconify-icon class="iconify" icon="lucide:calendar"></iconify-icon>
                           </div>
                         </div>
                       </div>
@@ -358,7 +332,7 @@ const title = 'Deal Details'
                             </select>
                           </div>
                           <div class="form-icon">
-                            <i class="iconify" data-icon="feather:briefcase"></i>
+                            <iconify-icon class="iconify" icon="lucide:briefcase"></iconify-icon>
                           </div>
                         </div>
                       </div>
@@ -377,7 +351,7 @@ const title = 'Deal Details'
                             </select>
                           </div>
                           <div class="form-icon">
-                            <i class="iconify" data-icon="feather:map-pin"></i>
+                            <iconify-icon class="iconify" icon="lucide:map-pin"></iconify-icon>
                           </div>
                         </div>
                       </div>
@@ -388,27 +362,18 @@ const title = 'Deal Details'
                       <div class="field deal-field">
                         <label class="grey-label-compact">Description</label>
                         <div class="control">
-                          <textarea
-                            class="textarea"
-                            rows="2"
-                            placeholder="Describe the event..."
-                          ></textarea>
+                          <textarea class="textarea" rows="2" placeholder="Describe the event..."></textarea>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="button-wrap">
-                    <button class="button is-primary is-outlined">
-                      Create Event
-                    </button>
+                    <button class="button is-primary is-outlined"> Create Event </button>
                   </div>
                 </form>
               </div>
 
-              <div
-                x-show.transition="activeActionTab === 'file-tab'"
-                class="action-wrap"
-              >
+              <div x-show.transition="activeActionTab === 'file-tab'" class="action-wrap">
                 <form>
                   <div class="control">
                     <div class="control attachments-field">
@@ -417,7 +382,7 @@ const title = 'Deal Details'
                           <div class="upload-box">
                             <input name="files[]" type="file" />
                             <label class="upload-box-inner">
-                              <i class="iconify" data-icon="fa-solid:plus"></i>
+                              <iconify-icon class="iconify" icon="fa-solid:plus"></iconify-icon>
                             </label>
                             <div class="preview-box is-hidden">
                               <div class="delete"></div>
@@ -427,7 +392,7 @@ const title = 'Deal Details'
                         </div>
                         <div class="add-more-files">
                           <a href="javascript:" class="add-file-input">
-                            <i class="iconify" data-icon="feather:plus"></i>
+                            <iconify-icon class="iconify" icon="lucide:plus"></iconify-icon>
                             <span>Attach another file</span>
                           </a>
                         </div>
@@ -435,15 +400,9 @@ const title = 'Deal Details'
                     </div>
                     <div class="button-wrap">
                       <div class="control">
-                        <textarea
-                          class="textarea"
-                          rows="1"
-                          placeholder="A quick note about these files..."
-                        ></textarea>
+                        <textarea class="textarea" rows="1" placeholder="A quick note about these files..."></textarea>
                       </div>
-                      <button type="submit" class="button is-primary is-outlined">
-                        Upload
-                      </button>
+                      <button type="submit" class="button is-primary is-outlined"> Upload </button>
                     </div>
                   </div>
                 </form>
@@ -461,7 +420,7 @@ const title = 'Deal Details'
             <ul>
               <li class="is-scheduled">
                 <div class="timeline-icon">
-                  <i class="iconify" data-icon="ph:users-three-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:users-three-duotone"></iconify-icon>
                 </div>
                 <div class="timeline-item">
                   <div class="item-body">
@@ -498,64 +457,58 @@ const title = 'Deal Details'
               <ul>
                 <li
                   @click="toggleBusinessTabs('all-tab')"
-                  :class="{
+                  :class=`{
                       'is-active': activeBusinessTab === 'all-tab',
                       '': activeBusinessTab !== 'all-tab',
-                  }"
+                  }`
                 >
                   <a>All</a>
                 </li>
                 <li
                   @click="toggleBusinessTabs('activities-tab')"
-                  :class="{
+                  :class=`{
                       'is-active': activeBusinessTab === 'activities-tab',
                       '': activeBusinessTab !== 'activities-tab',
-                  }"
+                  }`
                 >
                   <a>Activity</a>
                 </li>
                 <li
                   @click="toggleBusinessTabs('notes-tab')"
-                  :class="{
+                  :class=`{
                       'is-active': activeBusinessTab === 'notes-tab',
                       '': activeBusinessTab !== 'notes-tab',
-                  }"
+                  }`
                 >
                   <a>Notes</a>
                 </li>
                 <li
                   @click="toggleBusinessTabs('files-tab')"
-                  :class="{
+                  :class=`{
                       'is-active': activeBusinessTab === 'files-tab',
                       '': activeBusinessTab !== 'files-tab',
-                  }"
+                  }`
                 >
                   <a>Files</a>
                 </li>
               </ul>
             </div>
             <!-- All items -->
-            <div
-              x-show.transition="activeBusinessTab === 'all-tab'"
-              class="navtab-content is-active"
-            >
+            <div x-show.transition="activeBusinessTab === 'all-tab'" class="navtab-content is-active">
               <!-- Section -->
               <div class="deal-timeline">
                 <ul>
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:timer-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
                         <h3>Contact reached</h3>
                         <div class="meta-list">
                           <div class="meta-list-item">
-                            <span
-                              >A contact has been reached, messages
-                              exchanged</span
-                            >
+                            <span>A contact has been reached, messages exchanged</span>
                           </div>
                         </div>
                         <div class="meta-list">
@@ -570,7 +523,7 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:paperclip-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:paperclip-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
@@ -587,15 +540,12 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:notepad-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:notepad-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item is-note">
                       <div class="item-body">
                         <h3>Note</h3>
-                        <p class="note-text">
-                          We should really consider the new products we saw.
-                          Should create a meeting involving Dan and others.
-                        </p>
+                        <p class="note-text">We should really consider the new products we saw. Should create a meeting involving Dan and others.</p>
                         <div class="meta-list">
                           <div class="meta-list-item">
                             <img src="/img/avatars/52.jpg" alt="user photo" />
@@ -608,7 +558,7 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:paperclip-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:paperclip-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
@@ -625,7 +575,7 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:paperclip-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:paperclip-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
@@ -642,14 +592,12 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:notepad-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:notepad-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item is-note">
                       <div class="item-body">
                         <h3>Note</h3>
-                        <p class="note-text">
-                          Call the CEO back to discuss potential opportunities.
-                        </p>
+                        <p class="note-text">Call the CEO back to discuss potential opportunities.</p>
                         <div class="meta-list">
                           <div class="meta-list-item">
                             <img src="/img/avatars/29.jpg" alt="user photo" />
@@ -664,27 +612,19 @@ const title = 'Deal Details'
 
               <!-- Load more -->
               <div class="timeline-load has-text-centered">
-                <a
-                  class="button btn-dash btn-dash is-rounded ripple"
-                  data-ripple-color=""
-                >
-                  Load More
-                </a>
+                <a class="button btn-dash btn-dash is-rounded ripple" data-ripple-color=""> Load More </a>
               </div>
             </div>
 
             <!-- Deal activities -->
-            <div
-              x-show.transition="activeBusinessTab === 'activities-tab'"
-              class="navtab-content"
-            >
+            <div x-show.transition="activeBusinessTab === 'activities-tab'" class="navtab-content">
               <!-- Timeline section -->
               <div class="deal-timeline">
                 <ul>
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:timer-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
@@ -706,17 +646,14 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:timer-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
                         <h3>Contact reached</h3>
                         <div class="meta-list">
                           <div class="meta-list-item">
-                            <span
-                              >A contact has been reached, messages
-                              exchanged</span
-                            >
+                            <span>A contact has been reached, messages exchanged</span>
                           </div>
                         </div>
                         <div class="meta-list">
@@ -731,7 +668,7 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:coins-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:coins-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
@@ -753,7 +690,7 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:pencil-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:pencil-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
@@ -775,7 +712,7 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:users-three-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:users-three-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item">
                       <div class="item-body">
@@ -799,24 +736,19 @@ const title = 'Deal Details'
             </div>
 
             <!-- Deal Notes -->
-            <div
-              x-show.transition="activeBusinessTab === 'notes-tab'"
-              class="navtab-content"
-            >
+            <div x-show.transition="activeBusinessTab === 'notes-tab'" class="navtab-content">
               <!-- Timeline section -->
               <div class="deal-timeline">
                 <ul>
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:notepad-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:notepad-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item is-note">
                       <div class="item-body">
                         <h3>Note</h3>
-                        <p class="note-text">
-                          Call the CEO back to discuss potential opportunities.
-                        </p>
+                        <p class="note-text">Call the CEO back to discuss potential opportunities.</p>
                         <div class="meta-list">
                           <div class="meta-list-item">
                             <img src="/img/avatars/29.jpg" alt="user photo" />
@@ -829,15 +761,12 @@ const title = 'Deal Details'
                   <!--Item-->
                   <li>
                     <div class="timeline-icon">
-                      <i class="iconify" data-icon="ph:notepad-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:notepad-duotone"></iconify-icon>
                     </div>
                     <div class="timeline-item is-note">
                       <div class="item-body">
                         <h3>Note</h3>
-                        <p class="note-text">
-                          We should really consider the new products we saw.
-                          Should create a meeting involving Dan and others.
-                        </p>
+                        <p class="note-text">We should really consider the new products we saw. Should create a meeting involving Dan and others.</p>
                         <div class="meta-list">
                           <div class="meta-list-item">
                             <img src="/img/avatars/52.jpg" alt="user photo" />
@@ -852,10 +781,7 @@ const title = 'Deal Details'
             </div>
 
             <!-- Deal files -->
-            <div
-              x-show.transition="activeBusinessTab === 'files-tab'"
-              class="navtab-content"
-            >
+            <div x-show.transition="activeBusinessTab === 'files-tab'" class="navtab-content">
               <!-- Timeline section -->
               <div class="deal-timeline">
                 <ul>

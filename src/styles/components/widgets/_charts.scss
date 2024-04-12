@@ -57,6 +57,10 @@ body {
     }
 
     .apexcharts-svg {
+
+      line {
+        stroke: var(--night-light-16);
+      }
       .apexcharts-inner,
       .apexcharts-graphical {
         .apexcharts-xaxis {
@@ -73,6 +77,8 @@ body {
         }
 
         .apexcharts-grid {
+          stroke: var(--night-light-16);
+
           .apexcharts-gridlines-horizontal {
             .apexcharts-gridline {
               stroke: var(--night-light-16);

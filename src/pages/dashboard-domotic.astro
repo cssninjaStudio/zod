@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Default.astro';
+import Layout from '../layouts/Default.astro'
 const title = 'Domotic Dashboard'
 ---
 
@@ -10,65 +10,40 @@ const title = 'Domotic Dashboard'
         <div class="main-card">
           <div class="toggle-boxes">
             <!--Box-->
-            <div
-              class="toggle-box"
-              data-target="living"
-              :class="{
+            <div class="toggle-box" data-target="living" :class=`{
                 'is-active': activeBox === 'living'
-              }"
-              @click.prevent="toggleBox($event)"
-            >
-              <i class="iconify" data-icon="ph:armchair-duotone"></i>
+              }` @click.prevent="toggleBox($event)">
+              <iconify-icon class="iconify" icon="ph:armchair-duotone"></iconify-icon>
               <h3 class="box-title">Living Room</h3>
               <p>4 devices on</p>
-              <progress class="progress is-tiny is-success" value="60" max="100">
-                60%
-              </progress>
+              <progress class="progress is-tiny is-success" value="60" max="100"> 60% </progress>
             </div>
             <!--Box-->
-            <div class="toggle-box"
-              data-target="kitchen"
-              :class="{
+            <div class="toggle-box" data-target="kitchen" :class=`{
                 'is-active': activeBox === 'kitchen'
-              }"
-              @click.prevent="toggleBox($event)"
-            >
-              <i class="iconify" data-icon="ph:cooking-pot-duotone"></i>
+              }` @click.prevent="toggleBox($event)">
+              <iconify-icon class="iconify" icon="ph:cooking-pot-duotone"></iconify-icon>
               <h3 class="box-title">Kitchen</h3>
               <p>5 devices on</p>
-              <progress class="progress is-tiny is-success" value="80" max="100">
-                80%
-              </progress>
+              <progress class="progress is-tiny is-success" value="80" max="100"> 80% </progress>
             </div>
             <!--Box-->
-            <div class="toggle-box"
-              data-target="office"
-              :class="{
+            <div class="toggle-box" data-target="office" :class=`{
                 'is-active': activeBox === 'office'
-              }"
-              @click.prevent="toggleBox($event)"
-            >
-              <i class="iconify" data-icon="ph:lamp-duotone"></i>
+              }` @click.prevent="toggleBox($event)">
+              <iconify-icon class="iconify" icon="ph:lamp-duotone"></iconify-icon>
               <h3 class="box-title">Office</h3>
               <p>2 devices on</p>
-              <progress class="progress is-tiny is-success" value="30" max="100">
-                30%
-              </progress>
+              <progress class="progress is-tiny is-success" value="30" max="100"> 30% </progress>
             </div>
             <!--Box-->
-            <div class="toggle-box"
-              data-target="bathroom"
-              :class="{
+            <div class="toggle-box" data-target="bathroom" :class=`{
                 'is-active': activeBox === 'bathroom'
-              }"
-              @click.prevent="toggleBox($event)"
-            >
-              <i class="iconify" data-icon="ph:bathtub-duotone"></i>
+              }` @click.prevent="toggleBox($event)">
+              <iconify-icon class="iconify" icon="ph:bathtub-duotone"></iconify-icon>
               <h3 class="box-title">Bathroom</h3>
               <p>1 device on</p>
-              <progress class="progress is-tiny is-success" value="10" max="100">
-                10%
-              </progress>
+              <progress class="progress is-tiny is-success" value="10" max="100"> 10% </progress>
             </div>
           </div>
 
@@ -76,43 +51,27 @@ const title = 'Domotic Dashboard'
             <!--Actions-->
             <div class="vision-actions">
               <button class="is-active">
-                <i class="iconify" data-icon="ph:video-camera-duotone"></i>
+                <iconify-icon class="iconify" icon="ph:video-camera-duotone"></iconify-icon>
               </button>
               <button>
-                <i class="iconify" data-icon="ph:bell-simple-duotone"></i>
+                <iconify-icon class="iconify" icon="ph:bell-simple-duotone"></iconify-icon>
               </button>
               <button>
-                <i class="iconify" data-icon="ion:plus-round"></i>
+                <iconify-icon class="iconify" icon="ion:plus-round"></iconify-icon>
               </button>
             </div>
             <!--Images-->
-            <img
-              x-show="activeBox === 'living'"
-              src="https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="Vision"
-            />
-            <img
-              x-show="activeBox === 'kitchen'"
-              src="https://images.pexels.com/photos/3637739/pexels-photo-3637739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="Vision"
-            />
-            <img
-              x-show="activeBox === 'office'"
-              src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="Vision"
-            />
-            <img
-              x-show="activeBox === 'bathroom'"
-              src="https://images.pexels.com/photos/1571461/pexels-photo-1571461.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="Vision"
-            />
+            <img x-show="activeBox === 'living'" src="https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Vision" />
+            <img x-show="activeBox === 'kitchen'" src="https://images.pexels.com/photos/3637739/pexels-photo-3637739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Vision" />
+            <img x-show="activeBox === 'office'" src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Vision" />
+            <img x-show="activeBox === 'bathroom'" src="https://images.pexels.com/photos/1571461/pexels-photo-1571461.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Vision" />
           </div>
         </div>
       </div>
       <div class="column is-4">
         <div class="mb-4">
           <button class="button is-primary is-fullwidth is-big raised">
-            <i class="iconify" data-icon="ion:plus-round"></i>
+            <iconify-icon class="iconify" icon="ion:plus-round"></iconify-icon>
             <span class="ml-2">Add New Room</span>
           </button>
         </div>
@@ -124,7 +83,7 @@ const title = 'Domotic Dashboard'
           </div>
           <div class="summary-card-body">
             <div class="summary-stats">
-              <i class="iconify" data-icon="teenyicons:home-solid"></i>
+              <iconify-icon class="iconify" icon="teenyicons:home-solid"></iconify-icon>
               <div class="stat-block">
                 <span class="stat-label">Temperature</span>
                 <span class="stat-value">23°</span>
@@ -134,23 +93,18 @@ const title = 'Domotic Dashboard'
                 <span class="stat-value">9</span>
               </div>
             </div>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expectoque
-              quid ad id, quod.
-            </p>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Expectoque quid ad id, quod.</p>
             <div class="progress-block">
               <div class="progress-text">
                 <p>Condition</p>
                 <p class="text-success">Good</p>
               </div>
-              <progress class="progress is-small is-success" value="75" max="100">
-                75%
-              </progress>
+              <progress class="progress is-small is-success" value="75" max="100"> 75% </progress>
             </div>
             <div class="alert is-warning">
               <p>Your electric power is unstable</p>
               <button class="alert-close">
-                <i class="iconify" data-icon="feather:x"></i>
+                <iconify-icon class="iconify" icon="lucide:x"></iconify-icon>
               </button>
             </div>
           </div>

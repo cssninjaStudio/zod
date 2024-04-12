@@ -4,30 +4,22 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
 ---
 
 <!-- Message details -->
-<div
-  x-show="activeMessage === 'message-6'"
-  id="message-6"
-  class="inbox-message-details"
-  :class="{
+<div x-show="activeMessage === 'message-6'" id="message-6" class="inbox-message-details" :class=`{
         'mobile-active tablet-active': isMobileMessageActive,
         '': !isMobileMessageActive
-    }"
->
+    }`>
   <div class="header-area">
     <img class="sender-pic" src="/img/avatars/19.jpg" alt="sender photo" />
     <div class="message-meta">
       <span class="message-title">This month's lead generation report</span>
     </div>
     <div class="attachments inbox-hidden-mobile">
-      <i class="iconify" data-icon="feather:paperclip"></i>
+      <iconify-icon class="iconify" icon="lucide:paperclip"></iconify-icon>
       <span>1</span>
     </div>
     <InboxMessageDropdown />
-    <a
-      @click="closeMobileMessage()"
-      class="inbox-action inbox-close-details-mobile"
-    >
-      <i class="iconify" data-icon="feather:x"></i>
+    <a @click="closeMobileMessage()" class="inbox-action inbox-close-details-mobile">
+      <iconify-icon class="iconify" icon="lucide:x"></iconify-icon>
     </a>
   </div>
   <!--Message-->
@@ -40,13 +32,13 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
         </div>
         <div class="message-actions">
           <a class="inbox-action">
-            <i class="iconify" data-icon="feather:tag"></i>
+            <iconify-icon class="iconify" icon="lucide:tag"></iconify-icon>
           </a>
           <a class="inbox-action">
-            <i class="iconify" data-icon="feather:message-circle"></i>
+            <iconify-icon class="iconify" icon="lucide:message-circle"></iconify-icon>
           </a>
           <a class="inbox-action">
-            <i class="iconify" data-icon="feather:trash-2"></i>
+            <iconify-icon class="iconify" icon="lucide:trash-2"></iconify-icon>
           </a>
         </div>
       </div>
@@ -56,29 +48,18 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           <mark>Quam nemo umquam voluptatem appellavit, appellat;</mark>
-          <mark>Sequitur disserendi ratio cognitioque naturae;</mark> Ea possunt
-          paria non esse. Poterat autem inpune;
+          <mark>Sequitur disserendi ratio cognitioque naturae;</mark> Ea possunt paria non esse. Poterat autem inpune;
         </p>
         <ul>
           <li>Urgent tamen et nihil remittunt.</li>
-          <li>
-            Miserum hominem! Si dolor summum malum est, dici aliter non potest.
-          </li>
-          <li>
-            Quid igitur dubitamus in tota eius natura quaerere quid sit
-            effectum?
-          </li>
+          <li>Miserum hominem! Si dolor summum malum est, dici aliter non potest.</li>
+          <li>Quid igitur dubitamus in tota eius natura quaerere quid sit effectum?</li>
         </ul>
         <p>
-          <a href="http://loripsum.net/" target="_blank"
-            >Duo Reges: constructio interrete.</a
-          >
-          Satis est ad hoc responsum. Primum in nostrane potestate est, quid
-          meminerimus?
+          <a href="http://loripsum.net/" target="_blank">Duo Reges: constructio interrete.</a>
+          Satis est ad hoc responsum. Primum in nostrane potestate est, quid meminerimus?
           <a href="http://loripsum.net/" target="_blank">Nihil sane.</a>
-          <a href="http://loripsum.net/" target="_blank"
-            >Sit sane ista voluptas.</a
-          >
+          <a href="http://loripsum.net/" target="_blank">Sit sane ista voluptas.</a>
         </p>
 
         <p>Let me know when you have time to read it.</p>
@@ -89,7 +70,7 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
         <div class="attachment">
           <span>lead-report_february.pdf</span>
           <div class="download-icon">
-            <i class="iconify" data-icon="feather:arrow-down"></i>
+            <iconify-icon class="iconify" icon="lucide:arrow-down"></iconify-icon>
           </div>
         </div>
       </div>
@@ -108,11 +89,7 @@ import InboxReplyDropdown from './InboxReplyDropdown.astro'
         </div>
         <!--textarea-->
         <div class="control">
-          <textarea
-            class="textarea"
-            rows="6"
-            placeholder="Type your message..."
-          ></textarea>
+          <textarea class="textarea" rows="6" placeholder="Type your message..."></textarea>
           <button type="button" class="button">Send Message</button>
         </div>
       </div>

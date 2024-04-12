@@ -28,8 +28,8 @@
         border-color: var(--danger);
       }
 
-      &.is-secondary {
-        border-color: var(--secondary);
+      &.is-primary {
+        border-color: var(--primary);
       }
 
       &.is-green {
@@ -188,9 +188,9 @@
       }
     }
 
-    &.is-secondary {
+    &.is-primary {
       .event-date {
-        border-color: var(--secondary);
+        border-color: var(--primary);
       }
     }
 

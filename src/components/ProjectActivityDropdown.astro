@@ -1,14 +1,9 @@
-<div
-  x-data="initDropdown()"
-  @click.away="close()"
-  class="dropdown-wrap is-right"
-  :class="{
+<div x-data="initDropdown()" @click.away="close()" class="dropdown-wrap is-right" :class=`{
     'is-active': open,
     '': !open
-  }"
->
+  }`>
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,14 +12,14 @@
       </div>
       <div class="options-items">
         <a class="options-item">
-            <i class="iconify" data-icon="ph:bell-simple-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:bell-simple-duotone"></iconify-icon>
           <div class="option-content">
             <span>View</span>
             <span>Notification details</span>
           </div>
         </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:bell-slash-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:bell-slash-duotone"></iconify-icon>
           <div class="option-content">
             <span>Unsubscribe</span>
             <span>Disable this feed</span>

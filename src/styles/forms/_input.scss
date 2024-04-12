@@ -22,7 +22,7 @@
 
     ~ .icon,
     .form-icon {
-      color: var(--secondary) !important;
+      color: var(--primary) !important;
     }
   }
 
@@ -160,7 +160,6 @@
   &.has-icon {
     .form-icon {
       z-index: 1;
-
       position: absolute;
       #{$start-direction}: 0;
       top: 0;
@@ -169,17 +168,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: color .3s;
+      transition: color 0.3s;
 
-      svg,
       .iconify {
-        font-size: 1.25rem;
-        height: 18px;
-        width: 18px;
-        stroke-width: 1.6px;
-        stroke: var(--input-form-icon-color);
+        font-size: 1.15rem;
         color: var(--input-form-icon-color);
-        transition: stroke 0.3s color .3s;
+        transition: color .3s;
       }
 
       &.right-icon {
@@ -211,12 +205,10 @@
 
       &:focus {
         ~ .form-icon {
-          color: var(--secondary) !important;
+          color: var(--primary) !important;
 
-          svg,
           .iconify {
-            stroke: var(--secondary);
-            color: var(--secondary) !important;
+            color: var(--primary) !important;
           }
         }
       }

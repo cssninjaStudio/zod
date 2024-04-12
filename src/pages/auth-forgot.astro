@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Minimal.astro';
+import Layout from '../layouts/Minimal.astro'
 const title = 'Forgot Password'
 ---
 
@@ -11,23 +11,15 @@ const title = 'Forgot Password'
         <div class="login-nav-inner">
           <div class="start">
             <a href="/">
-              <img
-                class="brand-logo"
-                src="/img/logo/zod-text-primary.svg"
-                alt="Product logo"
-              />
+              <img class="brand-logo" src="/img/logo/zod-text-primary.svg" alt="Product logo" />
             </a>
           </div>
           <div class="end">
             <label class="theme-toggle mask mask-blob">
-              <input
-                type="checkbox"
-                x-on:change="toggleTheme()"
-                :checked="$store.app.isDark"
-              />
+              <input type="checkbox" x-on:change="toggleTheme()" :checked="$store.app.isDark" />
               <span class="theme-toggle-inner">
-                <i class="sun-icon iconify" data-icon="feather:sun"></i>
-                <i class="moon-icon iconify" data-icon="feather:moon"></i>
+                <iconify-icon class="sun-icon iconify" icon="lucide:sun"></iconify-icon>
+                <iconify-icon class="moon-icon iconify" icon="lucide:moon"></iconify-icon>
               </span>
             </label>
           </div>
@@ -42,11 +34,8 @@ const title = 'Forgot Password'
           <div class="columns is-vcentered">
             <div class="column">
               <div class="login-caption">
-                <h1 class="title is-2 is-bold is-leading">Recover Password</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Verum
-                  hoc idem saepe faciamus.
-                </p>
+                <h1 class="title is-2 is-medium is-leading">Recover Password</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Verum hoc idem saepe faciamus.</p>
               </div>
 
               <div class="login-form">
@@ -54,21 +43,15 @@ const title = 'Forgot Password'
                   <div class="field">
                     <label>Email Address</label>
                     <div class="control has-icon">
+                      <input type="text" class="input" placeholder="Enter your email" />
                       <div class="form-icon">
-                        <i class="iconify" data-icon="feather:mail"></i>
+                        <iconify-icon class="iconify" icon="lucide:mail"></iconify-icon>
                       </div>
-                      <input
-                        type="text"
-                        class="input"
-                        placeholder="Enter your email"
-                      />
                     </div>
                   </div>
                   <div class="field">
                     <div class="buttons">
-                      <button class="button is-primary is-fullwidth raised">
-                        Reset Password
-                      </button>
+                      <button class="button is-primary is-fullwidth raised"> Reset Password </button>
                     </div>
 
                     <div class="login-link">

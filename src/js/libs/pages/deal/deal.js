@@ -72,7 +72,7 @@ export function initCrmDeal() {
       this.eventComboOpened = false;
     },
     updateEventCombo(e) {
-      const icon = e.target.getAttribute("data-icon");
+      const icon = e.target.getAttribute("icon");
       const text = e.target.getAttribute("data-text");
       this.eventComboIcon = icon;
       this.eventComboText = text;

@@ -1,14 +1,9 @@
-<div
-  x-data="initDropdown()"
-  @click.away="close()"
-  class="dropdown-wrap is-right"
-  :class="{
-    'is-active': open,
-    '': !open
-  }"
->
+<div x-data="initDropdown()" @click.away="close()" class="dropdown-wrap is-right" :class=`{
+      'is-active': open,
+      '': !open
+    }`>
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,21 +12,21 @@
       </div>
       <div class="options-items">
         <a class="options-item">
-          <i class="iconify" data-icon="ph:television-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:television-duotone"></iconify-icon>
           <div class="option-content">
             <span>Watch</span>
             <span>Resume where you left</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:confetti-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:confetti-duotone"></iconify-icon>
           <div class="option-content">
             <span>Learn</span>
             <span>Free learning material</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:bell-slash-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:bell-slash-duotone"></iconify-icon>
           <div class="option-content">
             <span>Dismiss</span>
             <span>Dismiss this item</span>

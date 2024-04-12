@@ -243,7 +243,7 @@ Accounting Dashboard
           height: 24px;
           width: 24px;
           border-radius: 50%;
-          background: var(--secondary);
+          background: var(--primary);
           animation: wave 1.6s infinite;
           animation-duration: 2s;
           transform-origin: center center;
@@ -275,8 +275,8 @@ Accounting Dashboard
             svg {
               height: 18px;
               width: 18px;
-              stroke: var(--secondary-light-10);
-              color: var(--secondary-light-10);
+              stroke: var(--primary-light-10);
+              color: var(--primary-light-10);
             }
           }
         }
@@ -352,7 +352,7 @@ Accounting Dashboard
           padding: 0.25rem 0.75rem;
           font-size: 0.8rem;
           border-radius: 50rem;
-          background: var(--secondary);
+          background: var(--primary);
           color: var(--white);
         }
       }
@@ -440,8 +440,6 @@ Accounting Dashboard
               &:before {
                 content: "$";
                 position: relative;
-                top: -5px;
-                font-size: 70%;
               }
             }
           }

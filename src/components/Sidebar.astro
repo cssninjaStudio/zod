@@ -1,32 +1,24 @@
 ---
-import SidebarMenu from '../components/SidebarMenu.astro'
+import SidebarMenu from './SidebarMenu.astro'
 ---
 
 <nav
   class="menu-sidebar"
   x-data="initSidebar()"
-  :class="{
+  :class=`{
         '': $store.app.sidebarOpenedState,
         'is-sidebar-fold': !$store.app.sidebarOpenedState,
         'is-menu-sidebar-translated-mobile': $store.app.isSidebarOpenedMobile,
-    }"
+    }`
 >
   <!-- Menu header -->
   <div class="menu-header">
     <a href="/">
-      <img
-        class="sidebar-logo"
-        src="/img/logo/zod-text-primary.svg"
-        alt="Zod logo"
-      />
+      <img class="sidebar-logo" src="/img/logo/zod-text-primary.svg" alt="Zod logo" />
     </a>
 
-    <a
-      href="javascript:void(0);"
-      class="menu-arrow mask mask-blob"
-      @click="closeSidebar()"
-    >
-      <i class="iconify" data-icon="feather:arrow-left"></i>
+    <a href="javascript:void(0);" class="menu-arrow mask mask-blob" @click="closeSidebar()">
+      <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
     </a>
   </div>
 

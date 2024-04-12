@@ -1,14 +1,9 @@
-<div
-  x-data="initDropdown()"
-  @click.away="close()"
-  class="dropdown-wrap is-right"
-  :class="{
+<div x-data="initDropdown()" @click.away="close()" class="dropdown-wrap is-right" :class=`{
     'is-active': open,
     '': !open
-  }"
->
+  }`>
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,35 +12,35 @@
       </div>
       <div class="options-items">
         <a class="options-item">
-          <i class="iconify" data-icon="ph:pencil-line-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:pencil-duotone"></iconify-icon>
           <div class="option-content">
             <span>Edit</span>
             <span>Edit this invoice</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:check-circle-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:check-circle-duotone"></iconify-icon>
           <div class="option-content">
             <span>Review</span>
             <span>Send for review</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:printer-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:printer-duotone"></iconify-icon>
           <div class="option-content">
             <span>Print</span>
             <span>Print this invoice</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:paper-plane-right-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:paper-plane-right-duotone"></iconify-icon>
           <div class="option-content">
             <span>Send</span>
             <span>Send by email</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:download-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:download-duotone"></iconify-icon>
           <div class="option-content">
             <span>Download</span>
             <span>Download as PDF</span>

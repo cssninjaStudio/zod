@@ -4,6 +4,16 @@ import CrmBoardDropdown from '../components/CrmBoardDropdown.astro';
 const title = 'Kanban Board'
 ---
 
+<style is:global>
+  .dashboard-content {
+    padding-bottom: 0 !important;
+  }
+
+  .zod-wrapper {
+    padding-bottom: 0 !important;
+  }
+</style>
+
 <Layout title={title}>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.css" integrity="sha512-49xW99xceMN8dDoWaoCaXvuVMjnUctHv/jOlZxzFSMJYhqDZmSF/UnM6pLJjQu0YEBLSdO1DP0er6rUdm8/VqA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 

@@ -19,12 +19,8 @@
         min-width: 40px;
 
         .iconify {
-          font-size: 2.5rem;
-          color: var(--secondary);
-
-          path {
-            stroke-width: 1px;
-          }
+          font-size: 1.5rem;
+          color: var(--primary);
         }
       }
 
@@ -77,8 +73,6 @@
             &:before {
               content: "$";
               position: relative;
-              top: -5px;
-              font-size: 70%;
             }
           }
         }

@@ -10,6 +10,10 @@
   transform: translateX(calc(100% * #{$transform-direction}));
   z-index: 11;
 
+  &:not(.is-active) {
+    box-shadow: none !important;
+  }
+
   &.is-active {
     transform: translateX(0);
   }
@@ -191,7 +195,11 @@
     transform: translateX(0);
     box-shadow: none;
     border-color: transparent;
-    background: var(--wrap-muted-color);
+    background: var(--panel-bg-color);
+
+    &:not(.is-active) {
+      box-shadow: none !important;
+    }
 
     &.is-active {
       transform: translateX(0);

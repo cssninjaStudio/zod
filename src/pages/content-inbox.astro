@@ -1,42 +1,43 @@
 ---
-import Layout from '../layouts/Default.astro';
-import InboxMainDropdown from '../components/InboxMainDropdown.astro';
-import InboxMessagesDropdown from '../components/InboxMessagesDropdown.astro';
-import InboxMessagesList from '../components/InboxMessagesList.astro';
-import Message1 from '../components/Message1.astro';
-import Message2 from '../components/Message2.astro';
-import Message3 from '../components/Message3.astro';
-import Message4 from '../components/Message4.astro';
-import Message5 from '../components/Message5.astro';
-import Message6 from '../components/Message6.astro';
-import Message7 from '../components/Message7.astro';
-import Message8 from '../components/Message8.astro';
-import Message9 from '../components/Message9.astro';
-import Message10 from '../components/Message10.astro';
+import Layout from '../layouts/Default.astro'
+import InboxMainDropdown from '../components/InboxMainDropdown.astro'
+import InboxMessagesDropdown from '../components/InboxMessagesDropdown.astro'
+import InboxMessagesList from '../components/InboxMessagesList.astro'
+import Message1 from '../components/Message1.astro'
+import Message2 from '../components/Message2.astro'
+import Message3 from '../components/Message3.astro'
+import Message4 from '../components/Message4.astro'
+import Message5 from '../components/Message5.astro'
+import Message6 from '../components/Message6.astro'
+import Message7 from '../components/Message7.astro'
+import Message8 from '../components/Message8.astro'
+import Message9 from '../components/Message9.astro'
+import Message10 from '../components/Message10.astro'
 const title = 'Inbox'
 ---
+
+<style is:global>
+  .nav-wrapper .nav-wrapper-inner {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+  }
+</style>
+
 
 <Layout title={title}>
   <div class="inbox-wrapper" x-data="initInbox()">
     <div class="inbox-wrapper-inner">
       <!--Inbox sidebar-->
-      <div
-        class="inbox-sidebar"
-        :class="{
+      <div class="inbox-sidebar" :class=`{
             'mobile-active': isMobileActive,
             '': !isMobileActive
-
-            }"
-      >
+          }`>
         <!-- Header -->
         <div class="header-area">
           <h2 class="inbox-title">Inbox</h2>
           <InboxMainDropdown />
-          <a
-            @click="toggleMobileSidebar()"
-            class="inbox-action inbox-close-sidebar-mobile"
-          >
-            <i class="iconify" data-icon="feather:x">close</i>
+          <a @click="toggleMobileSidebar()" class="inbox-action inbox-close-sidebar-mobile">
+            <i class="iconify" data-icon="lucide:x">close</i>
           </a>
         </div>
         <!--Inner-->
@@ -48,38 +49,35 @@ const title = 'Inbox'
               <ul>
                 <li>
                   <a class="is-active">
-                    <i class="iconify" data-icon="ph:envelope-duotone"></i>
+                    <iconify-icon class="iconify" icon="ph:envelope-duotone"></iconify-icon>
                     <span>Inbox</span>
                     <span class="tag">24</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <i class="iconify" data-icon="ph:note-duotone"></i>
+                    <iconify-icon class="iconify" icon="ph:note-duotone"></iconify-icon>
                     <span>Drafts</span>
                     <span class="tag">2</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <i
-                      class="iconify"
-                      data-icon="ph:paper-plane-right-duotone"
-                    ></i>
+                    <i class="iconify" data-icon="ph:paper-plane-right-duotone"></i>
                     <span>Sent</span>
                     <span class="tag">7</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <i class="iconify" data-icon="ph:trash-duotone"></i>
+                    <iconify-icon class="iconify" icon="ph:trash-duotone"></iconify-icon>
                     <span>Trash</span>
                     <span class="tag">18</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <i class="iconify" data-icon="ph:warning-octagon-duotone"></i>
+                    <iconify-icon class="iconify" icon="ph:warning-octagon-duotone"></iconify-icon>
                     <span>Spam</span>
                     <span class="tag">29</span>
                   </a>
@@ -92,7 +90,7 @@ const title = 'Inbox'
             <div class="title-wrap">
               <h3>Contacts</h3>
               <a class="search-button">
-                <i class="iconify" data-icon="feather:search"></i>
+                <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
               </a>
             </div>
             <div class="contact-list has-slimscroll">
@@ -145,18 +143,15 @@ const title = 'Inbox'
       <div class="inbox-messages">
         <div class="header-area">
           <div class="actions">
-            <a
-              @click="toggleMobileSidebar()"
-              class="inbox-action mobile-menu-action"
-            >
-              <i class="iconify" data-icon="feather:arrow-right"></i>
+            <a @click="toggleMobileSidebar()" class="inbox-action mobile-menu-action">
+              <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
             </a>
           </div>
           <div class="actions">
             <div class="control inbox-search">
               <input type="text" class="input" placeholder="Search Inbox..." />
               <div class="inbox-search-icon">
-                <i class="iconify" data-icon="feather:search"></i>
+                <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
               </div>
             </div>
 
@@ -171,13 +166,10 @@ const title = 'Inbox'
       </div>
 
       <!--Loader-->
-      <div
-        class="inbox-message-overlay"
-        :class="{
-                'tablet-active': isMobileMessageActive,
-                '': !isMobileMessageActive
-            }"
-      >
+      <div class="inbox-message-overlay" :class=`{
+          'tablet-active': isMobileMessageActive,
+          '': !isMobileMessageActive
+        }`>
         <div class="loader is-loading"></div>
       </div>
 

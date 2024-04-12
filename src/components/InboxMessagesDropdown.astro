@@ -1,14 +1,9 @@
-<div
-  x-data="initDropdown()"
-  @click.away="close()"
-  class="dropdown-wrap is-right"
-  :class="{
+<div x-data="initDropdown()" @click.away="close()" class="dropdown-wrap is-right" :class=`{
     'is-active': open,
     '': !open
-  }"
->
+  }`>
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,28 +12,28 @@
       </div>
       <div class="options-items">
         <a class="options-item">
-          <i class="iconify" data-icon="ph:bookmark-simple-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:bookmark-simple-duotone"></iconify-icon>
           <div class="option-content">
             <span>Bookmark</span>
             <span>Bookmark selected</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:archive-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:archive-duotone"></iconify-icon>
           <div class="option-content">
             <span>Archive</span>
             <span>Archive selected</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:atom-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:atom-duotone"></iconify-icon>
           <div class="option-content">
             <span>Spam</span>
             <span>Mark selected as spam</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:trash-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:trash-duotone"></iconify-icon>
           <div class="option-content">
             <span>Delete</span>
             <span>Delete selected</span>

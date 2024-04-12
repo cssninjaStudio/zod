@@ -1,14 +1,9 @@
-<div
-  x-data="initDropdown()"
-  @click.away="close()"
-  class="dropdown-wrap is-right"
-  :class="{
+<div x-data="initDropdown()" @click.away="close()" class="dropdown-wrap is-right" :class=`{
     'is-active': open,
     '': !open
-  }"
->
+  }`>
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,21 +12,21 @@
       </div>
       <div class="options-items">
         <a class="options-item">
-          <i class="iconify" data-icon="ph:chat-circle-dots-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:chat-circle-dots-duotone"></iconify-icon>
           <div class="option-content">
             <span>Message</span>
             <span>Send a message</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:user-circle-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:user-circle-duotone"></iconify-icon>
           <div class="option-content">
             <span>Profile</span>
             <span>View profile details</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:ticket-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:ticket-duotone"></iconify-icon>
           <div class="option-content">
             <span>Tickets</span>
             <span>View assigned tickets</span>

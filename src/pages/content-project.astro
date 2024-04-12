@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Default.astro';
-import ProjectTaskGroupDropdown from '../components/ProjectTaskGroupDropdown.astro';
-import ProjectTaskDropdown from '../components/ProjectTaskDropdown.astro';
-import ProjectFileDropdown from '../components/ProjectFileDropdown.astro';
-import ProjectActivityDropdown from '../components/ProjectActivityDropdown.astro';
+import Layout from '../layouts/Default.astro'
+import ProjectTaskGroupDropdown from '../components/ProjectTaskGroupDropdown.astro'
+import ProjectTaskDropdown from '../components/ProjectTaskDropdown.astro'
+import ProjectFileDropdown from '../components/ProjectFileDropdown.astro'
+import ProjectActivityDropdown from '../components/ProjectActivityDropdown.astro'
 const title = 'Project Details'
 ---
 
@@ -13,12 +13,10 @@ const title = 'Project Details'
     <div class="project-header-wrap">
       <div class="title-wrap">
         <h2 class="project-title">Personal Banking App</h2>
-        <h4 class="project-tagline">
-          Finishing Code related tasks and Launching the Marketing Campaign.
-        </h4>
+        <h4 class="project-tagline">Finishing Code related tasks and Launching the Marketing Campaign.</h4>
       </div>
       <div class="task-count">
-        <i class="iconify" data-icon="ph:timer-duotone"></i>
+        <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
         <span>38/42</span>
       </div>
       <div class="project-members-avatars">
@@ -43,42 +41,27 @@ const title = 'Project Details'
     <div class="navigation-tabs animated-tabs">
       <div class="tabs">
         <ul>
-          <li
-            class="tab-link"
-            @click="toggleTabs('tasks-tab')"
-            :class="{
-                    'is-active': activeTab === 'tasks-tab',
-                    '': activeTab !== 'tasks-tab',
-                }"
-          >
+          <li class="tab-link" @click="toggleTabs('tasks-tab')" :class=`{
+              'is-active': activeTab === 'tasks-tab',
+              '': activeTab !== 'tasks-tab',
+            }`>
             <a>Tasks</a>
           </li>
-          <li
-            class="tab-link"
-            @click="toggleTabs('files-tab')"
-            :class="{
-                    'is-active': activeTab === 'files-tab',
-                    '': activeTab !== 'files-tab',
-                }"
-          >
+          <li class="tab-link" @click="toggleTabs('files-tab')" :class=`{
+              'is-active': activeTab === 'files-tab',
+              '': activeTab !== 'files-tab',
+            }`>
             <a>Files</a>
           </li>
-          <li
-            class="tab-link"
-            @click="toggleTabs('activity-tab')"
-            :class="{
-                    'is-active': activeTab === 'activity-tab',
-                    '': activeTab !== 'activity-tab',
-                }"
-          >
+          <li class="tab-link" @click="toggleTabs('activity-tab')" :class=`{
+              'is-active': activeTab === 'activity-tab',
+              '': activeTab !== 'activity-tab',
+            }`>
             <a>Activity</a>
           </li>
         </ul>
       </div>
-      <div
-        x-show.transition="activeTab === 'tasks-tab'"
-        class="navtab-content is-active"
-      >
+      <div x-show.transition="activeTab === 'tasks-tab'" class="navtab-content is-active">
         <!-- Task Group -->
         <div class="projects-list-wrapper">
           <!--Header-->
@@ -86,14 +69,14 @@ const title = 'Project Details'
             <div class="list-title">
               <span>Tasks</span>
               <div class="add-button">
-                <i class="iconify" data-icon="feather:plus"></i>
+                <iconify-icon class="iconify" icon="lucide:plus"></iconify-icon>
               </div>
             </div>
             <div class="list-filter">
               <div class="control has-icon">
                 <input class="input" type="text" placeholder="Filter Projects" />
                 <div class="form-icon">
-                  <i class="iconify" data-icon="feather:search"></i>
+                  <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
                 </div>
               </div>
             </div>
@@ -120,13 +103,7 @@ const title = 'Project Details'
                       </div>
                       <div class="task-info">
                         <div class="task-progress">
-                          <progress
-                            class="progress is-tiny is-secondary"
-                            value="82"
-                            max="100"
-                          >
-                            82%
-                          </progress>
+                          <progress class="progress is-tiny is-primary" value="82" max="100"> 82% </progress>
                         </div>
                         <div class="task-members">
                           <div class="avatars">
@@ -145,7 +122,7 @@ const title = 'Project Details'
                           </div>
                         </div>
                         <div class="subtasks-count">
-                          <i class="iconify" data-icon="ph:timer-duotone"></i>
+                          <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                           <span>7/9</span>
                         </div>
                         <div class="more-drop">
@@ -166,13 +143,7 @@ const title = 'Project Details'
                       </div>
                       <div class="task-info">
                         <div class="task-progress">
-                          <progress
-                            class="progress is-tiny is-secondary"
-                            value="24"
-                            max="100"
-                          >
-                            24%
-                          </progress>
+                          <progress class="progress is-tiny is-primary" value="24" max="100"> 24% </progress>
                         </div>
                         <div class="task-members">
                           <div class="avatars">
@@ -185,7 +156,7 @@ const title = 'Project Details'
                           </div>
                         </div>
                         <div class="subtasks-count">
-                          <i class="iconify" data-icon="ph:timer-duotone"></i>
+                          <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                           <span>2/10</span>
                         </div>
                         <div class="more-drop">
@@ -206,13 +177,7 @@ const title = 'Project Details'
                       </div>
                       <div class="task-info">
                         <div class="task-progress">
-                          <progress
-                            class="progress is-tiny is-secondary"
-                            value="65"
-                            max="100"
-                          >
-                            65%
-                          </progress>
+                          <progress class="progress is-tiny is-primary" value="65" max="100"> 65% </progress>
                         </div>
                         <div class="task-members">
                           <div class="avatars">
@@ -228,7 +193,7 @@ const title = 'Project Details'
                           </div>
                         </div>
                         <div class="subtasks-count">
-                          <i class="iconify" data-icon="ph:timer-duotone"></i>
+                          <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                           <span>8/15</span>
                         </div>
                         <div class="more-drop">
@@ -261,13 +226,7 @@ const title = 'Project Details'
                       </div>
                       <div class="task-info">
                         <div class="task-progress">
-                          <progress
-                            class="progress is-tiny is-secondary"
-                            value="75"
-                            max="100"
-                          >
-                            75%
-                          </progress>
+                          <progress class="progress is-tiny is-primary" value="75" max="100"> 75% </progress>
                         </div>
                         <div class="task-members">
                           <div class="avatars">
@@ -286,7 +245,7 @@ const title = 'Project Details'
                           </div>
                         </div>
                         <div class="subtasks-count">
-                          <i class="iconify" data-icon="ph:timer-duotone"></i>
+                          <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                           <span>13/24</span>
                         </div>
                         <div class="more-drop">
@@ -307,13 +266,7 @@ const title = 'Project Details'
                       </div>
                       <div class="task-info">
                         <div class="task-progress">
-                          <progress
-                            class="progress is-tiny is-secondary"
-                            value="92"
-                            max="100"
-                          >
-                            92%
-                          </progress>
+                          <progress class="progress is-tiny is-primary" value="92" max="100"> 92% </progress>
                         </div>
                         <div class="task-members">
                           <div class="avatars">
@@ -326,7 +279,7 @@ const title = 'Project Details'
                           </div>
                         </div>
                         <div class="subtasks-count">
-                          <i class="iconify" data-icon="ph:timer-duotone"></i>
+                          <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                           <span>7/8</span>
                         </div>
                         <div class="more-drop">
@@ -347,13 +300,7 @@ const title = 'Project Details'
                       </div>
                       <div class="task-info">
                         <div class="task-progress">
-                          <progress
-                            class="progress is-tiny is-secondary"
-                            value="15"
-                            max="100"
-                          >
-                            15%
-                          </progress>
+                          <progress class="progress is-tiny is-primary" value="15" max="100"> 15% </progress>
                         </div>
                         <div class="task-members">
                           <div class="avatars">
@@ -363,7 +310,7 @@ const title = 'Project Details'
                           </div>
                         </div>
                         <div class="subtasks-count">
-                          <i class="iconify" data-icon="ph:timer-duotone"></i>
+                          <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                           <span>3/43</span>
                         </div>
                         <div class="more-drop">
@@ -389,20 +336,12 @@ const title = 'Project Details'
                     <div class="card-progress" data-progress="20"></div>
                     <div class="card-inner">
                       <div class="task-meta">
-                        <span class="task-title">
-                          Cryptocurrency Social Platform
-                        </span>
+                        <span class="task-title"> Cryptocurrency Social Platform </span>
                         <span class="task-due-date"> No Due Date </span>
                       </div>
                       <div class="task-info">
                         <div class="task-progress">
-                          <progress
-                            class="progress is-tiny is-secondary"
-                            value="20"
-                            max="100"
-                          >
-                            20%
-                          </progress>
+                          <progress class="progress is-tiny is-primary" value="20" max="100"> 20% </progress>
                         </div>
                         <div class="task-members">
                           <div class="avatars">
@@ -415,7 +354,7 @@ const title = 'Project Details'
                           </div>
                         </div>
                         <div class="subtasks-count">
-                          <i class="iconify" data-icon="ph:timer-duotone"></i>
+                          <iconify-icon class="iconify" icon="ph:timer-duotone"></iconify-icon>
                           <span>2/10</span>
                         </div>
                         <div class="more-drop">
@@ -439,14 +378,14 @@ const title = 'Project Details'
             <div class="list-title">
               <span>Files</span>
               <div class="add-button">
-                <i class="iconify" data-icon="feather:plus"></i>
+                <iconify-icon class="iconify" icon="lucide:plus"></iconify-icon>
               </div>
             </div>
             <div class="list-filter">
               <div class="control has-icon">
                 <input class="input" type="text" placeholder="Filter Files" />
                 <div class="form-icon">
-                  <i class="iconify" data-icon="feather:search"></i>
+                  <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
                 </div>
               </div>
             </div>
@@ -460,10 +399,7 @@ const title = 'Project Details'
                       <div class="image is-48x48">
                         <img src="/img/avatars/42.jpg" alt="user photo" />
                         <div class="file-action">
-                          <i
-                            class="iconify"
-                            data-icon="file-icons:microsoft-word"
-                          ></i>
+                          <i class="iconify" data-icon="file-icons:microsoft-word"></i>
                         </div>
                       </div>
                     </div>
@@ -488,10 +424,7 @@ const title = 'Project Details'
                       <div class="image is-48x48">
                         <img src="/img/avatars/44.jpg" alt="user photo" />
                         <div class="file-action">
-                          <i
-                            class="iconify"
-                            data-icon="simple-icons:adobeillustrator"
-                          ></i>
+                          <i class="iconify" data-icon="simple-icons:adobeillustrator"></i>
                         </div>
                       </div>
                     </div>
@@ -516,7 +449,7 @@ const title = 'Project Details'
                       <div class="image is-48x48">
                         <img src="/img/avatars/55.jpg" alt="user photo" />
                         <div class="file-action">
-                          <i class="iconify" data-icon="mdi:folder-zip"></i>
+                          <iconify-icon class="iconify" icon="mdi:folder-zip"></iconify-icon>
                         </div>
                       </div>
                     </div>
@@ -541,7 +474,7 @@ const title = 'Project Details'
                       <div class="image is-48x48">
                         <img src="/img/avatars/19.jpg" alt="user photo" />
                         <div class="file-action">
-                          <i class="iconify" data-icon="simple-icons:jpeg"></i>
+                          <iconify-icon class="iconify" icon="simple-icons:jpeg"></iconify-icon>
                         </div>
                       </div>
                     </div>
@@ -566,10 +499,7 @@ const title = 'Project Details'
                       <div class="image is-48x48">
                         <img src="/img/avatars/29.jpg" alt="user photo" />
                         <div class="file-action">
-                          <i
-                            class="iconify"
-                            data-icon="file-icons:microsoft-word"
-                          ></i>
+                          <i class="iconify" data-icon="file-icons:microsoft-word"></i>
                         </div>
                       </div>
                     </div>
@@ -595,24 +525,21 @@ const title = 'Project Details'
         </div>
       </div>
 
-      <div
-        x-show.transition="activeTab === 'activity-tab'"
-        class="navtab-content"
-      >
+      <div x-show.transition="activeTab === 'activity-tab'" class="navtab-content">
         <!-- Activity List -->
         <div class="projects-list-wrapper">
           <div class="list-header">
             <div class="list-title">
               <span>Activity</span>
               <div class="add-button">
-                <i class="iconify" data-icon="feather:plus"></i>
+                <iconify-icon class="iconify" icon="lucide:plus"></iconify-icon>
               </div>
             </div>
             <div class="list-filter">
               <div class="control has-icon">
                 <input class="input" type="text" placeholder="Filter items" />
                 <div class="form-icon">
-                  <i class="iconify" data-icon="feather:search"></i>
+                  <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
                 </div>
               </div>
             </div>
@@ -630,9 +557,7 @@ const title = 'Project Details'
                     </div>
                     <div class="media-content">
                       <div class="meta">
-                        <p></p>
-                          Miranda James has completed the Website Review task.
-                        </p>
+                        <p>Miranda James has completed the Website Review task.</p>
                         <span>Just now</span>
                       </div>
                     </div>
@@ -651,9 +576,7 @@ const title = 'Project Details'
                     </div>
                     <div class="media-content">
                       <div class="meta">
-                        <p></p>
-                          Helen Miller created a new task.
-                        </p>
+                        <p>Helen Miller created a new task.</p>
                         <span>3 hours ago</span>
                       </div>
                     </div>
@@ -672,9 +595,7 @@ const title = 'Project Details'
                     </div>
                     <div class="media-content">
                       <div class="meta">
-                        <p></p>
-                          Alan has joined the team.
-                        </p>
+                        <p>Alan has joined the team.</p>
                         <span>5 hours ago</span>
                       </div>
                     </div>
@@ -693,9 +614,7 @@ const title = 'Project Details'
                     </div>
                     <div class="media-content">
                       <div class="meta">
-                        <p></p>
-                          Celia Stevens created a new task.
-                        </p>
+                        <p>Celia Stevens created a new task.</p>
                         <span>6 hours ago</span>
                       </div>
                     </div>
@@ -714,9 +633,7 @@ const title = 'Project Details'
                     </div>
                     <div class="media-content">
                       <div class="meta">
-                        <p></p>
-                          Terry Daniels has completed the chatbot task.
-                        </p>
+                        <p>Terry Daniels has completed the chatbot task.</p>
                         <span>Yesterday</span>
                       </div>
                     </div>
@@ -735,9 +652,7 @@ const title = 'Project Details'
                     </div>
                     <div class="media-content">
                       <div class="meta">
-                        <p></p>
-                          Helen has joined the team.
-                        </p>
+                        <p>Helen has joined the team.</p>
                         <span>5 days ago</span>
                       </div>
                     </div>

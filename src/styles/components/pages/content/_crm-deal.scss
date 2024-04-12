@@ -177,6 +177,7 @@ Deal Subheader
 
     .owner-meta {
       margin-#{$start-direction}: 0.75rem;
+      margin-#{$end-direction}: 0.75rem;
       line-height: 1.2;
 
       span {
@@ -318,10 +319,10 @@ Deal content
           transition: all 0.3s;
 
           &:hover {
-            color: var(--secondary);
+            color: var(--primary);
 
             .iconify {
-              color: var(--secondary);
+              color: var(--primary);
             }
           }
 
@@ -428,8 +429,8 @@ Deal content
               }
 
               &:hover {
-                background: var(--secondary);
-                box-shadow: var(--secondary-box-shadow);
+                background: var(--primary);
+                box-shadow: var(--primary-box-shadow);
                 cursor: pointer;
 
                 .iconify {
@@ -680,7 +681,7 @@ Deal content
         &.is-active {
           a {
             color: var(--title-color);
-            border-color: var(--secondary);
+            border-color: var(--primary);
           }
         }
 
@@ -730,7 +731,7 @@ Deal content
           top: 50%;
           width: 1.6px;
           height: 100%;
-          background: var(--wrap-muted-color);
+          background: var(--card-border-color);
         }
 
         .timeline-icon {
@@ -748,7 +749,7 @@ Deal content
 
           .iconify {
             font-size: 18px;
-            color: var(--secondary);
+            color: var(--primary);
           }
 
           img {

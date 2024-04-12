@@ -13,7 +13,8 @@
       line-height: 1;
       padding: 0 6px;
       font-family: var(--font-alt);
-      font-weight: 700;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
     }
 
     .project-tagline {
@@ -41,7 +42,7 @@
 
       .iconify {
         font-size: 1.5rem;
-        color: var(--secondary);
+        color: var(--primary);
       }
     }
 
@@ -72,7 +73,7 @@
   }
 
   &:hover {
-    background: var(--secondary);
+    background: var(--primary);
 
     .iconify {
       color: var(--white);
@@ -94,7 +95,7 @@
       span {
         font-family: var(--font-alt);
         font-size: 1.5rem;
-        font-weight: 700;
+        font-weight: 500;
         color: var(--title-color);
         display: block;
       }

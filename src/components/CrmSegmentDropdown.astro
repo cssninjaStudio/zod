@@ -2,13 +2,13 @@
   x-data="initDropdown()"
   @click.away="close()"
   class="dropdown-wrap is-right"
-  :class="{
-    'is-active': open,
-    '': !open
-  }"
->
+  :class=`{
+      'is-active': open,
+      '': !open
+    }`
+  >
   <button @click="toggle()" class="dropdown-button">
-    <i class="iconify" data-icon="feather:more-horizontal"></i>
+    <iconify-icon class="iconify" icon="lucide:more-horizontal"></iconify-icon>
   </button>
   <div class="drop-menu">
     <div class="menu-inner">
@@ -17,28 +17,28 @@
       </div>
       <div class="options-items">
         <a href="/content-crm-board" class="options-item">
-            <i class="iconify" data-icon="ph:projector-screen-duotone"></i>
+            <iconify-icon class="iconify" icon="ph:projector-screen-duotone"></iconify-icon>
           <div class="option-content">
             <span>Open Board</span>
             <span>Open this kanban board</span>
           </div>
         </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:pencil-line-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:pencil-line-duotone"></iconify-icon>
           <div class="option-content">
             <span>Edit Board</span>
             <span>Edit board details</span>
           </div>
         </a>
         <a class="options-item">
-            <i class="iconify" data-icon="ph:bell-simple-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:bell-simple-duotone"></iconify-icon>
           <div class="option-content">
             <span>Notifications</span>
             <span>Manage notifications</span>
           </div>
         </a>
         <a class="options-item">
-          <i class="iconify" data-icon="ph:trash-duotone"></i>
+          <iconify-icon class="iconify" icon="ph:trash-duotone"></iconify-icon>
         <div class="option-content">
           <span>Delete</span>
           <span>Delete this board</span>

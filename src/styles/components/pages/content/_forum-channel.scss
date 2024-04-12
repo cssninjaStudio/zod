@@ -249,8 +249,8 @@ Forum Channel
       cursor: pointer;
 
       &:hover {
-        border-color: var(--secondary-light-10);
-        background: var(--secondary-light-10);
+        border-color: var(--primary-light-10);
+        background: var(--primary-light-10);
         color: var(--white);
         box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.25) !important;
 
@@ -260,7 +260,7 @@ Forum Channel
       }
 
       &.is-active {
-        background: var(--secondary);
+        background: var(--primary);
         opacity: 1;
         color: var(--white);
       }
