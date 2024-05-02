@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/cssninjaStudio/zod/compare/v2.1.0...v2.2.0) (2024-05-02)
+
+
+### Features
+
+* add view transitions, fix missing icons ([3b2f31d](https://github.com/cssninjaStudio/zod/commit/3b2f31da30e9d35cf92b5ad602a632a248843e40))
+
 ## [2.1.0](https://github.com/cssninjaStudio/zod/compare/v2.0.2...v2.1.0) (2024-04-12)
 
 ### [2.0.2](https://github.com/cssninjaStudio/zod/compare/v2.0.1...v2.0.2) (2023-05-03)
