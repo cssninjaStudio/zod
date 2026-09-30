@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/cssninjaStudio/zod/compare/v2.2.0...v2.3.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([aab8888](https://github.com/cssninjaStudio/zod/commit/aab8888f224c5a968ea1212c5af50f3027c61590))
+
 ## [2.2.0](https://github.com/cssninjaStudio/zod/compare/v2.1.0...v2.2.0) (2024-05-02)
 
 
